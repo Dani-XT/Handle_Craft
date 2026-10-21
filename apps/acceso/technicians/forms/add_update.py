@@ -9,7 +9,7 @@ from django.contrib.auth import get_user_model
 from apps.sistema.sex.models import Sexo
 from apps.actas.locations.models import Campus, Direccion, Sede
 
-from automation_ticket.utils.validators.utils import rut_validator
+# from automation_ticket.utils.validators.utils import rut_validator
 
 User = get_user_model()
 

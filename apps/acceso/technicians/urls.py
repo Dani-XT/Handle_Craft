@@ -27,6 +27,4 @@ urlpatterns = [
         login_required(TechnicianStatusView.as_view()),
         name="technicians-status",
     ),
-    
-    
 ]

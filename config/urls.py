@@ -43,9 +43,6 @@ urlpatterns = [
     path('', include("apps.activos.supplies.urls")),
     path('', include("apps.activos.warehouse.urls")),
 
-    # AUTOMATIZACION
-    path('', include("apps.automation.automation.urls")),
-
     # COMPRAS
     path('', include("apps.compras.oc.urls")),
     path('', include("apps.compras.providers.urls")),

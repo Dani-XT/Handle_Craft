@@ -6,7 +6,7 @@ from django.utils import timezone
 import os
 import uuid
 
-from automation_ticket.utils.image.utils import image_exist
+from apps.core.utils import image_exist
 
 
 

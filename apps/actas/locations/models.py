@@ -1,5 +1,5 @@
 from django.db import models
-from automation_ticket.utils.image.utils import image_exist
+from apps.core.utils import image_exist
 
 # Create your models here.
 class Sede(models.Model):

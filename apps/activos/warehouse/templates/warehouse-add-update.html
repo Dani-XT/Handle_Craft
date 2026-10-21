@@ -1,0 +1,196 @@
+{% extends layout_path %}
+
+{% load static %}
+{% load i18n %}
+
+{% block title %}Ubicaciones - Lista de Ubicaciones{% endblock %}
+
+{% block page_css %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'vendor/libs/dropzone/dropzone.css' %}" />
+<link rel="stylesheet" href="{% static 'vendor/libs/datatables-bs5/datatables.bootstrap5.css' %}" />
+<link rel="stylesheet" href="{% static 'vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css' %}" />
+<link rel="stylesheet" href="{% static 'vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css' %}" />
+<link rel="stylesheet" href="{% static 'vendor/libs/select2/select2.css' %}" />
+<link rel="stylesheet" href="{% static 'vendor/libs/typeahead-js/typeahead.css' %}" />
+{% endblock page_css %}
+
+{% block vendor_js %}
+{{ block.super }}
+<script src="{% static 'vendor/libs/dropzone/dropzone.js' %}"></script>
+<script src="{% static 'vendor/libs/datatables-bs5/datatables-bootstrap5.js' %}"></script>
+<script src="{% static 'vendor/libs/select2/select2.js' %}"></script>
+<script src="{% static 'vendor/libs/autosize/autosize.js' %}"></script>
+<script src="{% static 'vendor/libs/typeahead-js/typeahead.js' %}"></script>
+<script src="{% static 'vendor/libs/bloodhound/bloodhound.js' %}"></script>
+{% endblock vendor_js %}
+
+{% block page_js %}
+{{ block.super }}
+<script src="{% static 'js/new/app-ubicaciones-list.js' %}"></script>
+<script src="{% static 'js/new/app-ubicaciones-add-update.js' %}" ></script>
+{% endblock page_js %}
+
+{% block content %}
+<div class="row">
+  <div class="col-xl-8 col-lg-7 col-md-7 order-0 order-md-1">
+		<!-- Bodegas -->
+		<div class="row text-wrap">
+			<h3 class="mb-1 mt-md-2">Bodegas</h3>
+			<p class="mb-4">Bodegas registradas en el sistema.</p>
+			{% if bodegas %}
+			{% for sede in bodegas %}
+				<div class="col-md-12 col-lg-6 mb-6">
+					<div class="card">
+						<div class="card-body">
+							<div class="d-flex align-items-center">
+								<div class="avatar avatar-xl">
+									<span class="avatar-initial rounded bg-label-info fs-5">{{ sede.nombre|get_iniciales }}</span>
+								</div>
+								<div class="d-flex justify-content-between align-items-center w-100">
+									<div class="role-heading ps-2">
+										<a href="{% url 'sedes-detail' sede.pk %}">
+											<h5 class="mb-0">{{ sede.nombre }}</h5>
+										</a>
+										<small>{{sede.descripcion}}</small>
+										<a href="{% url 'sedes-update' sede.pk %}" class="custom-modal">
+											<p class="mb-0 mt-1">Editar</p>
+										</a>
+									</div>
+									<a href="{% url 'sedes-delete' sede.pk %}" class="d-inline-flex p-2 align-items-center rounded-circle alert-danger">
+										<i class="ri-delete-bin-7-line ri-22px"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+			{% endif %}
+			<div class="col-md-6">
+				<div class="card pt-4">
+					<div class="row h-100">
+						<div class="col-5">
+							<div class="d-flex align-items-end justify-content-center">
+								<img src="{% static 'img/illustrations/illustration-3.png' %}" class="img-fluid" alt="Image" width="60">
+							</div>
+						</div>
+						<div class="col-7">
+							<div class="card-body text-sm-end text-center ps-sm-0">
+								<a href="" class="btn btn-sm btn-primary mb-4 text-nowrap custom-modal">Crear Bodega</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--/ Bodega -->
+
+</div>
+{% endblock %}
+
+{% comment %}
+<div class="modal fade" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-simple">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="text-center mb-6">
+          <h4 class="address-title mb-2">{% if sede %}Modificar{% else %}Crear{% endif %} Sedes</h4>
+          <p class="address-subtitle">{% if sede %}Modifica{% else %}Crea{% endif %} las sedes registradas en el Sistema.</p>
+        </div>
+        <form class="row g-5" method="post" enctype="multipart/form-data" action="{% if sede %}{% url 'sedes-update' sede.pk %}{% else %}{% url 'sedes-add' %}{% endif %}">
+          {% csrf_token %}
+          <div class="col-md-6 col-sm-12 order-0 order-md-1 mt-0 text-center d-flex align-items-center flex-column">
+            <!-- Avatar -->
+            {% if sede.img %}
+            <div class="d-flex justify-content-center align-items-center mb-1">
+              <img src="{{ sede.img }}" alt="user image" class="img-fluid rounded" height="110" width="110">        
+            </div>
+            <div class="button-wrapper">
+              <!-- Agregar nueva foto -->
+              <label for="avatar" class="btn btn-sm btn-primary me-3 mb-4" tabindex="0">
+                <span class="d-none d-sm-block">Nueva Foto</span>
+                <input type="file" name="avatar" id="avatar" class="account-file-input" hidden accept="image/png, image/jpeg" />
+              </label>
+              <!-- Resetear -->
+              <button type="button" id="reset-image" class="btn btn-sm btn-outline-danger account-image-reset mb-4">
+                <i class="ri-refresh-line d-block d-sm-none"></i>
+                <span class="d-none d-sm-block">Reset</span>
+              </button>
+              <div>Allowed JPG or PNG. Max size of 800K</div>
+            </div>
+            {% else %}
+            {% if sede %}
+            <div class="d-flex justify-content-center align-items-center m-4 rounded bg-label-info" style="height: 150px; width: 150px;">
+              <span class="fs-3">{{ sede.nombre|get_iniciales }}</span>
+            </div>
+            <div class="button-wrapper">
+              <!-- Agregar nueva foto -->
+              <label for="imagen" class="btn btn-sm btn-primary me-3 mb-4" tabindex="0">
+                <span class="d-none d-sm-block">Nueva Foto</span>
+                <input type="file" name="imagen" id="imagen" class="account-file-input" hidden accept="image/png, image/jpeg" />
+              </label>
+              <!-- Resetear -->
+              <button type="button" id="reset-image" class="btn btn-sm btn-outline-danger account-image-reset mb-4">
+                <i class="ri-refresh-line d-block d-sm-none"></i>
+                <span class="d-none d-sm-block">Reset</span>
+              </button>
+              <div>Allowed JPG, GIF or PNG. Max size of 800K</div>
+            </div>
+            {% else %}
+            <div class="dropzone needsclick" data-dropzone-name="imagen">
+              <div class="dz-message needsclick">
+                <div class="d-flex justify-content-center">
+                  <div class="avatar avatar-md">
+                    <span class="avatar-initial rounded bg-label-secondary">
+                      <i class="ri-upload-2-line ri-24px"></i>
+                    </span>
+                  </div>
+                </div>
+                <p class="h4 needsclick my-2">Drag and drop your image here</p>
+                <small class="text-muted d-block fs-6 my-2">or</small>
+                <span class="needsclick btn btn-sm btn-outline-primary" id="btnBrowse">Browse image</span>
+              </div>
+              <div class="fallback">
+                <input type="file" name="imagen" id="imagen" multiple />
+              </div>
+            </div>
+            {% endif %}
+            {% endif %}
+            <!--/ Avatar -->
+          </div>
+          <div class="col-md-6 col-sm-12 order-1">
+            <div class="row">
+              <!-- Nombre -->
+              <div class="col-md-12 mb-2">
+                <div class="form-floating form-floating-outline">
+                  <input type="text" class="form-control" name="nombre" id="nombre" {% if sede %}value="{{ sede.nombre }}"{% endif %} placeholder="Nombre Sede" aria-label="Nombre Sede">
+                  <label for="nombre">Nombre</label>
+                </div>
+              </div>
+              <!--/ Nombre -->
+              <!-- Descripcion -->
+              <div class="col-md-12 mb-2 mt-2">
+                <div class="form-floating form-floating-outline">
+                  <textarea name="descripcion" id="descripcion" class="form-control h-px-100" placeholder="Descripcion Sede" aria-label="Descripcion Sede">{% if sede %}{{ sede.descripcion }}{% endif %}</textarea>
+                  <label for="descripcion">Descripcion</label>
+                </div>
+              </div>
+              <!--/ Descripcion -->
+            </div>
+          </div>
+
+          <div class="col-12 text-center order-3">
+            <button type="submit" class="btn btn-primary me-3">Enviar</button>
+            <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+          </div> 
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endcomment %}

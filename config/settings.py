@@ -68,9 +68,6 @@ INSTALLED_APPS = [
     'apps.activos.supplies',
     'apps.activos.warehouse',
 
-    # AUTOMATIZACION
-    'apps.automation.automation',
-
     # COMPRAS
     'apps.compras.oc',
     'apps.compras.providers',

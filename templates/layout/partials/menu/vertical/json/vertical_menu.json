@@ -111,17 +111,6 @@
       "slug": "clients"
     },
     {
-      "menu_header": "Tickets",
-      "slug": "tickets",
-      "permission": "usuario.view_usuario"
-    },
-    {
-      "url": "automation-main",
-      "name": "Cargar Ticket",
-      "icon": "menu-icon tf-icons ri-price-tag-3-line",
-      "slug": "automation"
-    },
-    {
       "menu_header": "Proceso ETL",
       "slug": "etl",
       "permission": "usuario.view_usuario"
