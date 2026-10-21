@@ -1,0 +1,20 @@
+{
+    "grupos": [
+        {
+            "name": "Jefe TI",
+            "permisos": []
+        },
+        {
+            "name": "Coordinador",
+            "permisos": []
+        },
+        {
+            "name": "Bodega",
+            "permisos": []
+        },
+        {
+            "name": "Tecnico",
+            "permisos": []
+        }
+    ]
+}

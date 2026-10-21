@@ -1,0 +1,79 @@
+{
+    "edificios": [
+        {
+            "nombre": "R-1"
+        },
+        {
+            "nombre": "R-2"
+        },
+        {
+            "nombre": "R-3"
+        },
+        {
+            "nombre": "R-4"
+        },
+        {
+            "nombre": "R-5"
+        },
+        {
+            "nombre": "R-6"
+        },
+        {
+            "nombre": "R-7"
+        },
+        {
+            "nombre": "R-8"
+        },
+        {
+            "nombre": "R-9"
+        },
+        {
+            "nombre": "R-10"
+        },
+        {
+            "nombre": "R-11"
+        },
+        {
+            "nombre": "R-12"
+        },
+        {
+            "nombre": "R-13"
+        },
+        {
+            "nombre": "R-14"
+        },
+        {
+            "nombre": "A-1"
+        },
+        {
+            "nombre": "A-2"
+        },
+        {
+            "nombre": "C-1"
+        },
+        {
+            "nombre": "C-2"
+        },
+        {
+            "nombre": "C-3"
+        },
+        {
+            "nombre": "C-4"
+        },
+        {
+            "nombre": "C-5"
+        },
+        {
+            "nombre": "C-6"
+        },
+        {
+            "nombre": "C-7"
+        },
+        {
+            "nombre": "C-8"
+        },
+        {
+            "nombre": "R1"
+        }
+    ]
+}

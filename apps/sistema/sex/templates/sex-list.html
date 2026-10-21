@@ -1,0 +1,99 @@
+{% extends layout_path %}
+
+{% load static %}
+{% load i18n %}
+
+{% block title %}Precio - Planes{% endblock %}
+
+{% block page_css %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'vendor/libs/dropzone/dropzone.css' %}" />
+<link rel="stylesheet" href="{% static 'vendor/libs/datatables-bs5/datatables.bootstrap5.css' %}" />
+<link rel="stylesheet" href="{% static 'vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css' %}" />
+<link rel="stylesheet" href="{% static 'vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css' %}" />
+<link rel="stylesheet" href="{% static 'vendor/libs/select2/select2.css' %}" />
+<link rel="stylesheet" href="{% static 'vendor/css/pages/page-pricing.css' %}" />
+{% endblock page_css %}
+
+{% block vendor_js %}
+{{ block.super }}
+<script src="{% static 'vendor/libs/dropzone/dropzone.js' %}"></script>
+<script src="{% static 'vendor/libs/datatables-bs5/datatables-bootstrap5.js' %}"></script>
+<script src="{% static 'vendor/libs/select2/select2.js' %}"></script>
+<script src="{% static 'vendor/libs/autosize/autosize.js' %}"></script>
+{% endblock vendor_js %}
+
+{% block page_js %}
+{{ block.super }}
+<script src="{% static 'js/new/app-system-home.js' %}"></script>
+<script src="{% static 'js/new/app-sexo-add-update.js' %}"></script>
+{% endblock page_js %}
+
+{% block content %}
+<!-- Role cards -->
+<div class="row g-6">
+  
+</div>
+<!--/ Role cards -->
+
+<div class="row pb-6">
+  <!-- Generos -->
+  <div class="col-12 order-0 order-md-1">
+    <h3 class="mb-1 mt-md-2">Generos</h3>
+    <p class="mb-4">Generos registadas en el sistema</p>
+    <div class="row text-wrap">
+      {% if generos %}
+      {% for sexo in generos %}
+        <div class="col-md-12 col-lg-6 mb-6">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                {% if sexo.img %}
+                <img src="{{ sexo.img }}" alt="user image" class="img-fluid rounded" height="100" width="100">
+                {% else %}
+                <div class="d-flex justify-content-center align-items-center rounded bg-label-info" style="height: 100px; width: 100px;">
+                  <span class="fs-3">{{ sexo.nombre|get_iniciales }}</span>
+                </div>
+                {% endif %}      
+                <div class="d-flex justify-content-between align-items-center w-100">
+                  <div class="role-heading ps-2">
+                    <a class="custom-modal" href="">
+                      <h5 class="mb-0">{{ sexo.nombre }}</h5>
+                    </a>
+                    <small>{{sexo.descripcion}}</small>
+                    <a class="custom-modal" href="">
+                      <p class="mb-0 mt-1">Editar</p>
+                    </a>
+                  </div>
+                  <a href="" class="d-inline-flex p-2 align-items-center rounded-circle alert-danger">
+                    <i class="ri-delete-bin-7-line ri-22px"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+      {% endif %}
+      <div class="col-md-12 col-lg-6">
+        <div class="card pt-4">
+          <div class="row h-100">
+            <div class="col-5">
+              <div class="d-flex align-items-end justify-content-center">
+                <img src="{% static 'img/illustrations/illustration-3.png' %}" class="img-fluid" alt="Image" width="80">
+              </div>
+            </div>
+            <div class="col-7">
+              <div class="card-body text-sm-end text-center ps-sm-0">
+                <a href="" class="btn btn-sm btn-primary mb-4 text-nowrap custom-modal">Crear genero</a>
+                <p class="mb-0">Crear nuevo genero, si no existe</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Generos -->
+</div>
+{% endblock %}

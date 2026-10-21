@@ -1,0 +1,493 @@
+{% extends layout_path %}
+
+{% load static %}
+{% load i18n %}
+
+{% block title %}Crear cuenta - Subvivienda{% endblock %}
+
+{% block vendor_css %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'vendor/libs/flatpickr/flatpickr.css' %}" />
+<link rel="stylesheet" href="{% static 'vendor/libs/bs-stepper/bs-stepper.css' %}" />
+<link rel="stylesheet" href="{% static 'vendor/libs/bootstrap-select/bootstrap-select.css' %}" />
+<link rel="stylesheet" href="{% static 'vendor/libs/select2/select2.css' %}" />
+<link rel="stylesheet" href="{% static 'vendor/libs/@form-validation/form-validation.css' %}" />
+{% endblock vendor_css %}
+
+{% block vendor_js %}
+{{ block.super }}
+<script src="{% static 'vendor/libs/moment/moment.js' %}"></script>
+<script src="{% static 'vendor/libs/flatpickr/flatpickr.js' %}"></script>
+<script src="{% static 'vendor/libs/flatpickr/l10n/es.js' %}"></script>
+<script src="{% static 'vendor/libs/cleavejs/cleave.js' %}"></script>
+<script src="{% static 'vendor/libs/cleavejs/cleave-phone.js' %}"></script>
+<script src="{% static 'vendor/libs/bs-stepper/bs-stepper.js' %}"></script>
+<script src="{% static 'vendor/libs/select2/select2.js' %}"></script>
+<script src="{% static 'vendor/libs/@form-validation/popular.js' %}"></script>
+<script src="{% static 'vendor/libs/@form-validation/bootstrap5.js' %}"></script>
+<script src="{% static 'vendor/libs/@form-validation/auto-focus.js' %}"></script>
+{% endblock vendor_js %}
+
+{% block page_css %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'vendor/css/pages/page-auth.css' %}" />
+{% endblock page_css %}
+
+{% block page_js %}
+{{ block.super }}
+<script src="{% static 'js/pages-registro-usuario.js' %}"></script>
+{% endblock page_js %}
+
+{% block content %}
+<div class="authentication-wrapper authentication-cover">
+  <!-- Logo -->
+  <a href="{% url 'front:home' %}" class="auth-cover-brand d-flex align-items-center gap-3">
+    <span class="app-brand-logo demo">{% include 'partials/logo.html' %}</span>
+    <span class="app-brand-text demo text-heading fw-semibold">{% get_theme_variables 'template_name' %}</span>
+  </a>
+  <!-- /Logo -->
+  <div class="authentication-inner row m-0">
+
+    <!-- Left Text -->
+    <div class="d-none d-lg-flex col-lg-3 align-items-center justify-content-end p-5 pe-0">
+      <img alt="register-multi-steps-illustration" src="{% static 'img/illustrations/registration-multistep-illustration.png' %}" class="scaleX-n1-rtl w-px-300 h-auto mh-100 img-fluid">
+    </div>
+    <!-- /Left Text -->
+
+    <!--  Multi Steps Registration -->
+    <div class="d-flex col-lg-9 align-items-center justify-content-center authentication-bg p-5">
+      <div class="w-px-700 mt-12 mt-lg-0">
+        <div id="multiStepsValidation" class="bs-stepper wizard-numbered shadow-none">
+          <!-- TODO: Header STEP -->
+          <div class="bs-stepper-header border-bottom-0 mb-2">
+            <div class="step" data-target="#detallesCuentaValidacion">
+              <button type="button" class="step-trigger">
+                <span class="bs-stepper-circle"><i class="ri-check-line"></i></span>
+                <span class="bs-stepper-label">
+                  <span class="bs-stepper-number">01</span>
+                  <span class="d-flex flex-column ms-1">
+                    <span class="bs-stepper-title">Cuenta</span>
+                    <span class="bs-stepper-subtitle">Detalles Cuenta</span>
+                  </span>
+                </span>
+              </button>
+            </div>
+            
+            <div class="line"></div>
+            <div class="step" data-target="#informacionPersonalValidacion">
+              <button type="button" class="step-trigger">
+                <span class="bs-stepper-circle"><i class="ri-check-line"></i></span>
+                <span class="bs-stepper-label">
+                  <span class="bs-stepper-number">02</span>
+                  <span class="d-flex flex-column ms-1">
+                    <span class="bs-stepper-title">Personal</span>
+                    <span class="bs-stepper-subtitle">Ingresar Informacion</span>
+                  </span>
+                </span>
+              </button>
+            </div>
+
+            <div class="line"></div>
+            <div class="step" data-target="#informacionHogarValidacion">
+              <button type="button" class="step-trigger">
+                <span class="bs-stepper-circle"><i class="ri-check-line"></i></span>
+                <span class="bs-stepper-label">
+                  <span class="bs-stepper-number">03</span>
+                  <span class="d-flex flex-column ms-1">
+                    <span class="bs-stepper-title">Hogar</span>
+                    <span class="bs-stepper-subtitle">Informacion Familiar</span>
+                  </span>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <!-- contenido -->
+          <div class="bs-stepper-content">
+            <form id="multiStepsForm" method="post" action="{% url 'register' %}">
+              {% csrf_token %}
+              <!-- TODO: Detalle Cuenta -->
+              <div id="detallesCuentaValidacion" class="content">
+                <div class="content-header mb-5">
+                  <h4 class="mb-0">Cuenta</h4>
+                  <span>Ingrese los detalles de la Cuenta</span>
+                </div>
+                <div class="row gx-5">
+                  
+                  <!-- Email -->
+                  <div class="col-sm-6  mb-5">
+                    <div class="form-floating form-floating-outline">
+                      <input type="email" name="email" class="form-control" placeholder="john.doe@email.com" aria-label="john.doe" value="{{ form.email.value|default_if_none:'' }}"/>
+                      <label for="email">Email</label>
+                    </div>
+                  </div>
+                  <!-- Contraseña -->
+                  <div class="col-sm-6 form-password-toggle mb-5">
+                    <div class="input-group input-group-merge">
+                      <div class="form-floating form-floating-outline">
+                        <input type="password"  name="password" class="form-control" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" value="{{ form.password.value|default_if_none:'' }}" />
+                        <label for="password">Contraseña</label>
+                      </div>
+                      <span class="input-group-text cursor-pointer"><i class="ri-eye-off-line ri-20px"></i></span>
+                    </div>
+                  </div>
+                  <!-- Confirmar contraseña -->
+                  <div class="col-sm-6 form-password-toggle mb-5">
+                    <div class="input-group input-group-merge">
+                      <div class="form-floating form-floating-outline">
+                        <input type="password" name="password2" class="form-control" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password2" value="{{ form.password.value|default_if_none:'' }}" />
+                        <label for="password2">Confirmar Contraseña</label>
+                      </div>
+                      <span class="input-group-text cursor-pointer" id="password2"><i class="ri-eye-off-line ri-20px"></i></span>
+                    </div>
+                  </div>
+                  
+                  <div class="col-12 d-flex justify-content-between">
+                    <button class="btn btn-outline-secondary btn-prev" disabled> <i class="ri-arrow-left-line ri-16px me-sm-1_5 me-0"></i>
+                      <span class="align-middle d-sm-inline-block d-none">Anterior</span>
+                    </button>
+                    <button type="button" class="btn btn-primary btn-next"> <span class="align-middle d-sm-inline-block d-none me-sm-1_5 me-0">Siguiente</span> <i class="ri-arrow-right-line ri-16px"></i></button>
+                  </div>
+
+                  {% if messages %}
+                    {% for message in messages %}
+                    <div class="alert {% if message.tags == 'success' %}alert-success{% elif message.tags == 'error' %}alert-danger{% else %}alert-warning{% endif %}" role="alert">
+                      {{ message }}
+                    </div>
+                    {% endfor %}
+                  {% endif %}
+                </div>
+              </div>
+              <!-- TODO: Personal Info -->
+              <div id="informacionPersonalValidacion" class="content">
+                <div class="content-header mb-5">
+                  <h4 class="mb-0">Personal</h4>
+                  <span>Ingrese su Informacion Personal</span>
+                </div>
+                <div class="row gx-5">
+                  <!-- Nombre -->
+                  <div class="col-sm-6 mb-5">
+                    <div class="form-floating form-floating-outline">
+                      <input type="text" name="nombre" class="form-control" placeholder="John" value="{{ form.nombre.value|default_if_none:'' }}" />
+                      <label for="nombre">Nombre</label>
+                    </div>
+                  </div>
+                  <!-- Apellido -->
+                  <div class="col-sm-6 mb-5">
+                    <div class="form-floating form-floating-outline">
+                      <input type="text" name="apellido" class="form-control" placeholder="Doe" value="{{ form.apellido.value|default_if_none:'' }}"/>
+                      <label for="apellido">Apellido</label>
+                    </div>
+                  </div>
+                  <!-- RUT -->
+                   <div class="col-sm-6 mb-5">
+                    <div class="form-floating form-floating-outline">
+                      <input type="text" class="form-control cleave" name="rut" data-cleave-type="rut" placeholder="12.345.678-9" value="{{ form.rut.value|default_if_none:'' }}"/>
+                      <label for="rut">RUT</label>
+                    </div>
+                  </div>
+                  <!-- Telefono -->
+                  <div class="col-sm-6 mb-5">
+                    <div class="input-group input-group-merge">
+                      <span class="input-group-text">CL (+56)</span>
+                      <div class="form-floating form-floating-outline">
+                        <input type="text" name="telefono" class="form-control cleave" data-cleave-type="telefono" placeholder="9 1234 5678" value="{{ form.telefono.value|default_if_none:'' }}"/>
+                        <label for="telefono">Telefono</label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Fecha Nacimiento-->
+                  <div class="col-sm-6 mb-5">
+                    <div class="form-floating form-floating-outline">
+                      <input type="text" name="fecha_nacimiento" class="form-control flatpickr-validation cleave" data-cleave-type="fecha" placeholder="DD-MM-YYYY" value="{{ form.fecha_nacimiento.value|default_if_none:'' }}" />
+                      <label for="fecha_nacimiento">Fecha nacimiento</label>
+                    </div>
+                  </div>
+                  <!-- Sexo -->
+                  <div class="col-sm-6 mb-5">
+                    <div class="form-floating form-floating-outline">
+                      <select name="sexo" class="select2 form-select" data-placeholder="Seleccione un sexo" data-allow-clear="true">
+                        <option></option>
+                        {% for value, label in sexo %}
+                          <option 
+                            value="{{ value }}" 
+                            {% if form.sexo.value == value %}selected{% endif %}
+                          >
+                            {{ label }}
+                          </option>
+                        {% endfor %}
+                      </select>
+                      <label for="sexo">Sexo</label>
+                    </div>
+                  </div>
+                  <!-- Educacion -->
+                  <div class="col-sm-6 mb-5">
+                    <div class="form-floating form-floating-outline">
+                      <select name="nivel_educacional" class="select2 form-select" data-placeholder="Seleccione nivel de educacion" data-allow-clear="true">
+                        <option></option>
+                        {% for n in nivel_educacional %}
+                          <option
+                            value="{{ n.id }}"
+                            {% if form.nivel_educacional.value|stringformat:"s" == n.id|stringformat:"s" %}selected{% endif %}
+                          >
+                            {{ n.nombre }}
+                          </option>
+                        {% endfor %}
+                      </select>
+                      <label for="nivel_educacional">Educacion</label>
+                    </div>
+                  </div>
+                  <!-- Codigo Postal -->
+                  <div class="col-sm-6 mb-5">
+                    <div class="form-floating form-floating-outline">
+                      <input type="text" name="codigo_postal" class="form-control cleave" data-cleave-type="codigo-postal" placeholder="Codigo Postal" maxlength="7" value="{{ form.codigo_postal.value|default_if_none:'' }}"/>
+                      <label for="codigo_postal">Codigo Postal</label>
+                    </div>
+                  </div>
+                  <!-- Direccion -->
+                  <div class="col-md-8 mb-5">
+                    <div class="form-floating form-floating-outline">
+                      <input type="text" name="direccion" class="form-control" placeholder="Direccion" maxlength="300" value="{{ form.direccion.value|default_if_none:'' }}"/>
+                      <label for="direccion">Direccion</label>
+                    </div>
+                  </div>
+                  <!-- Numero casa -->
+                  <div class="col-md-4 mb-5">
+                    <div class="form-floating form-floating-outline">
+                      <input type="text" name="numero_direccion" class="form-control cleave" data-cleave-type="numero-casas" placeholder="0452" value="{{ form.numero_direccion.value|default_if_none:'' }}"/>
+                      <label for="numero_casa">Numero</label>
+                    </div>
+                  </div>
+                  <!-- Region -->
+                  <div class="col-sm-6 mb-5">
+                    <div class="form-floating form-floating-outline">
+                      <select 
+                        name="region" 
+                        class="select2 form-select " 
+                        data-placeholder="Seleccione una Region"
+                        data-allow-clear="true"
+                      >
+                        <option></option>
+                        {% for r in regiones %}
+                          <option
+                            value="{{ r.numero }}"
+                            {% if form.data.region|stringformat:"s" == r.numero|stringformat:"s" %}
+                              selected
+                            {% endif %}
+                          >
+                            {{ r.nombre }}
+                          </option>
+                        {% endfor %}
+                      </select>
+                      <label for="region">Region</label>
+                    </div>
+                  </div>
+                  <!-- Provincias -->
+                  <div class="col-sm-6 mb-5">
+                    <div class="form-floating form-floating-outline">
+                      <select 
+                        name="provincia" 
+                        class="select2 form-select " 
+                        data-placeholder="Seleccione una Provincia"
+                        data-allow-clear="true"
+                      >
+                        <option></option>
+                        {% for p in provincias %}
+                          <option
+                            value="{{ p.id }}"
+                            {% if form.data.provincia|stringformat:"s" == p.id|stringformat:"s" %}
+                              selected
+                            {% endif %}
+                          >
+                            {{ p.nombre }}
+                          </option>
+                        {% endfor %}
+                      </select>
+                      <label for="provincia">Provincia</label>
+                    </div>
+                  </div>
+                  <!-- Comuna -->
+                  <div class="col-sm-6 mb-5">
+                    <div class="form-floating form-floating-outline">
+                      <select 
+                        name="comuna" 
+                        class="select2 form-select" 
+                        data-placeholder="Seleccione una comuna"
+                        data-allow-clear="true"
+                      >
+                        <option></option>
+                        {% for c in comunas %}
+                          <option
+                            value="{{ c.id }}"
+                            {% if form.comuna.value|stringformat:"s" == c.id|stringformat:"s" %}
+                              selected
+                            {% endif %}
+                          >
+                            {{ c.nombre }}
+                          </option>
+                        {% endfor %}
+                      </select>
+                      <label for="comuna">Comuna</label>
+                    </div>
+                  </div>
+                  <!-- Monto para la vivienda UF-->
+                  <div class="col-sm-6 mb-5">
+                    <div class="form-floating form-floating-outline">
+                      <input type="text" name="ahorro_habitacional" class="form-control cleave"  placeholder="Ej: 1.500.000" value="{{ form.ahorro_habitacional.value|default_if_none:'' }}"/>
+                      <label for="ahorro_habitacional">Monto de Ahorro para la Vivienda (UF)</label>
+                    </div>
+                  </div>
+
+                  <!-- Jefe de hogar -->
+                  <div class="col-md-6 mb-5 ps-6 pe-6">
+                    <label class="text-sm-end small mb-2">¿Es usted jefe/a de hogar?</label>
+                    <div class="col-sm-9">
+                      <div class="form-check mb-2">
+                        <input name="jefe_hogar" class="form-check-input" type="radio" value="True" {% if form.jefe_hogar.value|stringformat:"s" == "True" %}checked{% endif %}/>
+                        <label class="form-check-label" for="jefe_hogar"> Si </label>
+                      </div>
+                      <div class="form-check">
+                        <input name="jefe_hogar" class="form-check-input" type="radio" value="False" {% if form.jefe_hogar.value|stringformat:"s" == "False" %}checked{% endif %}/>
+                        <label class="form-check-label" for="jefe_hogar"> No </label>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-12 d-flex justify-content-between">
+                    <button type="button" class="btn btn-outline-secondary btn-prev"> <i class="ri-arrow-left-line ri-16px me-sm-1_5 me-0"></i>
+                      <span  class="align-middle d-sm-inline-block d-none">Anterior</span>
+                    </button>
+                    <button type="button" class="btn btn-primary btn-next"> <span class="align-middle d-sm-inline-block d-none me-sm-1_5 me-0">Siguiente</span> <i class="ri-arrow-right-line ri-16px"></i></button>
+                  </div>
+                </div>
+              </div>
+              <!-- TODO: Informacion del Hogar -->
+              <div id="informacionHogarValidacion" class="content">
+                <div class="content-header mb-5">
+                  <h4 class="mb-0">Hogar</h4>
+                  <span>Resumen del contexto de su Hogar</span>
+                </div>
+                <div class="row gx-5">
+                  <!-- Cantidad de Integrantes -->
+                  <div class="col-sm-6 mb-5">
+                    <div class="form-floating form-floating-outline">
+                      <input type="text" name="cantidad_integrantes" class="form-control cleave" data-cleave-type="centenas" placeholder="Integrantes de su Hogar" value="{{ form.cantidad_integrantes.value|default_if_none:'' }}" />
+                      <label for="cantidad_integrantes">Cantidad de Integrantes</label>
+                    </div>
+                  </div>
+                  <!-- Sueldo Hogar -->
+                  <div class="col-sm-6 mb-3">
+                    <div class="form-floating form-floating-outline">
+                      <input type="text" name="sueldo_total_hogar" class="form-control cleave" data-cleave-type="moneda" placeholder="Integrantes de su Hogar" value="{{ form.sueldo_total_hogar.value|default_if_none:'' }}"/>
+                      <label for="sueldo_total_hogar">Sueldo Total del Hogar</label>
+                    </div>
+                  </div>
+                  <!-- Tramo RSH -->
+                  <div class="col-sm-6 mb-5">
+                    <div class="form-floating form-floating-outline">
+                      <input type="text" name="tramo_rsh" class="form-control cleave" data-cleave-type="porcentaje" placeholder="Ej. %60" value="{{ form.tramo_rsh.value|default_if_none:'' }}" />
+                      <label for="tramo_rsh">Tramo RSH (%)</label>
+                    </div>
+                  </div>
+                  <!-- Condicion Habitacional -->
+                  <div class="col-sm-6 mb-5">
+                    <div class="form-floating form-floating-outline">
+                      <select name="condicion_habitacional" class="select2 form-select" data-placeholder="Seleccione su condicion habitacional" data-allow-clear="true">
+                        <option></option>
+                        {% for c in condicion_habitacional %}
+                        <option
+                          value="{{ c.id }}"
+                          {% if form.condicion_habitacional.value|stringformat:"s" == c.id|stringformat:"s" %}
+                            selected
+                          {% endif %}
+                        >
+                          {{ c.nombre }}
+                        </option>
+                      {% endfor %}
+                      </select>
+                      <label for="condicion_habitacional">Condicion Habitacional</label>
+                    </div>
+                  </div>
+                  <!-- Situación previsional -->
+                  <div class="col-sm-6 mb-5">
+                    <div class="form-floating form-floating-outline">
+                      <select name="situacion_previsional" class="select2 form-select" data-placeholder="Seleccione Situacion Previsional" data-allow-clear="true">
+                        <option></option>
+                        {% for s in situacion_previsional %}
+                          <option
+                            value="{{ s.id }}"
+                            {% if form.situacion_previsional.value|stringformat:"s" == s.id|stringformat:"s" %}
+                              selected
+                            {% endif %}
+                          >
+                            {{ s.nombre }}
+                          </option>
+                        {% endfor %}
+                      </select>
+                      <label for="situacion_previsional">Situacion Previsional</label>
+                    </div>
+                  </div>
+                  <!-- Postulaciones Anteriores -->
+                  <div class="col-sm-6 mb-5">
+                    <div class="form-floating form-floating-outline">
+                      <select name="postulaciones_previas" class="select2 form-select" data-placeholder="Seleccione Postulaciones Previas" data-allow-clear="true">
+                        <option></option>
+                        {% for p in postulaciones_previas %}
+                          <option
+                            value="{{ p.id }}"
+                            {% if form.postulaciones_previas.value|stringformat:"s" == p.id|stringformat:"s" %}
+                              selected
+                            {% endif %}
+                          >
+                            {{ p.nombre }}
+                          </option>
+                        {% endfor %}
+                      </select>
+                      <label for="postulaciones_previas">Postulaciones Previas</label>
+                    </div>
+                  </div>
+                  <!-- Personas con discapacidad -->
+                  <div class="col-md-6 mb-5 ps-6 pe-6">
+                    <label class="text-sm-end small mb-2">¿Hay personas con discapacidad?</label>
+                    <div class="col-sm-9">
+                      <div class="form-check mb-2">
+                        <input name="discapacidad_hogar" class="form-check-input" type="radio" value="True" {% if form.discapacidad_hogar.value|stringformat:"s" == "True" %}checked{% endif %}/>
+                        <label class="form-check-label" for="discapacidad_hogar"> Si </label>
+                      </div>
+                      <div class="form-check">
+                        <input name="discapacidad_hogar" class="form-check-input" type="radio" value="False" {% if form.discapacidad_hogar.value|stringformat:"s" == "False" %}checked{% endif %}/>
+                        <label class="form-check-label" for="discapacidad_hogar"> No </label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Personas con Adultos mayores -->
+                  <div class="col-md-6 mb-5 ps-6 pe-6">
+                    <label class="text-sm-end small mb-2">¿Hay personas adultos mayores en el hogar?</label>
+                    <div class="col-sm-9">
+                      <div class="form-check mb-2">
+                        <input name="adultos_mayores" class="form-check-input" type="radio" value="True" {% if form.adultos_mayores.value|stringformat:"s" == "True" %}checked{% endif %}/>
+                        <label class="form-check-label" for="adultos_mayores"> Si </label>
+                      </div>
+                      <div class="form-check">
+                        <input name="adultos_mayores" class="form-check-input" type="radio" value="False" {% if form.adultos_mayores.value|stringformat:"s" == "False" %}checked{% endif %}/>
+                        <label class="form-check-label" for="adultos_mayores"> No </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 d-flex justify-content-between">
+                  <button type="button" class="btn btn-outline-secondary btn-prev"> <i class="ri-arrow-left-line ri-16px me-sm-1_5 me-0"></i>
+                    <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                  </button>
+                  <button type="submit" class="btn btn-success btn-next btn-submit">Submit <i class="ri-check-line ri-16px ms-1_5"></i></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- / Multi Steps Registration -->
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,154 @@
+{% extends layout_path %}
+
+{% load static %}
+{% load i18n %}
+
+{% block title %}Modelos - Apps{% endblock %}
+
+{% block vendor_css %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'vendor/libs/datatables-bs5/datatables.bootstrap5.css' %}" />
+<link rel="stylesheet" href="{% static 'vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css' %}" />
+<link rel="stylesheet" href="{% static 'vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css' %}" />
+<link rel="stylesheet" href="{% static 'vendor/libs/@form-validation/form-validation.css' %}" />
+{% endblock vendor_css %}
+
+{% block vendor_js %}
+{{ block.super }}
+<script src="{% static 'vendor/libs/datatables-bs5/datatables-bootstrap5.js' %}"></script>
+<script src="{% static 'vendor/libs/@form-validation/popular.js' %}"></script>
+<script src="{% static 'vendor/libs/@form-validation/bootstrap5.js' %}"></script>
+<script src="{% static 'vendor/libs/@form-validation/auto-focus.js' %}"></script>
+{% endblock vendor_js %}
+
+{% block page_js %}
+{{ block.super }}
+<script src="{% static 'js/app-permissions-list.js' %}"></script>
+{% endblock page_js %}
+
+{% block content %}
+<h4 class="mb-1">Entidades</h4>
+<p class="mb-6">Entidades que se visualizan en el Sistema con sus permisos asociados.</p>
+
+<!-- Entidades -->
+<div class="card mb-12">
+  <div class="card-datatable table-responsive">
+    <table class="datatables-modelos table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Asignados a</th>
+          <th>Permisos</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for entidad in entidades %}
+        <tr>
+          <!-- Nombre de la Entidad -->
+          <td>
+            <div class="d-flex flex-column">
+              <code>{{ entidad.app_label }}</code>
+              <a href=""><span class="text-heading text-truncate fw-medium text-capitalize">{{ entidad.model }}</a>
+            </div>
+          </td>
+          <!--/ Nombre de la Entidad -->
+
+          <!-- Grupos asociados a esta Entidad -->
+          <td>
+            {% if entidad.grupos %}
+              {% for grupo in entidad.grupos %}
+              <a href="">
+                <span class="badge rounded-pill bg-label-primary me-4">{{ grupo.name }}</span>
+              </a>
+              {% endfor %}
+            {% else %}
+              <span class="text-muted">N/A</span>
+            {% endif %}
+          </td>
+          <!--/ Grupos asociados a esta Entidad -->
+
+          <!-- Permisos -->
+          <td>
+            {% for permiso in entidad.permisos %}
+            <a href="">
+              <span class="badge rounded-pill bg-label-primary me-1">{{ permiso.name }}</span>
+            </a>
+            {% endfor %}
+          </td>
+          <!--/ Permisos -->
+
+          <!-- Acciones -->
+          <td>
+            <a href="" class="d-inline-flex p-2 align-items-center rounded-circle alert-danger">
+              <i class="ri-delete-bin-7-line ri-22px"></i>
+            </a>
+          </td>
+          <!--/ Acciones -->
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+<!--/ Tabla Permisos -->
+
+{% if request.user.is_superuser %}
+<h4 class="mb-1">Entidades Excluidas</h4>
+<p class="mb-6">Entidades que se encuentran excluidos en el sistema y no se muestran sus permisos</p>
+
+<!-- Tabla Modelos Excluidos -->
+<div class="card mb-12">
+  <div class="card-datatable table-responsive">
+    <table class="datatables-modelos-excluidos table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Permisos</th>
+          <th>Justificacion</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for entidad in entidades_excepts %}
+        <tr>
+          <!-- Nombre del modelo -->
+          <td>
+            <div class="d-flex flex-column">
+              <code>{{ entidad.content.app_label }}</code>
+              <a href=""><span class="text-heading text-truncate fw-medium text-capitalize">{{ entidad.content.model }}</span></a>
+            </div>
+          </td>
+          <!-- Grupos asociados a este modelo -->
+          <td>
+            {% for permiso in entidad.content.permission_set.all %}
+            <a href="">
+              <span class="badge rounded-pill bg-label-primary me-1">{{ permiso.name }}</span>
+            </a>
+            {% endfor %}
+          </td>
+          <!-- Justificacion -->
+          <td>
+            <span class="text-wrap">{{entidad.justificacion}}</span>
+          </td>
+          <!-- Acciones -->
+          <td>
+            <a href="" class="d-inline-flex p-2 align-items-center rounded-circle alert-danger" {% if not request.user.is_superuser %}disabled{% endif %}>
+              <i class="ri-delete-bin-7-line ri-22px"></i>
+            </a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+<!--/ Tabla Modelos Excluidos -->
+{% endif %}
+
+<span class="text-nowrap"><a href="#"><span class="badge rounded-pill bg-label-primary me-4">Administrador</span></a></span>
+<span class="text-nowrap"><a href="#"><span class="badge rounded-pill bg-label-warning me-4">Manager</span></a></span>
+<span class="text-nowrap"><a href="#"><span class="badge rounded-pill bg-label-success me-4">Users</span></a></span>
+<span class="text-nowrap"><a href="#"><span class="badge rounded-pill bg-label-info me-4">Support</span></a></span>
+<span class="text-nowrap"><a href="#"><span class="badge rounded-pill bg-label-danger me-4">Restricted User</span></a></span>
+{% endblock %}

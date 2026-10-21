@@ -1,0 +1,19 @@
+{
+    "sedes": [
+        {
+            "nombre": "Sede Santiago",
+            "descripcion": "",
+            "imagen": null
+        },
+        {
+            "nombre": "Sede Viña del Mar",
+            "descripcion": "",
+            "imagen": null
+        },
+        {
+            "nombre": "Sede Concepcion",
+            "descripcion": "",
+            "imagen": null
+        }
+    ]
+}

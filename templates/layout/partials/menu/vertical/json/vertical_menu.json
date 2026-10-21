@@ -1,0 +1,164 @@
+{
+  "menu": [
+    {
+      "url": "home",
+      "name": "Home",
+      "icon": "menu-icon tf-icons ri-home-2-line",
+      "slug": "home"
+    },
+    {
+      "url": "orders-list",
+      "name": "Solicitudes",
+      "icon": "menu-icon tf-icons ri-inbox-2-line",
+      "slug": "orders"
+    },
+    {
+      "menu_header": "Accesos",
+      "slug": "access",
+      "permission": "usuario.view_usuario"
+    },
+    {
+      "url": "technicians-list",
+      "name": "Tecnicos",
+      "icon": "menu-icon tf-icons ri-user-line",
+      "slug": "technicians"
+    },
+    {
+      "url": "groups-list",
+      "name": "Grupos",
+      "icon": "menu-icon tf-icons ri-group-line",
+      "slug": "groups"
+    },
+    {
+      "url": "permissions-list",
+      "name": "Permisos",
+      "icon": "menu-icon tf-icons ri-home-gear-line",
+      "slug": "permissions"
+    },
+    {
+      "menu_header": "Activos",
+      "slug": "activo",
+      "permission": "usuario.view_usuario"
+    },
+    {
+      "url": "computers-list",
+      "name": "Equipos",
+      "icon": "menu-icon tf-icons ri-computer-line",
+      "slug": "computers"
+    },
+    {
+      "url": "categories-list",
+      "name": "Categorias",
+      "icon": "menu-icon tf-icons ri-cpu-line",
+      "slug": "categories"
+    },
+    {
+      "url": "supplies-list",
+      "name": "Insumos",
+      "icon": "menu-icon tf-icons ri-mouse-line",
+      "slug": "supplies"
+    },
+    {
+      "url": "movements-list",
+      "name": "Movimientos",
+      "icon": "menu-icon tf-icons ri-arrow-left-right-line",
+      "slug": "movements"
+    },
+    {
+      "url": "warehouse-list",
+      "name": "Bodegas",
+      "icon": "menu-icon tf-icons ri-bank-line",
+      "slug": "warehouse"
+    },
+    {
+      "menu_header": "Compras",
+      "slug": "compras",
+      "permission": "usuario.view_usuario"
+    },
+    {
+      "url": "providers-list",
+      "name": "Proveedores",
+      "icon": "menu-icon tf-icons ri-team-line",
+      "slug": "providers"
+    },
+    {
+      "url": "oc-list",
+      "name": "Ordenes de Compra",
+      "icon": "menu-icon tf-icons ri-shopping-cart-line",
+      "slug": "oc"
+    },
+    {
+      "menu_header": "Actas",
+      "slug": "actas",
+      "permission": "usuario.view_usuario"
+    },
+    {
+      "url": "computers-forms-list",
+      "name": "Formularios",
+      "icon": "menu-icon tf-icons ri-survey-line",
+      "slug": "computers-forms"
+    },
+    {
+      "url": "locations-list",
+      "name": "Ubicaciones",
+      "icon": "menu-icon tf-icons ri-map-2-line",
+      "slug": "locations"
+    },
+    {
+      "url": "clients-list",
+      "name": "Usuarios",
+      "icon": "menu-icon tf-icons ri-group-2-line",
+      "slug": "clients"
+    },
+    {
+      "menu_header": "Tickets",
+      "slug": "tickets",
+      "permission": "usuario.view_usuario"
+    },
+    {
+      "url": "automation-main",
+      "name": "Cargar Ticket",
+      "icon": "menu-icon tf-icons ri-price-tag-3-line",
+      "slug": "automation"
+    },
+    {
+      "menu_header": "Proceso ETL",
+      "slug": "etl",
+      "permission": "usuario.view_usuario"
+    },
+    {
+      "url": "etl-main",
+      "name": "Dashboard",
+      "icon": "menu-icon tf-icons ri-line-chart-line",
+      "slug": "dashboard"
+    },
+    {
+      "menu_header": "QR",
+      "slug": "qr",
+      "permission": "usuario.view_usuario"
+    },
+    {
+      "url": "qr-soporte-list",
+      "name": "QR Soporte",
+      "icon": "menu-icon tf-icons ri-qr-code-line",
+      "slug": "qr-soporte"
+    },
+    {
+      "menu_header": "Sistema",
+      "slug": "system",
+      "permission": "usuario.view_usuario"
+    },
+    {
+      "url": "emails-list",
+      "name": "E-Mails",
+      "icon": "menu-icon tf-icons ri-mail-line",
+      "slug": "emails"
+    },
+    {
+      "url": "sex-list",
+      "name": "Generos",
+      "icon": "menu-icon tf-icons ri-open-arm-line",
+      "slug": "sex"
+    }
+  ]
+}

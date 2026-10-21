@@ -1,0 +1,137 @@
+<div
+  class="modal fade"
+  id="account-status-modal"
+  tabindex="-1"
+  aria-labelledby="account-status-modal-title"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <form
+        method="post"
+        action="{% url 'technicians-status' tecnico.pk %}"
+      >
+        {% csrf_token %}
+
+        <input
+          type="hidden"
+          name="action"
+          value="{% if tecnico.is_active %}deactivate{% else %}activate{% endif %}"
+        >
+
+        <div class="modal-header">
+          <h5
+            class="modal-title"
+            id="account-status-modal-title"
+          >
+            {% if tecnico.is_active %}
+              Desactivar cuenta
+            {% else %}
+              Activar cuenta
+            {% endif %}
+          </h5>
+
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Cerrar"
+          ></button>
+        </div>
+
+        <div class="modal-body">
+          {% if tecnico.is_active %}
+            <div class="alert alert-warning">
+              <div class="d-flex gap-3">
+                <i class="ri-alert-line ri-22px"></i>
+
+                <div>
+                  <h6 class="alert-heading mb-1">
+                    El usuario perderá el acceso
+                  </h6>
+
+                  <p class="mb-0">
+                    Sus datos y registros históricos
+                    permanecerán almacenados.
+                  </p>
+                </div>
+              </div>
+            </div>
+          {% else %}
+            <div class="alert alert-success">
+              <div class="d-flex gap-3">
+                <i class="ri-checkbox-circle-line ri-22px"></i>
+
+                <div>
+                  <h6 class="alert-heading mb-1">
+                    El usuario recuperará el acceso
+                  </h6>
+
+                  <p class="mb-0">
+                    Podrá volver a iniciar sesión
+                    normalmente.
+                  </p>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+
+          <p>
+            Cuenta:
+            <strong>
+              {{ tecnico.get_full_name|default:tecnico.email }}
+            </strong>
+          </p>
+
+          <div class="form-check">
+            <input
+              type="checkbox"
+              name="confirm"
+              id="confirm-account-status"
+              class="form-check-input"
+              required
+            >
+
+            <label
+              for="confirm-account-status"
+              class="form-check-label"
+            >
+              Confirmo que deseo
+              {% if tecnico.is_active %}
+                desactivar
+              {% else %}
+                activar
+              {% endif %}
+              esta cuenta.
+            </label>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-outline-secondary"
+            data-bs-dismiss="modal"
+          >
+            Cancelar
+          </button>
+
+          <button
+            type="submit"
+            class="btn {% if tecnico.is_active %}btn-danger{% else %}btn-success{% endif %}"
+          >
+            {% if tecnico.is_active %}
+              <i class="ri-user-forbid-line me-1"></i>
+              Desactivar cuenta
+            {% else %}
+              <i class="ri-user-follow-line me-1"></i>
+              Activar cuenta
+            {% endif %}
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
