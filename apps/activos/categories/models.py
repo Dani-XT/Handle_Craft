@@ -129,11 +129,11 @@ from django.core.exceptions import ValidationError
 
 
 class AtributoValor(models.Model):
-    producto = models.ForeignKey(
-        Producto,
-        on_delete=models.CASCADE,
-        related_name="valores_atributos",
-    )
+    # producto = models.ForeignKey(
+    #     Producto,
+    #     on_delete=models.CASCADE,
+    #     related_name="valores_atributos",
+    # )
 
     configuracion = models.ForeignKey(
         CategoriaAtributo,
