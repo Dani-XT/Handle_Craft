@@ -49,17 +49,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'apps.home',
+    'apps.landing',
     'apps.orders',
     
     # ACCESO
     'apps.acceso.groups',
     'apps.acceso.permissions',
     'apps.acceso.technicians',
-    
-    # ACTAS
-    'apps.actas.clients',
-    'apps.actas.computers_forms',
-    'apps.actas.locations',
 
     # ACTIVOS
     'apps.activos.categories',
@@ -72,8 +68,7 @@ INSTALLED_APPS = [
     'apps.compras.oc',
     'apps.compras.providers',
 
-    # ETL
-    'apps.ETL.etl',
+    # VENTAS
 
     # QR
     'apps.QR.qr_soporte',
@@ -84,6 +79,9 @@ INSTALLED_APPS = [
 
     'apps.core.apps.CoreConfig',
     'apps.auth.apps.AuthConfig',
+
+    # LIBRERIAS
+    "auditlog",
 
 
 
@@ -98,6 +96,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'auditlog.middleware.AuditlogMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]

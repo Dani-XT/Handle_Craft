@@ -5,7 +5,7 @@ from django.shortcuts import get_object_or_404, redirect
 from django.views.generic import FormView
 from django.contrib.auth.mixins import PermissionRequiredMixin
 
-# from apps.activos.warehouse.forms.add_update import WarehouseAddUodateForm
+from apps.activos.warehouse.forms.add_update import WarehouseAddUodateForm
 
 class WarehouseAddUpdateView(PermissionRequiredMixin, FormView):
     raise_exception = True

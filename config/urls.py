@@ -31,11 +31,6 @@ urlpatterns = [
     path('', include("apps.acceso.permissions.urls")),
     path('', include("apps.acceso.technicians.urls")),
 
-    # ACTAS
-    path('', include("apps.actas.clients.urls")),
-    path('', include("apps.actas.computers_forms.urls")),
-    path('', include("apps.actas.locations.urls")),
-
     # ACTIVOS
     path('', include("apps.activos.categories.urls")),
     path('', include("apps.activos.computers.urls")),
@@ -47,8 +42,7 @@ urlpatterns = [
     path('', include("apps.compras.oc.urls")),
     path('', include("apps.compras.providers.urls")),
 
-    # ETL
-    path('', include("apps.ETL.etl.urls")),
+    # VENTAS
 
     # QR
     path('', include("apps.QR.qr_soporte.urls")),

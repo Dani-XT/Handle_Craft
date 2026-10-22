@@ -7,7 +7,6 @@ from django.contrib.auth.models import Group
 from django.contrib.auth import get_user_model
 
 from apps.sistema.sex.models import Sexo
-from apps.actas.locations.models import Campus, Direccion, Sede
 
 # from automation_ticket.utils.validators.utils import rut_validator
 
@@ -48,10 +47,6 @@ class TechniciansAddUpdateForm(forms.ModelForm):
 
     sexo = forms.ModelChoiceField(queryset=Sexo.objects.none(), required=True,)
 
-    sede = forms.ModelChoiceField(queryset=Sede.objects.none())
-    campus = forms.ModelChoiceField(queryset=Campus.objects.none())
-    direccion = forms.ModelChoiceField(queryset=Direccion.objects.none())
-
     grupo = forms.ModelChoiceField(queryset=Group.objects.none(), required=False,)
 
     password1 = forms.CharField(label="Contraseña", required=False, strip=False,)
@@ -69,7 +64,6 @@ class TechniciansAddUpdateForm(forms.ModelForm):
             "rut",
             "email",
             "sexo",
-            "direccion",
         )
 
     def __init__(self, *args, actor=None, **kwargs):
@@ -79,10 +73,7 @@ class TechniciansAddUpdateForm(forms.ModelForm):
 
         self.fields["sexo"].queryset = (Sexo.objects.all().order_by("nombre"))
 
-        self.fields["sede"].queryset = (Sede.objects.all().order_by("nombre"))
-        self.fields["campus"].queryset = (Campus.objects.select_related("sede").order_by("nombre"))
-        self.fields["direccion"].queryset = (Direccion.objects.select_related("edificio", "campus", "campus__sede",).order_by("direccion"))
-
+        
         self.fields["grupo"].queryset = grupos_asignables_por(actor)
 
         self.original_is_superuser = bool(self.instance.pk and self.instance.is_superuser)
@@ -98,22 +89,7 @@ class TechniciansAddUpdateForm(forms.ModelForm):
             if grupo:
                 self.initial.setdefault("grupo", grupo.pk)
 
-            if self.instance.direccion_id:
-                direccion = self.instance.direccion
-
-                self.initial.setdefault(
-                    "direccion",
-                    direccion.pk,
-                )
-                self.initial.setdefault(
-                    "campus",
-                    direccion.campus_id,
-                )
-                self.initial.setdefault(
-                    "sede",
-                    direccion.campus.sede_id,
-                )
-
+            
         
 
     def clean_email(self):
@@ -152,9 +128,6 @@ class TechniciansAddUpdateForm(forms.ModelForm):
 
         password1 = data.get("password1")
         password2 = data.get("password2")
-        sede = data.get("sede")
-        campus = data.get("campus")
-        direccion = data.get("direccion")
         grupo = data.get("grupo")
         is_superuser = data.get("is_superuser", False)
         admin_password = data.get("admin_password")
@@ -186,18 +159,6 @@ class TechniciansAddUpdateForm(forms.ModelForm):
                 self.add_error("password1", error)
 
         # Validación jerárquica de ubicación.
-        if sede and campus and campus.sede_id != sede.pk:
-            self.add_error(
-                "campus",
-                "El campus seleccionado no pertenece a esta sede.",
-            )
-
-        if campus and direccion and direccion.campus_id != campus.pk:
-            self.add_error(
-                "direccion",
-                "La dirección seleccionada no pertenece a este campus.",
-            )
-
         promoting_to_superuser = (
             is_superuser
             and not self.original_is_superuser
