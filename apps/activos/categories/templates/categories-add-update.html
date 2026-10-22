@@ -118,52 +118,5 @@
   </div>
   <!--/ Imagen Categoria -->
 
-  <!-- Atributos -->
-  <div class="col-md-6 order-1 order-md-1">
-    <div class="card mb-6">
-      <div class="card-header d-flex justify-content-between align-items-center">
-        <h5 class="mb-0 card-title">Imagen Categoria</h5>
-      </div>
-      <div class="card-body">
-        {% if categoria.img %}
-        <div class="d-flex justify-content-center align-items-center mb-1">
-          <img src="{{ categoria.img }}" alt="user image" class="img-fluid rounded m-4" height="150" width="150">        
-        </div>
-        <div class="button-wrapper">
-          <label for="upload" class="btn btn-sm btn-primary me-3 mb-4" tabindex="0">
-            <span class="d-none d-sm-block">Upload new photo</span>
-            <i class="ri-upload-2-line d-block d-sm-none"></i>
-            <input type="file" id="upload" class="account-file-input" hidden accept="image/png, image/jpeg" />
-          </label>
-          <button type="button" class="btn btn-sm btn-outline-danger account-image-reset mb-4">
-            <i class="ri-refresh-line d-block d-sm-none"></i>
-            <span class="d-none d-sm-block">Reset</span>
-          </button>
-          <div>Allowed JPG, GIF or PNG. Max size of 800K</div>
-        </div>
-        {% else %}
-        <form action="/upload" class="dropzone needsclick" id="dropzone-basic">
-          <div class="dz-message needsclick">
-            <div class="d-flex justify-content-center">
-              <div class="avatar avatar-md">
-                <span class="avatar-initial rounded bg-label-secondary">
-                  <i class="ri-upload-2-line ri-24px"></i>
-                </span>
-              </div>
-            </div>
-            <p class="h4 needsclick my-2">Drag and drop your image here</p>
-            <small class="text-muted d-block fs-6 my-2">or</small>
-            <span class="needsclick btn btn-sm btn-outline-primary" id="btnBrowse">Browse image</span>
-          </div>
-          <div class="fallback">
-            <input name="file" type="file" />
-          </div>
-        </form>
-        {% endif %}
-      </div>
-    </div>
-  </div>
-  <!--/ Atributos -->
-
 </div>
 {% endblock %}

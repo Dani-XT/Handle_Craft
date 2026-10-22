@@ -55,11 +55,10 @@ INSTALLED_APPS = [
     # ACCESO
     'apps.acceso.groups',
     'apps.acceso.permissions',
-    'apps.acceso.technicians',
+    'apps.acceso.users',
 
     # ACTIVOS
     'apps.activos.categories',
-    'apps.activos.computers',
     'apps.activos.movements',
     'apps.activos.supplies',
     'apps.activos.warehouse',
@@ -69,9 +68,6 @@ INSTALLED_APPS = [
     'apps.compras.providers',
 
     # VENTAS
-
-    # QR
-    'apps.QR.qr_soporte',
 
     # SISTEMA
     'apps.sistema.sex',
@@ -236,7 +232,7 @@ EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD", default="")
 # Loginyour mail
 # ------------------------------------------------------------------------------
 LOGIN_URL = "/login/"
-LOGOUT_REDIRECT_URL = "/login/"
+LOGOUT_REDIRECT_URL = "/landing/"
 
 # Session
 # ------------------------------------------------------------------------------

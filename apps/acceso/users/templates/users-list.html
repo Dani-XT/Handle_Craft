@@ -32,10 +32,10 @@
 <p class="mb-3">Tecnicos con accesos al sistema.</p>
 <div class="card">
   <div class="card-datatable table-responsive">
-    <table class="datatables-tecnicos table" data-datatables-urls="{% url 'technicians-add' %}">
+    <table class="datatables-tecnicos table" data-datatables-urls="{% url 'users-add' %}">
       <thead>
         <tr>
-          <th>Tecnico</th>
+          <th>Usuario</th>
           <th>Email</th>
           <th>Rol</th>
           <th>Estado</th>
@@ -44,48 +44,48 @@
         </tr>
       </thead>
       <tbody>
-        {% for tecnico in tecnicos %}
+        {% for usuario in usuarios %}
         <tr>
           <!-- Avatar - Nombre y Usuario -->
           <td>      
             <div class="d-flex justify-content-start align-items-center user-name">
               <div class="avatar-wrapper">
                 <div class="avatar avatar-sm me-4">
-                  {% if tecnico.img %}
-                  <img src="{{ tecnico.img }}" alt="avatar" class="rounded-circle">
-                  {% elif tecnico.get_full_name %}
-                  <span class="avatar-initial rounded-circle bg-label-info">{{ tecnico.get_full_name|get_iniciales }}</span>
+                  {% if usuario.img %}
+                  <img src="{{ usuario.img }}" alt="avatar" class="rounded-circle">
+                  {% elif usuario.get_full_name %}
+                  <span class="avatar-initial rounded-circle bg-label-info">{{ usuario.get_full_name|get_iniciales }}</span>
                   {% else %}
-                  <span class="avatar-initial rounded-circle bg-label-info">{{ tecnico.username|get_iniciales }}</span>
+                  <span class="avatar-initial rounded-circle bg-label-info">{{ usuario.username|get_iniciales }}</span>
                   {% endif %}
                 </div>
               </div>
               <div class="d-flex flex-column">
                 <a href="#" class="text-heading text-truncate">
-                  <span class="fw-medium">{{tecnico.first_name}} {{tecnico.last_name}}</span>
+                  <span class="fw-medium">{{usuario.first_name}} {{usuario.last_name}}</span>
                 </a>
                 <a href="#" class="text-reset">
-                  <small>{{tecnico.username}}</small>
+                  <small>{{usuario.username}}</small>
                 </a>
               </div>
             </div>
           </td>
           <!-- Email -->
           <td>
-            {% if tecnico.email %}
-            <span>{{tecnico.email}}</span>
+            {% if usuario.email %}
+            <span>{{usuario.email}}</span>
             {% else %}
             <span>Sin email</span>
             {% endif %}
           </td> 
           <!-- Role -->
           <td> 
-            {% if tecnico.is_superuser %}
+            {% if usuario.is_superuser %}
               <span class="badge rounded-pill bg-label-danger me-1">SuperUser</span>
               
             {% else %}
-              {% if tecnico.groups.all %}
-                {% for grupo in tecnico.groups.all %}
+              {% if usuario.groups.all %}
+                {% for grupo in usuario.groups.all %}
                 <span class="badge rounded-pill bg-label-primary me-1">{{ grupo.name }}</span>
                 {% empty %}
                 <span class="text-muted">Sin rol</span>
@@ -95,7 +95,7 @@
           </td> 
           <!-- Estado -->
           <td>
-            {% if tecnico.is_active %}
+            {% if usuario.is_active %}
             <span class="badge badge-dot bg-success me-1"></span>Activo 
             {% else %}
             <span class="badge badge-dot bg-danger me-1"></span>Inactivo
@@ -103,7 +103,7 @@
           </td>
           <!-- Staff -->
           <td>
-            {% if tecnico.is_staff %}
+            {% if usuario.is_staff %}
             <span class="badge rounded-pill bg-label-success" text-capitalized>Staff</span>
             {% else %}
             <span class="badge rounded-pill bg-label-warning" text-capitalized>No staff</span>
@@ -111,7 +111,7 @@
           </td>
           <!-- Acciones -->
           <td>
-            <a href="{% url 'technicians-update' tecnico.pk %}" class="d-inline-flex p-2 align-items-center text-secondary">
+            <a href="{% url 'users-update' usuario.pk %}" class="d-inline-flex p-2 align-items-center text-secondary">
               <i class="ri-edit-box-line ri-22px"></i>
             </a>
             <a href="#" class="d-inline-flex p-2 align-items-center rounded-circle alert-danger">

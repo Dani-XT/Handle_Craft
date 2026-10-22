@@ -39,7 +39,7 @@ def grupos_asignables_por(actor):
         pk__in=grupos_permitidos
     ).order_by("name")
 
-class TechniciansAddUpdateForm(forms.ModelForm):
+class UsersAddUpdateForm(forms.ModelForm):
     first_name = forms.CharField(label="Nombre", max_length=150)
     last_name = forms.CharField(label="Apellido", max_length=150)
     email = forms.EmailField(label="E-mail", )

@@ -23,17 +23,19 @@ from django.conf.urls.static import static
 from web_project.views import SystemView
 
 urlpatterns = [
+    # LANDING
+    path('', include("apps.landing.urls")),
+    
     path('', include("apps.home.urls")),
     path('', include("apps.orders.urls")),
 
     # ACCESO
     path('', include("apps.acceso.groups.urls")),
     path('', include("apps.acceso.permissions.urls")),
-    path('', include("apps.acceso.technicians.urls")),
+    path('', include("apps.acceso.users.urls")),
 
     # ACTIVOS
     path('', include("apps.activos.categories.urls")),
-    path('', include("apps.activos.computers.urls")),
     path('', include("apps.activos.movements.urls")),
     path('', include("apps.activos.supplies.urls")),
     path('', include("apps.activos.warehouse.urls")),
@@ -43,9 +45,6 @@ urlpatterns = [
     path('', include("apps.compras.providers.urls")),
 
     # VENTAS
-
-    # QR
-    path('', include("apps.QR.qr_soporte.urls")),
 
     # SISTEMA
     path('', include("apps.sistema.emails.urls")),

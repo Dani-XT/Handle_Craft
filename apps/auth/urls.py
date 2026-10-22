@@ -1,5 +1,4 @@
 from django.urls import path
-from django.shortcuts import redirect
 
 from django.contrib.auth.views import LogoutView
 
@@ -10,7 +9,6 @@ from apps.auth.views.forgot_password import ForgetPasswordView
 from apps.auth.views.reset_password import ResetPasswordView
 
 urlpatterns = [
-    path("", lambda request: redirect('login')),
 
     path(
         "login/",

@@ -39,7 +39,7 @@ TEMPLATE_CONFIG = {
 THEME_VARIABLES = {
     "creator_name": "ThemeSelection",
     "creator_url": "https://themeselection.com/",
-    "template_name": "Materio",
+    "template_name": "HandleKraft ",
     "template_suffix": "Django Admin Template",
     "template_version": "2.0.0",
     "template_free": False,

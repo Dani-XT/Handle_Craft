@@ -27,7 +27,7 @@
   method="post"
   id="technician-form"
   autocomplete="off"
-  action="{% if tecnico %}{% url 'technicians-update' tecnico.pk %}{% else %}{% url 'technicians-add' %}{% endif %}"
+  action="{% if tecnico %}{% url 'users-update' tecnico.pk %}{% else %}{% url 'users-add' %}{% endif %}"
   data-original-superuser="{% if tecnico.is_superuser %}true{% else %}false{% endif %}"
 >
   {% csrf_token %}
@@ -39,7 +39,7 @@
     </div>
 
     <div class="d-flex flex-wrap gap-3">
-      <a href="{% url 'technicians-list' %}" class="btn btn-outline-danger">Descartar</a>
+      <a href="{% url 'users-list' %}" class="btn btn-outline-danger">Descartar</a>
       <button type="submit" class="btn btn-primary">{% if tecnico %}Guardar cambios{% else %}Crear usuario{% endif %}</button>
     </div>
 

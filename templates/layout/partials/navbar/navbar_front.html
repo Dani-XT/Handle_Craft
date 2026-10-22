@@ -1,0 +1,153 @@
+{% load static %}
+
+<!-- Navbar: Start -->
+<nav class="layout-navbar container shadow-none py-0">
+  <div class="navbar navbar-expand-lg landing-navbar border-top-0 px-4 px-md-8">
+    <!-- Menu logo wrapper: Start -->
+    <div class="navbar-brand app-brand demo d-flex py-0 py-lg-2 me-6">
+      <!-- Mobile menu toggle: Start-->
+      <button class="navbar-toggler border-0 px-0 me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="tf-icons ri-menu-fill ri-24px align-middle"></i>
+      </button>
+      <!-- Mobile menu toggle: End-->
+      <a href="{% url 'landing' %}" class="app-brand-link">
+        <span class="app-brand-logo demo">{% include 'partials/logo.html' %}</span>
+        <span class="app-brand-text demo menu-text fw-semibold ms-2 ps-1">{% get_theme_variables 'template_name' %}</span>
+      </a>
+    </div>
+    <!-- Menu logo wrapper: End -->
+    <!-- Menu wrapper: Start -->
+    <div class="collapse navbar-collapse landing-nav-menu" id="navbarSupportedContent">
+      <button class="navbar-toggler border-0 text-heading position-absolute end-0 top-0 scaleX-n1-rtl" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="tf-icons ri-close-fill"></i>
+      </button>
+      <ul class="navbar-nav me-auto p-4 p-lg-0">
+        <li class="nav-item">
+          <a class="nav-link fw-medium" aria-current="page" href="{% url 'landing' %}#landingHero">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-medium" href="{% url 'landing' %}#landingFeatures">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-medium" href="{% url 'landing' %}#landingTeam">Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-medium" href="{% url 'landing' %}#landingFAQ">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-medium text-nowrap" href="{% url 'landing' %}#landingContact">Contact us</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link fw-medium text-nowrap" href="{% url 'home' %}">Admin</a>
+        </li>
+      </ul>
+    </div>
+    <div class="landing-menu-overlay d-lg-none"></div>
+    <!-- Menu wrapper: End -->
+    <!-- Toolbar: Start -->
+    <ul class="navbar-nav flex-row align-items-center ms-auto">
+      {% if has_customizer %}
+      <!-- Style Switcher -->
+      <li class="nav-item dropdown-style-switcher dropdown me-2 me-xl-0">
+        <a class="nav-link btn btn-text-secondary rounded-pill btn-icon dropdown-toggle hide-arrow me-sm-4" href="javascript:void(0);" data-bs-toggle="dropdown">
+          <i class='ri-24px text-heading'></i>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end dropdown-styles">
+          <li>
+            <a class="dropdown-item" href="javascript:void(0);" data-theme="light">
+              <span class="align-middle"><i class='ri-sun-line ri-24px me-3'></i>Light</span>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="javascript:void(0);" data-theme="dark">
+              <span class="align-middle"><i class="ri-moon-clear-line ri-24px me-3"></i>Dark</span>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="javascript:void(0);" data-theme="system">
+              <span class="align-middle"><i class="ri-computer-line ri-24px me-3"></i>System</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!-- / Style Switcher-->
+      {% endif %}
+      <!-- navbar button: Start -->
+      {% if request.user.is_authenticated %}
+
+      <li class="nav-item navbar-dropdown dropdown-user dropdown">
+        <a class="nav-link dropdown-toggle hide-arrow p-0" href="javascript:void(0);" data-bs-toggle="dropdown">
+          <div class="avatar avatar-online">
+            <!-- Moke condition for displaying user avatar -->
+            {% if request.user|has_group:"admin" %}
+            <img src="{% static 'img/avatars/1.png' %}" alt class="w-px-40 h-auto rounded-circle">
+            {% else %}
+            <img src="{% static 'img/avatars/3.png' %}" alt class="w-px-40 h-auto rounded-circle">
+            {% endif %}
+          </div>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end mt-3 py-2">
+          <li>
+            <a class="dropdown-item" href="">
+               <div class="d-flex align-items-center">
+                <div class="flex-shrink-0 me-2">
+                  <div class="avatar avatar-online">
+                    <!-- Moke condition for displaying user avatar -->
+                    {% if request.user|has_group:"admin" %}
+                    <img src="{% static 'img/avatars/1.png' %}" alt class="w-px-40 h-auto rounded-circle">
+                    {% else %}
+                    <img src="{% static 'img/avatars/3.png' %}" alt class="w-px-40 h-auto rounded-circle">
+                    {% endif %}
+                  </div>
+                </div>
+                <div class="flex-grow-1">
+                  <h6 class="mb-0 small">{{ request.user.username| capfirst }}</h6>
+                      {% for group in request.user.groups.all %}
+                      <small class="text-muted">{{ group.name|  capfirst }}</small>
+                  {% endfor %}
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            {% if request.user.is_authenticated and request.user.profile.is_verified %}
+            <span class="dropdown-item d-flex justify-content-between align-content-center">
+              <span>
+                <i class='ri-user-line ri-22px me-2'></i>
+                <span class="align-middle">Verified</span>
+              </span>
+              <span class="text-success"><i class='ri-checkbox-circle-line ri-22px'></i></span>
+            </span>
+            {% else %}
+            <a class="dropdown-item d-flex justify-content-between align-content-center" href="">
+              <span>
+                <i class='ri-user-line ri-22px me-2'></i>
+                <span class="align-middle">Not Verified</span>
+              </span>
+              <span class="text-danger"><i class='ri-close-circle-line ri-22px'></i></span>
+            </a>
+            {% endif %}
+          </li>
+          <li>
+            <form action="" method="post" class="d-grid px-4 pt-2 pb-1">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-danger d-flex">
+                  <small class="align-middle">Logout</small>
+                  <i class="ri-logout-box-r-line ms-2 ri-16px"></i>
+              </button>
+            </form>
+          </li>
+        </ul>
+      </li>
+      {% else %}
+      <li>
+        <a href="{% url 'login' %}" class="btn btn-primary px-2 px-sm-4 px-lg-2 px-xl-4" target="_blank"><span class="tf-icons ri-user-line me-md-1"></span><span class="d-none d-md-block">Login/Register</span></a>
+      </li>
+      {% endif %}
+      <!-- navbar button: End -->
+    </ul>
+    <!-- Toolbar: End -->
+  </div>
+</nav>
+<!-- Navbar: End -->

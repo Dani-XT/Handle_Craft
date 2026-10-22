@@ -6,7 +6,7 @@ from django.db import transaction
 from django.shortcuts import get_object_or_404, redirect
 from django.views import View
 
-from apps.acceso.technicians.forms.status import TechnicianStatusForm
+from apps.acceso.users.forms.status import TechnicianStatusForm
 
 
 User = get_user_model()

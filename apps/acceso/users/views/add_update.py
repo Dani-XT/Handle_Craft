@@ -13,16 +13,16 @@ from django.contrib.auth import get_user_model
 from web_project import TemplateLayout
 from web_project.template_helpers.theme import TemplateHelper
 
-from apps.acceso.technicians.forms.add_update import TechniciansAddUpdateForm
+from apps.acceso.users.forms.add_update import UsersAddUpdateForm
 
 User = get_user_model()
 
-class TechniciansAddUpdateView(PermissionRequiredMixin, FormView):
+class UsersAddUpdateView(PermissionRequiredMixin, FormView):
     raise_exception = True
 
-    template_name = "technicians-add-update.html"
-    form_class = TechniciansAddUpdateForm
-    success_url = reverse_lazy("technicians-list")
+    template_name = "users-add-update.html"
+    form_class = UsersAddUpdateForm
+    success_url = reverse_lazy("users-list")
 
     # Obtener usuario
     def get_object(self):

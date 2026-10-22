@@ -7,16 +7,16 @@ from web_project.template_helpers.theme import TemplateHelper
 
 User = get_user_model()
 
-class TechniciansListView(PermissionRequiredMixin, TemplateView):
+class UsersListView(PermissionRequiredMixin, TemplateView):
     permission_required = ("auth.view_user")
-    template_name = "technicians-list.html"
+    template_name = "users-list.html"
 
     def get_context_data(self, **kwargs):
         context = TemplateLayout.init(self, super().get_context_data(**kwargs))
 
         context.update(
             {
-                "tecnicos": User.objects.all().order_by('id'),
+                "usuarios": User.objects.all().order_by('id'),
             }
         )
 

@@ -1,6 +1,6 @@
 {% extends layout_path %}
 
-{% block title %}Product List - eCommerce{% endblock %}
+{% block title %}Categorias - Apps {% endblock %}
 
 {% block vendor_css %}
 {{ block.super }}
@@ -66,7 +66,7 @@
             </div>
             <div class="col-7">
               <div class="card-body text-sm-end text-center ps-sm-0">
-                <a href="" class="btn btn-sm btn-primary mb-4 text-nowrap add-new-role">Crear categoria</a>
+                <a href="{% url 'categories-add' %}" class="btn btn-sm btn-primary mb-4 text-nowrap add-new-role">Crear categoria</a>
                 <p class="mb-0">Crear categoria, si no existe</p>
               </div>
             </div>

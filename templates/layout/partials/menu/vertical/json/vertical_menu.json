@@ -18,10 +18,10 @@
       "permission": "usuario.view_usuario"
     },
     {
-      "url": "technicians-list",
-      "name": "Tecnicos",
+      "url": "users-list",
+      "name": "Usuarios",
       "icon": "menu-icon tf-icons ri-user-line",
-      "slug": "technicians"
+      "slug": "users"
     },
     {
       "url": "groups-list",
@@ -39,12 +39,6 @@
       "menu_header": "Activos",
       "slug": "activo",
       "permission": "usuario.view_usuario"
-    },
-    {
-      "url": "computers-list",
-      "name": "Equipos",
-      "icon": "menu-icon tf-icons ri-computer-line",
-      "slug": "computers"
     },
     {
       "url": "categories-list",
@@ -86,51 +80,6 @@
       "name": "Ordenes de Compra",
       "icon": "menu-icon tf-icons ri-shopping-cart-line",
       "slug": "oc"
-    },
-    {
-      "menu_header": "Actas",
-      "slug": "actas",
-      "permission": "usuario.view_usuario"
-    },
-    {
-      "url": "computers-forms-list",
-      "name": "Formularios",
-      "icon": "menu-icon tf-icons ri-survey-line",
-      "slug": "computers-forms"
-    },
-    {
-      "url": "locations-list",
-      "name": "Ubicaciones",
-      "icon": "menu-icon tf-icons ri-map-2-line",
-      "slug": "locations"
-    },
-    {
-      "url": "clients-list",
-      "name": "Usuarios",
-      "icon": "menu-icon tf-icons ri-group-2-line",
-      "slug": "clients"
-    },
-    {
-      "menu_header": "Proceso ETL",
-      "slug": "etl",
-      "permission": "usuario.view_usuario"
-    },
-    {
-      "url": "etl-main",
-      "name": "Dashboard",
-      "icon": "menu-icon tf-icons ri-line-chart-line",
-      "slug": "dashboard"
-    },
-    {
-      "menu_header": "QR",
-      "slug": "qr",
-      "permission": "usuario.view_usuario"
-    },
-    {
-      "url": "qr-soporte-list",
-      "name": "QR Soporte",
-      "icon": "menu-icon tf-icons ri-qr-code-line",
-      "slug": "qr-soporte"
     },
     {
       "menu_header": "Sistema",
