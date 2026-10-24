@@ -37,10 +37,11 @@
         <li class="nav-item">
           <a class="nav-link fw-medium text-nowrap" href="{% url 'landing' %}#landingContact">Contact us</a>
         </li>
-        
+        {% if request.user.is_authenticated %}
         <li class="nav-item">
           <a class="nav-link fw-medium text-nowrap" href="{% url 'home' %}">Admin</a>
         </li>
+        {% endif %}
       </ul>
     </div>
     <div class="landing-menu-overlay d-lg-none"></div>
