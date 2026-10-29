@@ -131,7 +131,7 @@
             {% endif %}
           </li>
           <li>
-            <form action="" method="post" class="d-grid px-4 pt-2 pb-1">
+            <form action="{% url 'logout' %}" method="post" class="d-grid px-4 pt-2 pb-1">
               {% csrf_token %}
               <button type="submit" class="btn btn-danger d-flex">
                   <small class="align-middle">Logout</small>

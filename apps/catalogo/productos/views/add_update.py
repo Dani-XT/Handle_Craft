@@ -1,20 +1,23 @@
 from django.views.generic import TemplateView
+from django.contrib.auth.mixins import PermissionRequiredMixin
+
 from web_project import TemplateLayout
 from web_project.template_helpers.theme import TemplateHelper
 
+from apps.catalogo.productos.models import Producto
 
-class LandingView(TemplateView):
+class ProductosAddUpdateView(PermissionRequiredMixin, TemplateView):
+    permission_required = ("auth.view_user")
+    template_name = "productos-add-update.html"
+
     def get_context_data(self, **kwargs):
         context = TemplateLayout.init(self, super().get_context_data(**kwargs))
 
         context.update(
             {
-                "layout": "front",
-                "layout_path": TemplateHelper.set_layout("layout_front.html", context),
-                "active_url": self.request.path, 
+                "productos": Producto.objects.all()
             }
         )
 
         TemplateHelper.map_context(context)
-
         return context

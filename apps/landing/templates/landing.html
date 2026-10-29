@@ -1021,33 +1021,33 @@
         <div class="col-lg-7">
           <div class="card">
             <div class="card-body">
-              <h5 class="mb-6">Share your ideas</h5>
+              <h5 class="mb-6">Comparte tus ideas</h5>
               <form>
                 {% csrf_token %}
                 <div class="row g-5">
                   <div class="col-md-6">
                     <div class="form-floating form-floating-outline">
-                      <input type="text" class="form-control" id="basic-default-fullname" placeholder="John Doe" />
-                      <label for="basic-default-fullname">Full name</label>
+                      <input type="text" class="form-control" id="basic-default-fullname" placeholder="John Doe" value="{{ request.user.get_full_name }}" />
+                      <label for="basic-default-fullname">Nombre Completo</label>
                     </div>
                   </div>
 
                   <div class="col-md-6">
                     <div class="form-floating form-floating-outline">
-                      <input type="email" class="form-control" id="basic-default-email" placeholder="johndoe99@gmail.com" />
-                      <label for="basic-default-email">Email address</label>
+                      <input type="email" class="form-control" id="basic-default-email" placeholder="johndoe99@gmail.com" value="{{ request.user.email }}" />
+                      <label for="basic-default-email">Email</label>
                     </div>
                   </div>
 
                   <div class="col-12">
                     <div class="form-floating form-floating-outline">
-                      <textarea class="form-control h-px-200" placeholder="Message" aria-label="Message" id="basic-default-message"></textarea>
-                      <label for="basic-default-message">Message</label>
+                      <textarea class="form-control h-px-200" placeholder="Mensaje" aria-label="Message" id="basic-default-message"></textarea>
+                      <label for="basic-default-message">Mensaje</label>
                     </div>
                   </div>
 
                 </div>
-                <button type="submit" class="btn btn-primary mt-5">Send inquiry</button>
+                <button type="submit" class="btn btn-primary mt-5">Enviar sugerencia</button>
               </form>
             </div>
           </div>

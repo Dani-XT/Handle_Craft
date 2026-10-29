@@ -1,7 +1,7 @@
 from django.urls import path
 from django.shortcuts import redirect
 
-from .views import LandingView
+from apps.landing.views.views import LandingView
 
 urlpatterns = [
     path("", lambda request: redirect('landing')),

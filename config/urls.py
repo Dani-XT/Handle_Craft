@@ -23,7 +23,7 @@ from django.conf.urls.static import static
 from web_project.views import SystemView
 
 urlpatterns = [
-    # LANDING
+    # HOMES PRINCIPALES
     path('', include("apps.landing.urls")),    
     path('', include("apps.home.urls")),
 
@@ -32,11 +32,23 @@ urlpatterns = [
     path('', include("apps.acceso.permisos.urls")),
     path('', include("apps.acceso.usuarios.urls")),
 
+    # CATALOGO
+    path('', include("apps.catalogo.categorias.urls")),
+    path('', include("apps.catalogo.productos.urls")),
+
+    # COMPRAS
+
+    # INVENTARIO
+
+    # PERSONAL (PERSONAS)
 
     # SISTEMA
     path('', include("apps.sistema.emails.urls")),
     path('', include("apps.sistema.sexo.urls")),
 
+    # VENTAS
+
+    # AUTENTICACION
     path('', include("apps.auth.urls")),
 
     path('admin/', admin.site.urls),

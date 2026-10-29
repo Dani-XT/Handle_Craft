@@ -28,8 +28,8 @@
 
 {% block content %}
 <!-- Users List Table -->
-<h4 class="mb-1">Tecnicos</h4>
-<p class="mb-3">Tecnicos con accesos al sistema.</p>
+<h4 class="mb-1">Usuarios</h4>
+<p class="mb-3">Usuarios con accesos al sistema.</p>
 <div class="card">
   <div class="card-datatable table-responsive">
     <table class="datatables-tecnicos table" data-datatables-urls="{% url 'usuarios-add' %}">
@@ -81,7 +81,7 @@
           <!-- Role -->
           <td> 
             {% if usuario.is_superuser %}
-              <span class="badge rounded-pill bg-label-danger me-1">SuperUser</span>
+              <span class="badge rounded-pill bg-label-danger me-1">Super Admin</span>
               
             {% else %}
               {% if usuario.groups.all %}

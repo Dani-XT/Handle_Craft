@@ -1,0 +1,91 @@
+{% extends layout_path %}
+
+{% load static %}
+{% load i18n %}
+
+{% block title %}Product List - eCommerce{% endblock %}
+
+{% block vendor_css %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'vendor/libs/dropzone/dropzone.css' %}" />
+<link rel="stylesheet" href="{% static 'vendor/libs/datatables-bs5/datatables.bootstrap5.css' %}" />
+<link rel="stylesheet" href="{% static 'vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css' %}" />
+<link rel="stylesheet" href="{% static 'vendor/libs/select2/select2.css' %}" />
+{% endblock vendor_css %}
+
+{% block vendor_js %}
+{{ block.super }}
+<script src="{% static 'vendor/libs/dropzone/dropzone.js' %}"></script>
+<script src="{% static 'vendor/libs/datatables-bs5/datatables-bootstrap5.js' %}"></script>
+<script src="{% static 'vendor/libs/select2/select2.js' %}"></script>
+<script src="{% static 'vendor/libs/autosize/autosize.js' %}"></script>
+{% endblock vendor_js %}
+
+{% block page_js %}
+{{ block.super }}
+<script src="{% static 'js/new/app-equipos-list.js' %}"></script>
+{% endblock page_js %}
+
+{% block content %}
+
+<div class="row">
+  <!-- Categorias -->
+  <div class="col-12 order-0 order-md-1">
+    <h3 class="mb-1 mt-md-2">Categorias</h3>
+    <p class="mb-4">Categorias registadas en el sistema</p>
+    <div class="row text-wrap">
+      {% if categorias %}
+      {% for categoria in categorias %}
+      <div class="col-md-4 mb-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <div class="d-flex justify-content-center align-items-center mb-1">
+              {% if categoria.img %}
+              <img src="{{ categoria.img }}" alt="categoria-{{ categoria.id }}" class="img-fluid rounded m-4" height="150" width="150">        
+              {% else %}
+              <div class="avatar avatar-xl">
+                <span class="avatar-initial rounded bg-label-info fs-5">{{ categoria.nombre|get_iniciales }}</span>
+              </div>
+              {% endif %}
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="role-heading">
+                <a href="{% url 'categorias-detail' categoria.pk %}">
+                  <h5 class="mb-1">{{categoria.nombre}}</h5>
+                </a>
+                <a href="{% url 'categorias-update' categoria.pk %}">
+                  <p class="mb-0">Editar</p>
+                </a>
+              </div>
+              <a href="{% url 'categorias-delete' categoria.pk %}" class="d-inline-flex p-2 align-items-center rounded-circle alert-danger">
+                <i class="ri-delete-bin-7-line ri-22px"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      {% endif %}
+      <div class="col-12 col-md-6 col-lg-4 mb-6">
+        <div class="card pt-4">
+          <div class="row h-100">
+            <div class="col-5">
+              <div class="d-flex align-items-end justify-content-center">
+                <img src="{% static 'img/illustrations/tree.png' %}" class="img-fluid" alt="Image" width="80">
+              </div>
+            </div>
+            <div class="col-7">
+              <div class="card-body text-sm-end text-center ps-sm-0">
+                <a href="{% url 'categorias-add' %}" class="btn btn-sm btn-primary mb-4 text-nowrap add-new-role">Crear nueva categoria</a>
+                <p class="mb-0">Crear nueva categoria, si no existe</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Categorias -->
+</div>
+
+{% endblock %}

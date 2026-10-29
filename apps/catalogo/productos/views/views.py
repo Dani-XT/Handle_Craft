@@ -4,8 +4,9 @@ from django.contrib.auth.mixins import PermissionRequiredMixin
 from web_project import TemplateLayout
 from web_project.template_helpers.theme import TemplateHelper
 
+from apps.catalogo.productos.models import Producto
 
-class UsersListView(PermissionRequiredMixin, TemplateView):
+class ProductosListView(PermissionRequiredMixin, TemplateView):
     permission_required = ("auth.view_user")
     template_name = "productos-list.html"
 
@@ -14,7 +15,7 @@ class UsersListView(PermissionRequiredMixin, TemplateView):
 
         context.update(
             {
-                
+                "productos": Producto.objects.all()
             }
         )
 

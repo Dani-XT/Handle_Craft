@@ -30,6 +30,23 @@
       "slug": "permissions"
     },
     {
+      "menu_header": "Catalogo",
+      "slug": "products",
+      "permission": "usuario.view_usuario"
+    },
+    {
+      "url": "categorias-list",
+      "name": "Categorias",
+      "icon": "menu-icon tf-icons ri-home-gear-line",
+      "slug": "categories"
+    },
+    {
+      "url": "productos-list",
+      "name": "Productos",
+      "icon": "menu-icon tf-icons ri-home-gear-line",
+      "slug": "products"
+    },
+    {
       "menu_header": "Sistema",
       "slug": "system",
       "permission": "usuario.view_usuario"

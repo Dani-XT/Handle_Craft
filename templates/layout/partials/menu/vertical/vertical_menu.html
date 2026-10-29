@@ -2,7 +2,7 @@
   <!-- ! Hide app brand if navbar-full -->
   {% if not navbar_full %}
   <div class="app-brand demo">
-    <a href="#" class="app-brand-link">
+    <a href="{% url 'landing' %}" class="app-brand-link">
       <span class="app-brand-logo demo me-1">
         {% include 'partials/logo.html' %}
       </span>
