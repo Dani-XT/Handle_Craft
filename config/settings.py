@@ -56,6 +56,10 @@ INSTALLED_APPS = [
     'apps.acceso.permisos',
     'apps.acceso.usuarios',
 
+    # PRODUCTOS
+    'apps.productos.productos',
+    'apps.productos.pedidos',
+
     # SISTEMA
     'apps.sistema.sexo',
     'apps.sistema.emails',
