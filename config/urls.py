@@ -24,31 +24,18 @@ from web_project.views import SystemView
 
 urlpatterns = [
     # LANDING
-    path('', include("apps.landing.urls")),
-    
+    path('', include("apps.landing.urls")),    
     path('', include("apps.home.urls")),
-    path('', include("apps.orders.urls")),
 
     # ACCESO
-    path('', include("apps.acceso.groups.urls")),
-    path('', include("apps.acceso.permissions.urls")),
-    path('', include("apps.acceso.users.urls")),
+    path('', include("apps.acceso.grupos.urls")),
+    path('', include("apps.acceso.permisos.urls")),
+    path('', include("apps.acceso.usuarios.urls")),
 
-    # ACTIVOS
-    path('', include("apps.activos.categories.urls")),
-    path('', include("apps.activos.movements.urls")),
-    path('', include("apps.activos.supplies.urls")),
-    path('', include("apps.activos.warehouse.urls")),
-
-    # COMPRAS
-    path('', include("apps.compras.oc.urls")),
-    path('', include("apps.compras.providers.urls")),
-
-    # VENTAS
 
     # SISTEMA
     path('', include("apps.sistema.emails.urls")),
-    path('', include("apps.sistema.sex.urls")),
+    path('', include("apps.sistema.sexo.urls")),
 
     path('', include("apps.auth.urls")),
 

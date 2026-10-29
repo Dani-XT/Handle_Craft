@@ -7,79 +7,27 @@
       "slug": "home"
     },
     {
-      "url": "orders-list",
-      "name": "Solicitudes",
-      "icon": "menu-icon tf-icons ri-inbox-2-line",
-      "slug": "orders"
-    },
-    {
       "menu_header": "Accesos",
       "slug": "access",
       "permission": "usuario.view_usuario"
     },
     {
-      "url": "users-list",
+      "url": "usuarios-list",
       "name": "Usuarios",
       "icon": "menu-icon tf-icons ri-user-line",
       "slug": "users"
     },
     {
-      "url": "groups-list",
+      "url": "grupos-list",
       "name": "Grupos",
       "icon": "menu-icon tf-icons ri-group-line",
       "slug": "groups"
     },
     {
-      "url": "permissions-list",
+      "url": "permisos-list",
       "name": "Permisos",
       "icon": "menu-icon tf-icons ri-home-gear-line",
       "slug": "permissions"
-    },
-    {
-      "menu_header": "Activos",
-      "slug": "activo",
-      "permission": "usuario.view_usuario"
-    },
-    {
-      "url": "categories-list",
-      "name": "Categorias",
-      "icon": "menu-icon tf-icons ri-cpu-line",
-      "slug": "categories"
-    },
-    {
-      "url": "supplies-list",
-      "name": "Insumos",
-      "icon": "menu-icon tf-icons ri-mouse-line",
-      "slug": "supplies"
-    },
-    {
-      "url": "movements-list",
-      "name": "Movimientos",
-      "icon": "menu-icon tf-icons ri-arrow-left-right-line",
-      "slug": "movements"
-    },
-    {
-      "url": "warehouse-list",
-      "name": "Bodegas",
-      "icon": "menu-icon tf-icons ri-bank-line",
-      "slug": "warehouse"
-    },
-    {
-      "menu_header": "Compras",
-      "slug": "compras",
-      "permission": "usuario.view_usuario"
-    },
-    {
-      "url": "providers-list",
-      "name": "Proveedores",
-      "icon": "menu-icon tf-icons ri-team-line",
-      "slug": "providers"
-    },
-    {
-      "url": "oc-list",
-      "name": "Ordenes de Compra",
-      "icon": "menu-icon tf-icons ri-shopping-cart-line",
-      "slug": "oc"
     },
     {
       "menu_header": "Sistema",
@@ -93,7 +41,7 @@
       "slug": "emails"
     },
     {
-      "url": "sex-list",
+      "url": "sexo-list",
       "name": "Generos",
       "icon": "menu-icon tf-icons ri-open-arm-line",
       "slug": "sex"

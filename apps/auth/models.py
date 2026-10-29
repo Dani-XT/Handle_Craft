@@ -21,7 +21,7 @@ class User(AbstractUser):
     )
 
     sexo = models.ForeignKey(
-        "sex.Sexo",
+        "sexo.Sexo",
         on_delete=models.SET_NULL,
         related_name="tecnicos",
         null=True,

@@ -12,7 +12,7 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.models import Group
 
 from apps.actas.locations.models import Sede, Campus, Edificio, Direccion
-from apps.sistema.sex.models import Sexo
+from apps.sistema.sexo.models import Sexo
 
 class Command(BaseCommand):
     help = "Pobla la base de datos con los registros principales del sistema para no hacerlo de manera manual"

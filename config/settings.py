@@ -50,28 +50,16 @@ INSTALLED_APPS = [
 
     'apps.home',
     'apps.landing',
-    'apps.orders',
     
     # ACCESO
-    'apps.acceso.groups',
-    'apps.acceso.permissions',
-    'apps.acceso.users',
-
-    # ACTIVOS
-    'apps.activos.categories',
-    'apps.activos.movements',
-    'apps.activos.supplies',
-    'apps.activos.warehouse',
-
-    # COMPRAS
-    'apps.compras.oc',
-    'apps.compras.providers',
-
-    # VENTAS
+    'apps.acceso.grupos',
+    'apps.acceso.permisos',
+    'apps.acceso.usuarios',
 
     # SISTEMA
-    'apps.sistema.sex',
+    'apps.sistema.sexo',
     'apps.sistema.emails',
+    'apps.sistema.perfil',
 
     'apps.core.apps.CoreConfig',
     'apps.auth.apps.AuthConfig',

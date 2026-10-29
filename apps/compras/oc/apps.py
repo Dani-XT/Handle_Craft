@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class OcConfig(AppConfig):
-    name = 'apps.compras.oc'
+    name = 'oc'
