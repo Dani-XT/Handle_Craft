@@ -41,7 +41,7 @@
 {% block content %}
 <div class="authentication-wrapper authentication-cover">
   <!-- Logo -->
-  <a href="{% url 'front:home' %}" class="auth-cover-brand d-flex align-items-center gap-3">
+  <a href="{% url 'landing' %}" class="auth-cover-brand d-flex align-items-center gap-3">
     <span class="app-brand-logo demo">{% include 'partials/logo.html' %}</span>
     <span class="app-brand-text demo text-heading fw-semibold">{% get_theme_variables 'template_name' %}</span>
   </a>

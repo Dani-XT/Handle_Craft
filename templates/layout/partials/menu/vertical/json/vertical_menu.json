@@ -39,16 +39,16 @@
       "permission": "usuario.view_usuario"
     },
     {
-      "url": "categorias-list",
+      "url": "categorias-catalogo-list",
       "name": "Categorias",
       "icon": "menu-icon tf-icons ri-home-gear-line",
       "slug": "categories"
     },
     {
-      "url": "pedidos-list",
-      "name": "Pedidos",
-      "icon": "menu-icon tf-icons ri-inbox-2-line",
-      "slug": "orders"
+      "url": "cotizaciones-list",
+      "name": "Cotizaciones",
+      "icon": "menu-icon tf-icons ri-home-gear-line",
+      "slug": "quotes"
     },
     {
       "url": "productos-list",
@@ -89,22 +89,48 @@
       "slug": "warehouse"
     },
     {
-      "url": "home",
+      "url": "categorias-inventario-list",
       "name": "Categorias",
       "icon": "menu-icon tf-icons ri-cpu-line",
       "slug": "categories"
     },
     {
-      "url": "home",
+      "url": "insumos-list",
       "name": "Insumos",
       "icon": "menu-icon tf-icons ri-mouse-line",
       "slug": "supplies"
     },
     {
-      "url": "home",
+      "url": "movimientos-list",
       "name": "Movimientos",
       "icon": "menu-icon tf-icons ri-arrow-left-right-line",
       "slug": "movements"
+    },
+
+
+    {
+      "menu_header": "Trabajadores",
+      "slug": "personal",
+      "permission": "usuario.view_usuario"
+    },
+
+
+    {
+      "menu_header": "Ventas",
+      "slug": "ventas",
+      "permission": "usuario.view_usuario"
+    },
+    {
+      "url": "pedidos-list",
+      "name": "Pedidos",
+      "icon": "menu-icon tf-icons ri-inbox-2-line",
+      "slug": "orders"
+    },
+    {
+      "url": "ventas-list",
+      "name": "Ventas",
+      "icon": "menu-icon tf-icons ri-inbox-2-line",
+      "slug": "orders"
     },
 
 

@@ -6,6 +6,7 @@ from web_project.template_helpers.theme import TemplateHelper
 
 from apps.auth.views import AuthView
 
+from apps.auth.forms.register import RegisterUsuarioForm
 
 
 class RegisterView(AuthView):
@@ -14,19 +15,19 @@ class RegisterView(AuthView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
-        form = kwargs.get("form") or UsuarioNaturalForm()
+        form = kwargs.get("form") or RegisterUsuarioForm()
         
         context.update(
             {
                 "form": form,
-                "regiones": Region.objects.all(),
-                "provincias": Provincia.objects.all(),
-                "comunas": Comuna.objects.all(),
-                "nivel_educacional": NivelEducacional.objects.all(),
-                "sexo": Usuario.Sexo.choices,
-                "situacion_previsional": SituacionPrevisional.objects.all(),
-                "condicion_habitacional": CondicionHabitacional.objects.all(),
-                "postulaciones_previas": PostulacionesPrevias.objects.all(),
+                # "regiones": Region.objects.all(),
+                # "provincias": Provincia.objects.all(),
+                # "comunas": Comuna.objects.all(),
+                # "nivel_educacional": NivelEducacional.objects.all(),
+                # "sexo": Usuario.Sexo.choices,
+                # "situacion_previsional": SituacionPrevisional.objects.all(),
+                # "condicion_habitacional": CondicionHabitacional.objects.all(),
+                # "postulaciones_previas": PostulacionesPrevias.objects.all(),
             }
         )
 

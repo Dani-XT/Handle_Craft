@@ -6,7 +6,7 @@ from apps.catalogo.categorias.views.views import CategoriasCatalogoListView
 
 urlpatterns = [
     path(
-        "categories/list/",
+        "catalog/categories/list/",
         login_required(CategoriasCatalogoListView.as_view()),
         name = "categorias-catalogo-list"
     ),

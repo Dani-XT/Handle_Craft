@@ -1,13 +1,12 @@
 from django.urls import path
 from django.contrib.auth.decorators import login_required
 
-from apps.catalogo.productos.views.views import ProductosListView
+from apps.inventario.categorias.views.views import CategoriasCatalogoListView
 
 urlpatterns = [
     path(
-        "products/list/",
-        login_required(ProductosListView.as_view()),
-        name = "productos-list"
+        "inventory/category/list/",
+        login_required(CategoriasCatalogoListView.as_view()),
+        name = "categorias-inventario-list"
     ),
-    
 ]

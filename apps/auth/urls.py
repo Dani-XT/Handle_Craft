@@ -21,6 +21,7 @@ urlpatterns = [
         RegisterView.as_view(template_name="register.html"),
         name="register"
     ),
+    
     path(
         "verify_email/",
         VerifyEmailView.as_view(template_name="auth/verify_email.html"),

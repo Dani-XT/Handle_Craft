@@ -34,7 +34,7 @@ urlpatterns = [
 
     # CATALOGO
     path('', include("apps.catalogo.categorias.urls")),
-    path('', include("apps.catalogo.pedidos.urls")),
+    path('', include("apps.catalogo.cotizaciones.urls")),
     path('', include("apps.catalogo.productos.urls")),
 
     # COMPRAS
@@ -43,9 +43,17 @@ urlpatterns = [
 
     # INVENTARIO
     path('', include("apps.inventario.bodegas.urls")),
+    path('', include("apps.inventario.categorias.urls")),
+    path('', include("apps.inventario.insumos.urls")),
+    path('', include("apps.inventario.movimientos.urls")),
 
 
     # PERSONAL (PERSONAS)
+
+    # VENTAS
+    path('', include("apps.ventas.pedidos.urls")),
+    path('', include("apps.ventas.ventas.urls")),
+
 
     # SISTEMA
     path('', include("apps.sistema.emails.urls")),

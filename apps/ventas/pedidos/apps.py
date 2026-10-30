@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class PedidosConfig(AppConfig):
-    name = 'apps.catalogo.pedidos'
+    name = 'apps.ventas.pedidos'
