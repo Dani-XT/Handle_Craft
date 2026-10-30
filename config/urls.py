@@ -34,11 +34,16 @@ urlpatterns = [
 
     # CATALOGO
     path('', include("apps.catalogo.categorias.urls")),
+    path('', include("apps.catalogo.pedidos.urls")),
     path('', include("apps.catalogo.productos.urls")),
 
     # COMPRAS
+    path('', include("apps.compras.oc.urls")),
+    path('', include("apps.compras.proveedores.urls")),
 
     # INVENTARIO
+    path('', include("apps.inventario.bodegas.urls")),
+
 
     # PERSONAL (PERSONAS)
 

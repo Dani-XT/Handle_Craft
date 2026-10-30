@@ -6,6 +6,8 @@
       "icon": "menu-icon tf-icons ri-home-2-line",
       "slug": "home"
     },
+
+
     {
       "menu_header": "Accesos",
       "slug": "access",
@@ -29,6 +31,8 @@
       "icon": "menu-icon tf-icons ri-home-gear-line",
       "slug": "permissions"
     },
+
+
     {
       "menu_header": "Catalogo",
       "slug": "products",
@@ -41,11 +45,69 @@
       "slug": "categories"
     },
     {
+      "url": "pedidos-list",
+      "name": "Pedidos",
+      "icon": "menu-icon tf-icons ri-inbox-2-line",
+      "slug": "orders"
+    },
+    {
       "url": "productos-list",
       "name": "Productos",
       "icon": "menu-icon tf-icons ri-home-gear-line",
       "slug": "products"
     },
+
+
+    {
+      "menu_header": "Compras",
+      "slug": "compras",
+      "permission": "usuario.view_usuario"
+    },
+    {
+      "url": "oc-list",
+      "name": "Ordenes de Compra",
+      "icon": "menu-icon tf-icons ri-shopping-cart-line",
+      "slug": "oc"
+    },
+    {
+      "url": "proveedores-list",
+      "name": "Proveedores",
+      "icon": "menu-icon tf-icons ri-team-line",
+      "slug": "providers"
+    },
+
+
+    {
+      "menu_header": "Inventario",
+      "slug": "inventario",
+      "permission": "usuario.view_usuario"
+    },
+    {
+      "url": "bodegas-list",
+      "name": "Bodegas",
+      "icon": "menu-icon tf-icons ri-bank-line",
+      "slug": "warehouse"
+    },
+    {
+      "url": "home",
+      "name": "Categorias",
+      "icon": "menu-icon tf-icons ri-cpu-line",
+      "slug": "categories"
+    },
+    {
+      "url": "home",
+      "name": "Insumos",
+      "icon": "menu-icon tf-icons ri-mouse-line",
+      "slug": "supplies"
+    },
+    {
+      "url": "home",
+      "name": "Movimientos",
+      "icon": "menu-icon tf-icons ri-arrow-left-right-line",
+      "slug": "movements"
+    },
+
+
     {
       "menu_header": "Sistema",
       "slug": "system",

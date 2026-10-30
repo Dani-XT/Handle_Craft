@@ -51,16 +51,28 @@ INSTALLED_APPS = [
     'apps.home',
     'apps.landing',
     
-    # CATALOGO
-    'apps.catalogo.categorias',
-    'apps.catalogo.productos',
-    'apps.catalogo.pedidos',
-
     # ACCESO
     'apps.acceso.grupos',
     'apps.acceso.permisos',
     'apps.acceso.usuarios',
 
+    # CATALOGO
+    'apps.catalogo.categorias',
+    'apps.catalogo.productos',
+    'apps.catalogo.pedidos',
+
+    # COMPRAS
+    'apps.compras.oc',
+    'apps.compras.proveedores',
+
+    # INVENTARIO
+    'apps.inventario.bodegas',
+
+    # CATEGORIAS
+
+    # INSUMOS
+
+    # MOVIMIENTOS
 
     # SISTEMA
     'apps.sistema.sexo',

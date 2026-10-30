@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class BodegasConfig(AppConfig):
-    name = 'bodegas'
+    name = 'apps.inventario.bodegas'
