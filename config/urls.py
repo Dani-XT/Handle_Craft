@@ -51,6 +51,7 @@ urlpatterns = [
     # PERSONAL (PERSONAS)
 
     # VENTAS
+    path('', include("apps.ventas.clientes.urls")),
     path('', include("apps.ventas.pedidos.urls")),
     path('', include("apps.ventas.ventas.urls")),
 

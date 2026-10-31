@@ -121,6 +121,12 @@
       "permission": "usuario.view_usuario"
     },
     {
+      "url": "clientes-list",
+      "name": "Clientes",
+      "icon": "menu-icon tf-icons ri-inbox-2-line",
+      "slug": "clients"
+    },
+    {
       "url": "pedidos-list",
       "name": "Pedidos",
       "icon": "menu-icon tf-icons ri-inbox-2-line",
@@ -130,7 +136,7 @@
       "url": "ventas-list",
       "name": "Ventas",
       "icon": "menu-icon tf-icons ri-inbox-2-line",
-      "slug": "orders"
+      "slug": "sells"
     },
 
 

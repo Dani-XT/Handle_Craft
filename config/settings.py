@@ -75,6 +75,7 @@ INSTALLED_APPS = [
 
 
     # VENTAS
+    'apps.ventas.clientes',
     'apps.ventas.pedidos',
     'apps.ventas.ventas',
 
