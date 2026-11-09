@@ -38,9 +38,9 @@ class ForgetPasswordView(AuthView):
             send_password_reset_email(email, token)
 
             if settings.EMAIL_HOST_USER and settings.EMAIL_HOST_PASSWORD:
-                messages.success(request, "A password reset email has been sent. Please check your inbox")
+                messages.success(request, "Se ha enviado un correo para restablecer la contraseña.")
             else:
-                messages.error(request, "Email settings are not configured. Unable to send verification email.")
+                messages.error(request, "No es posible enviar el correo electrónico de verificación.")
 
 
             return redirect("forgot-password")

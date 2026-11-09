@@ -49,6 +49,9 @@ urlpatterns = [
 
 
     # PERSONAL (PERSONAS)
+    path('', include("apps.trabajadores.areas.urls")),
+    path('', include("apps.trabajadores.personas.urls")),
+
 
     # VENTAS
     path('', include("apps.ventas.clientes.urls")),

@@ -113,7 +113,18 @@
       "slug": "personal",
       "permission": "usuario.view_usuario"
     },
-
+    {
+      "url": "areas-list",
+      "name": "Areas",
+      "icon": "menu-icon tf-icons ri-inbox-2-line",
+      "slug": "areas"
+    },
+    {
+      "url": "personas-list",
+      "name": "Personas",
+      "icon": "menu-icon tf-icons ri-inbox-2-line",
+      "slug": "personas"
+    },
 
     {
       "menu_header": "Ventas",

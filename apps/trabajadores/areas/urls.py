@@ -5,7 +5,7 @@ from apps.trabajadores.areas.views.views import AreasListView
 
 urlpatterns = [
     path(
-        "products/list/",
+        "areas/list/",
         login_required(AreasListView.as_view()),
         name = "areas-list"
     ),

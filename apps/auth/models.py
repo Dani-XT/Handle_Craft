@@ -36,6 +36,14 @@ class User(AbstractUser):
         blank=True,
     )
 
+    email_token = models.CharField(max_length=100, blank=True, null=True)
+    forget_password_token = models.CharField(max_length=100, blank=True, null=True)
+    is_verified = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+
+
+
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = ["first_name", "last_name"]

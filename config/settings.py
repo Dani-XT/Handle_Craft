@@ -72,6 +72,9 @@ INSTALLED_APPS = [
     'apps.inventario.movimientos',
 
     # PERSONAL
+    'apps.trabajadores.areas',
+    'apps.trabajadores.personas',
+
 
 
     # VENTAS
@@ -233,9 +236,10 @@ AUTH_USER_MODEL = 'apps_auth.User'
 # ------------------------------------------------------------------------------
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = "smtp.office365.com"
+EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
 
 EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER", default="")
 EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD", default="")
