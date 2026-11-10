@@ -78,9 +78,22 @@ class User(AbstractUser):
 
         return username
 
+    
     def save(self, *args, **kwargs):
         update_fields = kwargs.get("update_fields")
 
+        # Normalizar nombres y apellidos
+        if update_fields is None or "first_name" in update_fields:
+            self.first_name = " ".join(
+                self.first_name.split()
+            ).title()
+
+        if update_fields is None or "last_name" in update_fields:
+            self.last_name = " ".join(
+                self.last_name.split()
+            ).title()
+
+        # Sincronizar username con email
         sync_username = (
             update_fields is None
             or "email" in update_fields

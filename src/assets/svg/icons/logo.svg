@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="765" height="714" viewBox="0 0 765 714" role="img" aria-label="HandleKraft, logo HK con forma de bolsa" fill="none">
+  <defs>
+    <linearGradient id="hk-handle" x1="183" y1="0" x2="582" y2="231" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7C2CFF"/>
+      <stop offset="1" stop-color="#5A00F0"/>
+    </linearGradient>
+
+    <linearGradient id="hk-body" x1="70" y1="650" x2="620" y2="180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7F47FF"/>
+      <stop offset="0.55" stop-color="#6330F2"/>
+      <stop offset="1" stop-color="#4618CE"/>
+    </linearGradient>
+
+    <linearGradient id="hk-body-shadow" x1="290" y1="706" x2="420" y2="260" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4D1ED2" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#35107B" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <linearGradient id="hk-violet" x1="420" y1="250" x2="760" y2="710" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6100F6"/>
+      <stop offset="1" stop-color="#3A00DD"/>
+    </linearGradient>
+
+    <linearGradient id="hk-ribbon" x1="352" y1="240" x2="652" y2="565" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D8A8FF"/>
+      <stop offset="0.55" stop-color="#C28BFF"/>
+      <stop offset="1" stop-color="#A96BFF"/>
+    </linearGradient>
+
+    <linearGradient id="hk-ribbon2" x1="359" y1="530" x2="683" y2="706" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B97BFF"/>
+      <stop offset="1" stop-color="#A66AFF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Asa de la bolsa -->
+  <path d="M183 231V199C183 90 276 0 383 0C493 0 582 90 582 199V231H512V199C512 125 453 65 383 65C312 65 253 125 253 199V231Z" fill="url(#hk-handle)"/>
+
+  <!-- Cuerpo base de la bolsa / H -->
+  <path d="M125 230H244C265 230 265 230 263 250L236 402H323L330 249C330 231 351 231 351 231H648C670 231 675 253 675 253L759 664C767 705 736 706 736 706H307C281 706 282 679 282 679L287 531H211L183 678C179 706 154 706 154 706H33C1 706 7 675 7 675L98 252C102 230 125 230 125 230Z" fill="url(#hk-body)"/>
+
+  <!-- Sombra/columna central para dar más lectura a la H -->
+  <path d="M330 249C330 231 351 231 351 231H500L520 706H307C281 706 282 679 282 679L287 531H211L236 402H323L330 249Z" fill="url(#hk-body-shadow)" opacity="0.6"/>
+
+  <!-- Cara derecha violeta -->
+  <path d="M647 231C671 231 675 253 675 253L759 664C767 705 736 706 736 706H682L433 484Z" fill="url(#hk-violet)"/>
+
+  <!-- Cinta superior de la K -->
+  <path d="M507 231H652L438 481L360 563C342 551 342 532 342 532V433C342 417 353 404 353 404Z" fill="url(#hk-ribbon)"/>
+
+  <!-- Diagonal inferior de la K -->
+  <path d="M434 483L683 706H482L359 565C341 547 342 532 342 532Z" fill="url(#hk-ribbon2)"/>
+</svg>

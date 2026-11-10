@@ -23,7 +23,7 @@ urlpatterns = [
     ),
     
     path(
-        "verify_email/",
+        "verify-email/",
         VerifyEmailView.as_view(template_name="auth/verify_email.html"),
         name="verify-email-page",
     ),
@@ -35,18 +35,18 @@ urlpatterns = [
     ),
 
     path(
-        "send_verification/",
+        "send-verification/",
         SendVerificationView.as_view(),
         name="send-verification",
     ),
     path(
-        "forgot_password/",
+        "forgot-password/",
         ForgetPasswordView.as_view(),
         name="forgot-password",
     ),
 
     path(
-        "reset_password/<str:token>/",
+        "reset-password/<str:token>/",
         ResetPasswordView.as_view(template_name="reset_password.html"),
         name="reset-password",
     ),

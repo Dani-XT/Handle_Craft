@@ -2,6 +2,7 @@ from django.urls import path
 from django.contrib.auth.decorators import login_required
 
 from apps.inventario.categorias.views.views import CategoriaInventarioListView
+from apps.inventario.categorias.views.add_update import CategoriaInventarioAddUpdateView
 
 
 urlpatterns = [
@@ -12,12 +13,12 @@ urlpatterns = [
     ),
     path(
         "inventory/add/",
-        login_required(CategoriaInventarioListView.as_view()),
+        login_required(CategoriaInventarioAddUpdateView.as_view()),
         name = "categorias-inventario-add"
     ),
     path(
         "inventory/update/<int:pk>/",
-        login_required(CategoriaInventarioListView.as_view()),
+        login_required(CategoriaInventarioAddUpdateView.as_view()),
         name = "categorias-inventario-update"
     ),
     path(

@@ -19,13 +19,13 @@ def get_absolute_url(path):
     return settings.BASE_URL + path
 
 def send_verification_email(email, token):
-    subject = "Verify your email"
+    subject = "Verifica tu email"
     verification_url = get_absolute_url(reverse('verify-email', kwargs={'token': token}))
-    message = f"Hi,\n\nPlease verify your email using this link: {verification_url}"
+    message = f"Hola,\n\nPorfavor verifica tu email, usando este link: {verification_url}"
     send_email(subject, email, message)
 
 def send_password_reset_email(email, token):
-    subject = "Reset your password"
+    subject = "¿Olvido su contraseña?"
     reset_url = get_absolute_url(reverse('reset-password', kwargs={'token': token}))
-    message = f"Hi,\n\nPlease reset your password using this link: {reset_url}"
+    message = f"Hola,\n\nPorfavor ingrese su nueva contraseña usando este link: {reset_url}"
     send_email(subject, email, message)

@@ -50,14 +50,14 @@
             </div>
             <div class="d-flex justify-content-between align-items-center">
               <div class="role-heading">
-                <a href="{% url 'categorias-detail' categoria.pk %}">
+                <a href="{% url 'categorias-inventario-detail' categoria.pk %}">
                   <h5 class="mb-1">{{categoria.nombre}}</h5>
                 </a>
-                <a href="{% url 'categorias-update' categoria.pk %}">
+                <a href="{% url 'categorias-inventario-update' categoria.pk %}">
                   <p class="mb-0">Editar</p>
                 </a>
               </div>
-              <a href="{% url 'categorias-delete' categoria.pk %}" class="d-inline-flex p-2 align-items-center rounded-circle alert-danger">
+              <a href="{% url 'categorias-inventario-delete' categoria.pk %}" class="d-inline-flex p-2 align-items-center rounded-circle alert-danger">
                 <i class="ri-delete-bin-7-line ri-22px"></i>
               </a>
             </div>
@@ -76,7 +76,7 @@
             </div>
             <div class="col-7">
               <div class="card-body text-sm-end text-center ps-sm-0">
-                <a href="{% url 'categorias-add' %}" class="btn btn-sm btn-primary mb-4 text-nowrap add-new-role">Crear nueva categoria</a>
+                <a href="{% url 'categorias-inventario-add' %}" class="btn btn-sm btn-primary mb-4 text-nowrap add-new-role">Crear nueva categoria</a>
                 <p class="mb-0">Crear nueva categoria, si no existe</p>
               </div>
             </div>

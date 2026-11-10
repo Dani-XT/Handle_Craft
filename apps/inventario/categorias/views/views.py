@@ -6,7 +6,7 @@ from web_project.template_helpers.theme import TemplateHelper
 
 class CategoriaInventarioListView(PermissionRequiredMixin, TemplateView):
     permission_required = ("auth.view_user")
-    template_name = "categorias-catalogo-list.html"
+    template_name = "categorias-inventario-list.html"
 
     def get_context_data(self, **kwargs):
         context = TemplateLayout.init(self, super().get_context_data(**kwargs))

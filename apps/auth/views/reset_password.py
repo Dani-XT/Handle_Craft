@@ -5,10 +5,12 @@ from django.contrib.auth import get_user_model
 from apps.auth.views import AuthView
 from django.contrib.auth import authenticate, login
 
+Usuario = get_user_model()
+
 class ResetPasswordView(AuthView):
     def get(self, request,token):
         if request.user.is_authenticated:
-            return redirect("front:home")
+            return redirect("home")
 
         return super().get(request)
 
@@ -42,7 +44,7 @@ class ResetPasswordView(AuthView):
             authenticated_user = authenticate(request, email=usuario.email, password=new_password)
             if authenticated_user:
                 login(request, authenticated_user)
-                return redirect("front:home")
+                return redirect("home")
             else:
                 messages.success(request, "Password reset successful. Please log in.")
                 return redirect("login")

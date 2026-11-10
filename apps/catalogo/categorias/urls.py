@@ -13,21 +13,21 @@ urlpatterns = [
     path(
         "categories/add/",
         login_required(CategoriasCatalogoListView.as_view()),
-        name = "categorias-add"
+        name = "categorias-catalogo-add"
     ),
     path(
         "categories/update/<int:pk>/",
         login_required(CategoriasCatalogoListView.as_view()),
-        name = "categorias-update"
+        name = "categorias-catalogo-update"
     ),
     path(
         "categories/detail/<int:pk>/",
         login_required(CategoriasCatalogoListView.as_view()),
-        name = "categorias-detail"
+        name = "categorias-catalogo-detail"
     ),
     path(
         "categories/delete/<int:pk>/",
         login_required(CategoriasCatalogoListView.as_view()),
-        name = "categorias-delete"
+        name = "categorias-catalogo-delete"
     ),
 ]
