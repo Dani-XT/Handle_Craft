@@ -144,14 +144,14 @@
                     id="{{ form.email.id_for_label }}"
                     value="{{ form.email.value|default_if_none:'' }}"
                     class="form-control{% if form.email.errors %} is-invalid{% endif %}"
-                    placeholder="nombre.apellido@unab.cl"
+                    placeholder="nombre.apellido@gmail.cl"
                     autocomplete="email"
                   >
                   <label for="{{ form.email.id_for_label }}">{{ form.email.label }}</label>
                 </div>
               </div>
 
-              <small class="text-muted">Debe terminar en @unab.cl</small>
+              <small class="text-muted">Debe terminar en @gmail.cl</small>
 
               {% for error in form.email.errors %}
                 <div class="invalid-feedback d-block">

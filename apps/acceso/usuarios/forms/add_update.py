@@ -94,13 +94,6 @@ class UsersAddUpdateForm(forms.ModelForm):
 
     def clean_email(self):
         email = self.cleaned_data["email"].strip().lower()
-        dominio = email.rpartition("@")[2]
-
-        if dominio != "unab.cl":
-            raise ValidationError(
-                "Debes utilizar un correo institucional terminado en @unab.cl."
-            )
-
         queryset = User.objects.filter(email__iexact=email)
 
         if self.instance.pk:
