@@ -57,7 +57,6 @@ INSTALLED_APPS = [
     'apps.acceso.usuarios',
 
     # CATALOGO
-    'apps.catalogo.categorias.apps.CategoriasConfig',
     'apps.catalogo.cotizaciones',
     'apps.catalogo.productos',
 
@@ -67,7 +66,7 @@ INSTALLED_APPS = [
 
     # INVENTARIO
     'apps.inventario.bodegas',
-    'apps.inventario.categorias.apps.CategoriasConfig',
+    'apps.sistema.categorias.apps.CategoriasConfig',
     'apps.inventario.insumos',
     'apps.inventario.movimientos',
 
@@ -87,6 +86,13 @@ INSTALLED_APPS = [
     'apps.sistema.emails',
     'apps.sistema.perfil',
 
+    'apps.inventario.articulos.apps.ArticulosConfig',
+    'apps.inventario.unidades',
+    'apps.catalogo.precios',
+    'apps.catalogo.personalizaciones',
+    'apps.compras.recepciones',
+    'apps.ventas.despachos',
+    'apps.ventas.pagos',
     'apps.core.apps.CoreConfig',
     'apps.auth.apps.AuthConfig',
 

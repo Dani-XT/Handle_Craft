@@ -1,0 +1,140 @@
+{% extends layout_path %}
+
+{% load static %}
+{% load i18n %}
+
+{% block title %}eCommerce Add Product - Apps{% endblock %}
+
+{% block vendor_css %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'vendor/libs/quill/typography.css' %}" />
+<link rel="stylesheet" href="{% static 'vendor/libs/quill/katex.css' %}" />
+<link rel="stylesheet" href="{% static 'vendor/libs/quill/editor.css' %}" />
+<link rel="stylesheet" href="{% static 'vendor/libs/select2/select2.css' %}" />
+<link rel="stylesheet" href="{% static 'vendor/libs/dropzone/dropzone.css' %}" />
+<link rel="stylesheet" href="{% static 'vendor/libs/flatpickr/flatpickr.css' %}" />
+<link rel="stylesheet" href="{% static 'vendor/libs/tagify/tagify.css' %}" />
+{% endblock vendor_css %}
+
+{% block vendor_js %}
+{{ block.super }}
+<script src="{% static 'vendor/libs/quill/katex.js' %}"></script>
+<script src="{% static 'vendor/libs/quill/quill.js' %}"></script>
+<script src="{% static 'vendor/libs/select2/select2.js' %}"></script>
+<script src="{% static 'vendor/libs/dropzone/dropzone.js' %}"></script>
+<script src="{% static 'vendor/libs/jquery-repeater/jquery-repeater.js' %}"></script>
+<script src="{% static 'vendor/libs/flatpickr/flatpickr.js' %}"></script>
+<script src="{% static 'vendor/libs/tagify/tagify.js' %}"></script>
+{% endblock vendor_js %}
+
+{% block page_js %}
+{{ block.super }}
+<script src="{% static 'js/app-ecommerce-product-add.js' %}"></script>
+{% endblock page_js %}
+
+{% block content %}
+<div class="app-ecommerce">
+  <!-- Add Product -->
+  <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-6 gap-4 gap-md-0">
+
+    <div class="d-flex flex-column justify-content-center">
+      <h4 class="mb-1">Add a new Product</h4>
+      <p class="mb-0">Orders placed across your store</p>
+    </div>
+    <div class="d-flex align-content-center flex-wrap gap-4">
+      <button class="btn btn-outline-secondary">Descartar</button>
+      <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <!-- First column-->
+    <div class="col-12 col-lg-7">
+      <!-- Product Information -->
+      <div class="card mb-6">
+        <div class="card-header">
+          <h5 class="card-tile mb-0">Product information</h5>
+        </div>
+        
+        <div class="card-body">
+          <div class="row gx-5">
+            <!-- Nombre -->
+            <div class="col">
+              <div class="form-floating form-floating-outline mb-5">
+                <input type="text" class="form-control" id="ecommerce-product-name" placeholder="Product title" name="productTitle" aria-label="Product title">
+                <label for="ecommerce-product-name">Nombre</label>
+              </div>
+            </div>
+            <!-- /Nombre -->
+
+            <!-- Tipo -->
+            <div class="col">
+              <div class="form-floating form-floating-outline">
+                <input type="text" class="form-control" id="ecommerce-product-barcode" placeholder="0123-4567" name="productBarcode" aria-label="Product barcode">
+                <label for="ecommerce-product-name">Tipo</label>
+              </div>
+            </div>
+            <!-- /Tipo -->
+          </div>
+
+          <!-- Descripcion -->
+          <div>
+            <label class="mb-1">Description (Optional)</label>
+            <div class="form-control p-0 pt-1">
+              <div class="comment-toolbar border-0 border-bottom">
+                <div class="d-flex justify-content-start">
+                  <span class="ql-formats me-0">
+                    <button class="ql-bold"></button>
+                    <button class="ql-italic"></button>
+                    <button class="ql-underline"></button>
+                    <button class="ql-list" value="ordered"></button>
+                    <button class="ql-list" value="bullet"></button>
+                    <button class="ql-link"></button>
+                    <button class="ql-image"></button>
+                  </span>
+                </div>
+              </div>
+              <div class="comment-editor border-0 pb-1" id="ecommerce-category-description"></div>
+            </div>
+          </div>
+          <!-- /Comment -->
+        </div>
+      </div>
+    </div>
+    <!-- /First column -->
+
+    <!-- Second column -->
+    <div class="col-12 col-lg-5">
+      <!-- Media -->
+      <div class="card mb-6">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h5 class="mb-0 card-title">Product Image</h5>
+          <a href="javascript:void(0);" class="fw-medium">Add media from URL</a>
+        </div>
+        <div class="card-body">
+          <form action="/upload" class="dropzone needsclick" id="dropzone-basic">
+            <div class="dz-message needsclick">
+              <div class="d-flex justify-content-center">
+                <div class="avatar avatar-md">
+                  <span class="avatar-initial rounded bg-label-secondary">
+                    <i class="ri-upload-2-line ri-24px"></i>
+                  </span>
+                </div>
+              </div>
+              <p class="h4 needsclick my-2">Drag and drop your image here</p>
+              <small class="text-muted d-block fs-6 my-2">or</small>
+              <span class="needsclick btn btn-sm btn-outline-primary" id="btnBrowse">Browse image</span>
+            </div>
+            <div class="fallback">
+              <input name="file" type="file" />
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- /Media -->
+    </div>
+    <!-- /Second column -->
+  </div>
+</div>
+{% endblock %}

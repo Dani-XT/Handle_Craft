@@ -1,3 +1,6 @@
 from django.contrib import admin
+from apps.core.admin import MasterAdmin
+from .models import Bodega, Ubicacion
 
-# Register your models here.
+for model in [Bodega, Ubicacion]:
+    admin.site.register(model, MasterAdmin)

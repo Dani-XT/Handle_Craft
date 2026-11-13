@@ -1,3 +1,6 @@
 from django.contrib import admin
+from apps.core.admin import MasterAdmin
+from .models import Categoria
 
-# Register your models here.
+for model in [Categoria]:
+    admin.site.register(model, MasterAdmin)

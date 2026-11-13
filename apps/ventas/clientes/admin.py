@@ -1,3 +1,6 @@
 from django.contrib import admin
+from apps.core.admin import MasterAdmin
+from .models import Cliente, DireccionCliente, ContactoCliente
 
-# Register your models here.
+for model in [Cliente, DireccionCliente, ContactoCliente]:
+    admin.site.register(model, MasterAdmin)

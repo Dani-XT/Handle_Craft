@@ -14,6 +14,7 @@ from apps.core.models import BaseModel
 
 
 class Cotizacion(BaseModel):
+    cliente = models.ForeignKey("clientes.Cliente", on_delete=models.PROTECT, null=True, blank=True, related_name="cotizaciones")
     class Estado(models.TextChoices):
         BORRADOR = "borrador", "Borrador"
         EN_REVISION = "en_revision", "En revisión"

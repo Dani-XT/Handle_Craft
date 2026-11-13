@@ -33,7 +33,6 @@ urlpatterns = [
     path('', include("apps.acceso.usuarios.urls")),
 
     # CATALOGO
-    path('', include("apps.catalogo.categorias.urls")),
     path('', include("apps.catalogo.cotizaciones.urls")),
     path('', include("apps.catalogo.productos.urls")),
 
@@ -43,7 +42,7 @@ urlpatterns = [
 
     # INVENTARIO
     path('', include("apps.inventario.bodegas.urls")),
-    path('', include("apps.inventario.categorias.urls")),
+    path('', include("apps.sistema.categorias.urls")),
     path('', include("apps.inventario.insumos.urls")),
     path('', include("apps.inventario.movimientos.urls")),
 

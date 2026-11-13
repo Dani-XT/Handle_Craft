@@ -1,0 +1,1604 @@
+{
+  "files": [
+    {
+      "path": "apps/core/admin.py",
+      "before": "5c924e0e41f27a7044f1a47fd3292ab80103c20e0b8f3abf34a6158329a1f4dd",
+      "after": "79947acd4ea94a872eec259b2801b3f2589b923551b295f2e139629d57d59c27"
+    },
+    {
+      "path": "apps/core/apps.py",
+      "before": "040b6e5d3c6a91bd3327c7cd368fc84b113e39718d9127d7c2712fa425f4ef41",
+      "after": "84591347155fb83262030dcc830ac413a4801d65c7028e9c4b899b9e84bf008f"
+    },
+    {
+      "path": "apps/core/documents.py",
+      "before": null,
+      "after": "23897b8c8ebe0b02a20600bc117445b60b49b0f2f4c43fa852d9a6dde5d1dfc5"
+    },
+    {
+      "path": "apps/core/models.py",
+      "before": "da9998c92e825a37f866b2e2e316359ec454d5ebf29f5320eb2951b451194718",
+      "after": "e943ee0451856a15297e105245dcf43121e27927915a722ff3ac83858cc23adc"
+    },
+    {
+      "path": "apps/core/workflows.py",
+      "before": null,
+      "after": "d6535cd3398429b62ba465e8b8b27dd55d51ff715e4e72bb701dd39049c46363"
+    },
+    {
+      "path": "apps/ventas/clientes/admin.py",
+      "before": "a7ac68a753eeb831b6530bf71bf6917e577139f0734d17cc6a8666391564ab25",
+      "after": "612d6518c4f299d07d30b0ea016c72522fadbc15b4074b7fdb6ff91f45347387"
+    },
+    {
+      "path": "apps/ventas/clientes/models.py",
+      "before": "e0e54c7030f1f5f56004427dd41edd7cc106d8d8b52d148b24e2b322454fb0aa",
+      "after": "dbcb29107cfcc731c6e27de02c4c3dc6c6576ff6b29f2f16e1d526b6264dddb4"
+    },
+    {
+      "path": "apps/ventas/despachos/admin.py",
+      "before": null,
+      "after": "ea694adb0015145a5af18b75357a269f72342aa864b6ed93e78dbde378783232"
+    },
+    {
+      "path": "apps/ventas/despachos/apps.py",
+      "before": null,
+      "after": "813cbe2b9723c3026474b3df0bc04417c319bbf913aa9e00757f3c2023e4d840"
+    },
+    {
+      "path": "apps/ventas/despachos/models.py",
+      "before": null,
+      "after": "ab1b08f59a3522126d5031eb8ce67400f1a96992dd5c90a060f77ef68719bf81"
+    },
+    {
+      "path": "apps/ventas/despachos/services.py",
+      "before": null,
+      "after": "35bc420e074b84946fdd47e2e918db844783e4983539255736e917d1234b18aa"
+    },
+    {
+      "path": "apps/ventas/despachos/urls.py",
+      "before": null,
+      "after": "1303608826f0e3b38a1e92b0c1b807e0dd9ad9101e67d0eba53bbc363c5e954e"
+    },
+    {
+      "path": "apps/ventas/despachos/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/ventas/pagos/admin.py",
+      "before": null,
+      "after": "fe3e064f2193a41e93fe71e6d3d99689a79acc98b783a53dd816814bf9e715c7"
+    },
+    {
+      "path": "apps/ventas/pagos/apps.py",
+      "before": null,
+      "after": "72946105e5a32542b3be11008836f97f409a18e875731f901aa1de7510d1116e"
+    },
+    {
+      "path": "apps/ventas/pagos/models.py",
+      "before": null,
+      "after": "3a6713697e405edb0c1226f280d6c156a54b276d7d8dcaac18968f988410865a"
+    },
+    {
+      "path": "apps/ventas/pagos/services.py",
+      "before": null,
+      "after": "7666c506aada636a69f8be5e70159342d7e61b2b0c002940b85aba2af199d1bd"
+    },
+    {
+      "path": "apps/ventas/pagos/urls.py",
+      "before": null,
+      "after": "1303608826f0e3b38a1e92b0c1b807e0dd9ad9101e67d0eba53bbc363c5e954e"
+    },
+    {
+      "path": "apps/ventas/pagos/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/ventas/pedidos/admin.py",
+      "before": "a7ac68a753eeb831b6530bf71bf6917e577139f0734d17cc6a8666391564ab25",
+      "after": "ccf44f091fbc1d9ca9310f5b896e2fee9ca400adc76774a8605e7dc0159011be"
+    },
+    {
+      "path": "apps/ventas/pedidos/models.py",
+      "before": "e0e54c7030f1f5f56004427dd41edd7cc106d8d8b52d148b24e2b322454fb0aa",
+      "after": "f9b66a63c71e77385789499aed669f68658815faa7f40809862dc409f709e80d"
+    },
+    {
+      "path": "apps/ventas/pedidos/services.py",
+      "before": null,
+      "after": "e4d7abe0c10277a4ef7529e81703d7fda66eb6c390d8715f1a5c439b1b54a656"
+    },
+    {
+      "path": "apps/ventas/pedidos/tests.py",
+      "before": "dae0da7efdcdb3a7fb572d5e914b60631099122d4a4727ac6434c016161c5fe1",
+      "after": "bf12c3de3d51de45863d087548c2074c3f927f69cd74d5fcec8fe611d3a0837b"
+    },
+    {
+      "path": "apps/ventas/ventas/admin.py",
+      "before": "a7ac68a753eeb831b6530bf71bf6917e577139f0734d17cc6a8666391564ab25",
+      "after": "e50e3e51776c6d335a0ca2026ee2c529b79a59533f7f08d03242d3797a2abe18"
+    },
+    {
+      "path": "apps/ventas/ventas/models.py",
+      "before": "e0e54c7030f1f5f56004427dd41edd7cc106d8d8b52d148b24e2b322454fb0aa",
+      "after": "969ba7bad75a3991be2090c9bb8aaf206c6f1d3e94c475f949f28be7e30d84b8"
+    },
+    {
+      "path": "apps/ventas/ventas/services.py",
+      "before": null,
+      "after": "9ea893fb5cb56ff9e4699932b4c3a0d2b6ec6d90783661b5aa6e2d62beb16a2e"
+    },
+    {
+      "path": "apps/ventas/ventas/forms/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/ventas/ventas/migrations/0001_initial.py",
+      "before": null,
+      "after": "0694595a6ab4a7e21208faa4fcdb3409af1a29ea815bbe5195b9cc20d241c87a"
+    },
+    {
+      "path": "apps/ventas/ventas/views/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/ventas/pedidos/forms/registro.py",
+      "before": null,
+      "after": "f33eb7300a26aa893ab3b9540b7225c734aa0d251551d2dc9ddf405217a27637"
+    },
+    {
+      "path": "apps/ventas/pedidos/forms/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/ventas/pedidos/migrations/0001_initial.py",
+      "before": null,
+      "after": "5130b3a0e5f4682bc094387b4ed7ca741a7e7a53638bb5ac7740e3d60a66726a"
+    },
+    {
+      "path": "apps/ventas/pedidos/views/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/ventas/pagos/forms/registro.py",
+      "before": null,
+      "after": "19bb059db2f8a299a4f21173b20390b55d604fd9a39ea513a00855b3cc2ff150"
+    },
+    {
+      "path": "apps/ventas/pagos/forms/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/ventas/pagos/migrations/0001_initial.py",
+      "before": null,
+      "after": "97605e6a6785a82afdc53c4470251c12582580db0081259457bbc2378db9239a"
+    },
+    {
+      "path": "apps/ventas/pagos/migrations/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/ventas/pagos/views/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/ventas/pagos/templates/pagos/README.md",
+      "before": null,
+      "after": "39aa682815e164bc19d35ebb00dca47dffb821f64a31d394f2be0cd21f1fe324"
+    },
+    {
+      "path": "apps/ventas/despachos/forms/registro.py",
+      "before": null,
+      "after": "60af66333a58006153c446c9cf71ac2378535af303b16aeb0236ae666945b7ad"
+    },
+    {
+      "path": "apps/ventas/despachos/forms/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/ventas/despachos/migrations/0001_initial.py",
+      "before": null,
+      "after": "66463d0b395b5f622437a227f913cffe7a55e1e7eeb39f75cf11691aff284002"
+    },
+    {
+      "path": "apps/ventas/despachos/migrations/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/ventas/despachos/views/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/ventas/despachos/templates/despachos/README.md",
+      "before": null,
+      "after": "39aa682815e164bc19d35ebb00dca47dffb821f64a31d394f2be0cd21f1fe324"
+    },
+    {
+      "path": "apps/ventas/clientes/forms/registro.py",
+      "before": null,
+      "after": "dd555a7a883c5814aff77014719c22bc9c385d17bf976d1b8058c6d92e3d58ab"
+    },
+    {
+      "path": "apps/ventas/clientes/forms/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/ventas/clientes/migrations/0001_initial.py",
+      "before": null,
+      "after": "e854b25716bcc11c799f0801f418716b058e0a53344d48e1eec46ed0be429553"
+    },
+    {
+      "path": "apps/ventas/clientes/views/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/sistema/categorias/admin.py",
+      "before": "a7ac68a753eeb831b6530bf71bf6917e577139f0734d17cc6a8666391564ab25",
+      "after": "afb586992f9587bbe538a056d9436e155eba11451b95cc5e2d6ed65cc6821b03"
+    },
+    {
+      "path": "apps/sistema/categorias/apps.py",
+      "before": "d0b859f4f18e12722b99706609eab67bb4c8096668af211c878b4142959358d6",
+      "after": "f3ee600d5056c8246bb86e25d2d619508bbbf048a4c0369c6a19b3f81afb1fb2"
+    },
+    {
+      "path": "apps/sistema/categorias/models.py",
+      "before": "e0e54c7030f1f5f56004427dd41edd7cc106d8d8b52d148b24e2b322454fb0aa",
+      "after": "c00c40b3c7e18394d860fc73f1015cbe4cac9d7f6b599f753b14cf1e49e915de"
+    },
+    {
+      "path": "apps/sistema/categorias/urls.py",
+      "before": null,
+      "after": "5ef391848005b29b81f24a4c73e97da0c5dec0dad294e7ea275d9066f4f0961a"
+    },
+    {
+      "path": "apps/sistema/categorias/forms/categoria.py",
+      "before": null,
+      "after": "86909382046b29f48dc41e78c123fc99cd93f7c786cc53fca788deac2e7847ab"
+    },
+    {
+      "path": "apps/sistema/categorias/forms/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/sistema/categorias/migrations/0001_initial.py",
+      "before": null,
+      "after": "bf5d81dbd17df0362a4e2f95fb31a062112f9b366fd9b430bfcc52c81556e0be"
+    },
+    {
+      "path": "apps/sistema/categorias/views/archive.py",
+      "before": null,
+      "after": "db3d2422a2c97136c17057eb27af259b6cdeb5c96cbda222faf94501d318390a"
+    },
+    {
+      "path": "apps/sistema/categorias/views/base.py",
+      "before": null,
+      "after": "9e36718adb9add5dba193313658c65f36c34397e1feedb794d47e9655deff585"
+    },
+    {
+      "path": "apps/sistema/categorias/views/create.py",
+      "before": null,
+      "after": "81335f587d5076e5944e06ca00548b4cee6bab9c449de459dd36447500a38f4e"
+    },
+    {
+      "path": "apps/sistema/categorias/views/detail.py",
+      "before": null,
+      "after": "61924a4329dbecd557cd6bda5af1558da29c1055fa37906898bc96d3209ff52f"
+    },
+    {
+      "path": "apps/sistema/categorias/views/list.py",
+      "before": null,
+      "after": "dc447ff3a6e8049340c48d255e0159377dcd11364efe71a973ce69643abd1511"
+    },
+    {
+      "path": "apps/sistema/categorias/views/update.py",
+      "before": null,
+      "after": "6c810e9e978daf51f933c743c3382e71c678cb5d93c130b5cea34236d4383e08"
+    },
+    {
+      "path": "apps/sistema/categorias/views/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/sistema/categorias/templates/categorias/archive.html",
+      "before": null,
+      "after": "df6c6dd5d76bb0bf39e6ad9abd0b8f1d95a233bc7ba32eb7f7e12aabb503ad3d"
+    },
+    {
+      "path": "apps/sistema/categorias/templates/categorias/detail.html",
+      "before": null,
+      "after": "df6c6dd5d76bb0bf39e6ad9abd0b8f1d95a233bc7ba32eb7f7e12aabb503ad3d"
+    },
+    {
+      "path": "apps/sistema/categorias/templates/categorias/form.html",
+      "before": null,
+      "after": "7306ae63f9a228ab5130e34d38dd3e86f80385db23a3cbf5645d5406f37523c8"
+    },
+    {
+      "path": "apps/sistema/categorias/templates/categorias/list.html",
+      "before": null,
+      "after": "c0ed0a95888c6c9dc9dab4da9f1d2333828c687eb9eaf637490c5969dcdd7e0c"
+    },
+    {
+      "path": "apps/sistema/categorias/templates/categorias/legacy/categorias-catalogo-add-update.html",
+      "before": null,
+      "after": "df6c6dd5d76bb0bf39e6ad9abd0b8f1d95a233bc7ba32eb7f7e12aabb503ad3d"
+    },
+    {
+      "path": "apps/sistema/categorias/templates/categorias/legacy/categorias-catalogo-delete.html",
+      "before": null,
+      "after": "df6c6dd5d76bb0bf39e6ad9abd0b8f1d95a233bc7ba32eb7f7e12aabb503ad3d"
+    },
+    {
+      "path": "apps/sistema/categorias/templates/categorias/legacy/categorias-catalogo-detail.html",
+      "before": null,
+      "after": "df6c6dd5d76bb0bf39e6ad9abd0b8f1d95a233bc7ba32eb7f7e12aabb503ad3d"
+    },
+    {
+      "path": "apps/sistema/categorias/templates/categorias/legacy/categorias-catalogo-list.html",
+      "before": null,
+      "after": "b248b5ea255ba55534d94ba119d43bf15c0ee8f36d438e6c355a7e89315c7b1a"
+    },
+    {
+      "path": "apps/inventario/articulos/admin.py",
+      "before": null,
+      "after": "340d9feacab15f8b61b2f2342e2a3facab15731dfb0567ad1c845cddd0060968"
+    },
+    {
+      "path": "apps/inventario/articulos/apps.py",
+      "before": null,
+      "after": "900ebfc3543555bbe50fec5e21a0e29d9ebed670a1c3568456d485bc74a5dc02"
+    },
+    {
+      "path": "apps/inventario/articulos/models.py",
+      "before": null,
+      "after": "f448daa38dad9c2f1e5eed93bd046e66292ea9e195c22b0bc49be53fb4f407ad"
+    },
+    {
+      "path": "apps/inventario/articulos/urls.py",
+      "before": null,
+      "after": "1303608826f0e3b38a1e92b0c1b807e0dd9ad9101e67d0eba53bbc363c5e954e"
+    },
+    {
+      "path": "apps/inventario/articulos/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/inventario/movimientos/models.py",
+      "before": "4d48ddf22de692db7318ab89768c8f73dc42deda2418c2859388ee8c0fbf710f",
+      "after": "a5af0d5f0f0f5248acf9391fe58701d98d34e43e0fefdcd5775fb5b9d9de6a87"
+    },
+    {
+      "path": "apps/inventario/movimientos/services.py",
+      "before": "b791cad8d3a9658a849e214040c7fa3e741c0339a9bcf194b460ad590ed79781",
+      "after": "b18e992a3e616049ae9e3c40a3ae7683cc5cccc57a02d04d5ae83ea116d86249"
+    },
+    {
+      "path": "apps/inventario/movimientos/tests.py",
+      "before": "04bbb9b743f587e9637cc9ec24fe279333101e1aa2b3186b54bd15d44a69e27d",
+      "after": "bebb1a4d5f652a482a250d89a553f83b43967794000484c7564609756cbf2f65"
+    },
+    {
+      "path": "apps/inventario/unidades/admin.py",
+      "before": null,
+      "after": "c58380e4e1be7779ea1c02a2deb88ff0f497725ce07008cb36b50c21ab0e35d2"
+    },
+    {
+      "path": "apps/inventario/unidades/apps.py",
+      "before": null,
+      "after": "f3e39b6b6ee2b0a3dbd04bb7c3ecdcc7ae315d15d24c6f17eb45cf87e681f377"
+    },
+    {
+      "path": "apps/inventario/unidades/models.py",
+      "before": null,
+      "after": "59e0c092d83edea19601d9c5e1d3eac53821ab9baddb698f6d67a88e51b801ee"
+    },
+    {
+      "path": "apps/inventario/unidades/urls.py",
+      "before": null,
+      "after": "1303608826f0e3b38a1e92b0c1b807e0dd9ad9101e67d0eba53bbc363c5e954e"
+    },
+    {
+      "path": "apps/inventario/unidades/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/inventario/unidades/forms/registro.py",
+      "before": null,
+      "after": "82bea9fe34bdb0235fd0e636b15f165b87449497c014b25dd3039de527b56ba3"
+    },
+    {
+      "path": "apps/inventario/unidades/forms/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/inventario/unidades/migrations/0001_initial.py",
+      "before": null,
+      "after": "598cfd48c0ad78270bd2de47fbc1dd417d4014c2c361984ab5db412ccbfe8877"
+    },
+    {
+      "path": "apps/inventario/unidades/migrations/0002_unidades_iniciales.py",
+      "before": null,
+      "after": "9ec26de2f9b46f13953b46127d10c71aff9ac4de1a5428af66649fbec6233144"
+    },
+    {
+      "path": "apps/inventario/unidades/migrations/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/inventario/unidades/views/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/inventario/unidades/templates/unidades/README.md",
+      "before": null,
+      "after": "39aa682815e164bc19d35ebb00dca47dffb821f64a31d394f2be0cd21f1fe324"
+    },
+    {
+      "path": "apps/inventario/movimientos/migrations/0002_reservainventario_detalle_pedido.py",
+      "before": null,
+      "after": "53120b8d91af7075d572a04ff0ff88c97bcb14ea11679fbbc81915fe9576a608"
+    },
+    {
+      "path": "apps/inventario/articulos/forms/registro.py",
+      "before": null,
+      "after": "0ef76d13e0c5ab913dab1dff59493540788473d9d413f857c3900a4241dac5f5"
+    },
+    {
+      "path": "apps/inventario/articulos/forms/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/inventario/articulos/migrations/0001_initial.py",
+      "before": null,
+      "after": "cfff7f1e992577782058645fa4aad9120ed8f5bbc6b471c354838418ec2d3987"
+    },
+    {
+      "path": "apps/inventario/articulos/migrations/0002_presentacionarticulo_and_more.py",
+      "before": null,
+      "after": "7dc24c32d8c758a101569f507e07c3c063e3be986329a4e874d00df18e8fb39c"
+    },
+    {
+      "path": "apps/inventario/articulos/migrations/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/inventario/articulos/views/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/inventario/articulos/templates/articulos/README.md",
+      "before": null,
+      "after": "39aa682815e164bc19d35ebb00dca47dffb821f64a31d394f2be0cd21f1fe324"
+    },
+    {
+      "path": "apps/compras/oc/admin.py",
+      "before": "a7ac68a753eeb831b6530bf71bf6917e577139f0734d17cc6a8666391564ab25",
+      "after": "e7d8cd896f41fc5b8dc99c0fe90d0b679a3ff36a86ef1973445f603530215c58"
+    },
+    {
+      "path": "apps/compras/oc/models.py",
+      "before": "e0e54c7030f1f5f56004427dd41edd7cc106d8d8b52d148b24e2b322454fb0aa",
+      "after": "64aba372a42933217932790cbf0e3994142e83a6bed3ef372f160ec3bc1a62b7"
+    },
+    {
+      "path": "apps/compras/oc/services.py",
+      "before": null,
+      "after": "0f88122d09daaed14c9592d11128790ad9c8a545ffc71a54b64e6880602140a9"
+    },
+    {
+      "path": "apps/compras/proveedores/admin.py",
+      "before": "a7ac68a753eeb831b6530bf71bf6917e577139f0734d17cc6a8666391564ab25",
+      "after": "a17c00f60f3784fde5f043ca5e7986380b313bedd2f9f65bf0093496102abdb2"
+    },
+    {
+      "path": "apps/compras/proveedores/models.py",
+      "before": "e0e54c7030f1f5f56004427dd41edd7cc106d8d8b52d148b24e2b322454fb0aa",
+      "after": "6fd90eec1257076ca9d08729d7d6cc9adad4f5167dbefa1514be3e7f9cb53816"
+    },
+    {
+      "path": "apps/compras/recepciones/admin.py",
+      "before": null,
+      "after": "4d31cf3f8f094e6ea1aaf35f06253e20217f26e109b40b0de2f73dfa594a9a30"
+    },
+    {
+      "path": "apps/compras/recepciones/apps.py",
+      "before": null,
+      "after": "b03e259cf745333ec60d4709859dd73b7e9acf2e130cd1a44aadc4bb9b92efa5"
+    },
+    {
+      "path": "apps/compras/recepciones/models.py",
+      "before": null,
+      "after": "6095ebffa590c34e6d97abfbf1b33ad4d2ac2fbb055d9bcf9be2be004852463f"
+    },
+    {
+      "path": "apps/compras/recepciones/services.py",
+      "before": null,
+      "after": "14cfa30cf19a6d6d3dfdd73005878906fbcae9cfd78fc69a2a04cfa607ec8edd"
+    },
+    {
+      "path": "apps/compras/recepciones/urls.py",
+      "before": null,
+      "after": "1303608826f0e3b38a1e92b0c1b807e0dd9ad9101e67d0eba53bbc363c5e954e"
+    },
+    {
+      "path": "apps/compras/recepciones/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/compras/recepciones/forms/registro.py",
+      "before": null,
+      "after": "b037d226bbdf92421506e068cae421893b0951dcb76373e9b4133ec82356ee07"
+    },
+    {
+      "path": "apps/compras/recepciones/forms/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/compras/recepciones/migrations/0001_initial.py",
+      "before": null,
+      "after": "72b5826b124c85f6f2cc5a144ad11b1ed4b78d6359eed6e1c603a7d1a3e11649"
+    },
+    {
+      "path": "apps/compras/recepciones/migrations/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/compras/recepciones/views/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/compras/recepciones/templates/recepciones/README.md",
+      "before": null,
+      "after": "39aa682815e164bc19d35ebb00dca47dffb821f64a31d394f2be0cd21f1fe324"
+    },
+    {
+      "path": "apps/compras/proveedores/forms/registro.py",
+      "before": null,
+      "after": "d98f2a5ce3c976c003c57008f75607ca56482c5d4824a47ab21f732c94c1b5ef"
+    },
+    {
+      "path": "apps/compras/proveedores/forms/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/compras/proveedores/migrations/0001_initial.py",
+      "before": null,
+      "after": "eedc02fc952c1d99b8cbb1d860b61eacd375d130920e40acda1b88c3b2c1b832"
+    },
+    {
+      "path": "apps/compras/proveedores/views/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/compras/oc/forms/registro.py",
+      "before": null,
+      "after": "87e24daf4b0eef89b70514177cba238654bf1490cdf89215827f4bafec616366"
+    },
+    {
+      "path": "apps/compras/oc/forms/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/compras/oc/migrations/0001_initial.py",
+      "before": null,
+      "after": "2259fa7f134c4ea7d084d6dda44634f39c6b93c75f44ab93b99f4215c8aefc07"
+    },
+    {
+      "path": "apps/compras/oc/views/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/catalogo/cotizaciones/models.py",
+      "before": "74f266a7a6bd53752d2d5d6d4237e9359398d3b39403b8ac1d87929756533646",
+      "after": "ede3b74bd59cc404dbfd5beace8ba531d186ef22506244b0e9c833c360df80fb"
+    },
+    {
+      "path": "apps/catalogo/personalizaciones/admin.py",
+      "before": null,
+      "after": "dc9fb91925d08741f3286e91a7141ef946838003dc6ae4c7560af272818871c1"
+    },
+    {
+      "path": "apps/catalogo/personalizaciones/apps.py",
+      "before": null,
+      "after": "e04ef0382bcda64389f19cd3acf161faf77256a4b7bd7ff5eb3104a842320e4d"
+    },
+    {
+      "path": "apps/catalogo/personalizaciones/models.py",
+      "before": null,
+      "after": "8f02b8c2236bef2c47bd0dc835b8c0c478a39002f7090d54351601d137463750"
+    },
+    {
+      "path": "apps/catalogo/personalizaciones/services.py",
+      "before": null,
+      "after": "22dd22b6386dde9fde8e191c241e226a18b0201efb13c4182c3f9ab8edf50aca"
+    },
+    {
+      "path": "apps/catalogo/personalizaciones/urls.py",
+      "before": null,
+      "after": "1303608826f0e3b38a1e92b0c1b807e0dd9ad9101e67d0eba53bbc363c5e954e"
+    },
+    {
+      "path": "apps/catalogo/personalizaciones/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/catalogo/precios/admin.py",
+      "before": null,
+      "after": "828c4e1bbf19568117d07bc0c156525be167368ff0658cf8bfd51c13581d2659"
+    },
+    {
+      "path": "apps/catalogo/precios/apps.py",
+      "before": null,
+      "after": "85336dd40727e818acbf22b1562e6ab0a585d103ee98e1af24476720c28471cb"
+    },
+    {
+      "path": "apps/catalogo/precios/models.py",
+      "before": null,
+      "after": "157c4f8c68f1ddc913b48047a73e04281d9ac003b02a5f5c93f388203e9e9b61"
+    },
+    {
+      "path": "apps/catalogo/precios/selectors.py",
+      "before": null,
+      "after": "99d7f82141e3f10f8a0899663b945e955e0e4f639803e795d642dc59ef006027"
+    },
+    {
+      "path": "apps/catalogo/precios/services.py",
+      "before": null,
+      "after": "edd967f2444eb071cfa66112d0a017bf7c3b158ca588d16933de47b3e5d56f3d"
+    },
+    {
+      "path": "apps/catalogo/precios/urls.py",
+      "before": null,
+      "after": "1303608826f0e3b38a1e92b0c1b807e0dd9ad9101e67d0eba53bbc363c5e954e"
+    },
+    {
+      "path": "apps/catalogo/precios/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/catalogo/productos/models.py",
+      "before": "63dc5e826108317496b7c0921e265d63faa26747ca7f17c6d50e6eef88fe456a",
+      "after": "55a9df40fed48e45d65dbe2cb78047cace0a2685bd5d4f16bf19bf8576b93dd3"
+    },
+    {
+      "path": "apps/catalogo/productos/services.py",
+      "before": "145409bb202ec2df8eb8848bc66570cd94c1edaf9213d5c95eab033b7911f628",
+      "after": "723e251f992ebaacb48b293f86442ea24bfdf168cdbb95ee98c75833586866ea"
+    },
+    {
+      "path": "apps/catalogo/productos/migrations/0002_remove_varianteproducto_variante_precio_positivo_and_more.py",
+      "before": null,
+      "after": "fe9e49917f6cf19212a2b21cda16bdb55103ff45d74884095809751fa05c7edb"
+    },
+    {
+      "path": "apps/catalogo/precios/forms/registro.py",
+      "before": null,
+      "after": "0cef6109a4906ea1eb50c11a41f4c2577eaade0d8e8d4413ae0a82f4fb8d3d2f"
+    },
+    {
+      "path": "apps/catalogo/precios/forms/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/catalogo/precios/migrations/0001_initial.py",
+      "before": null,
+      "after": "9b28870dc9e63242ddc0364d10cab1b17ba246efc8c8a5e6c7b566baf4913675"
+    },
+    {
+      "path": "apps/catalogo/precios/migrations/0002_importar_precios_base.py",
+      "before": null,
+      "after": "c972e220c79e98d9f443a93a7228c457480b6371990f84f425a5b7acdd24ad72"
+    },
+    {
+      "path": "apps/catalogo/precios/migrations/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/catalogo/precios/views/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/catalogo/precios/templates/precios/README.md",
+      "before": null,
+      "after": "39aa682815e164bc19d35ebb00dca47dffb821f64a31d394f2be0cd21f1fe324"
+    },
+    {
+      "path": "apps/catalogo/personalizaciones/forms/registro.py",
+      "before": null,
+      "after": "1fc13c04cdd2a761bc8b566a2d65c3aaeba1db2fa1dea69549a1b143fdd931f3"
+    },
+    {
+      "path": "apps/catalogo/personalizaciones/forms/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/catalogo/personalizaciones/migrations/0001_initial.py",
+      "before": null,
+      "after": "eb5ec5f19c6beac91698dece13af84d7f6380aa11e59ca40160d38212c0fadae"
+    },
+    {
+      "path": "apps/catalogo/personalizaciones/migrations/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/catalogo/personalizaciones/views/__init__.py",
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/catalogo/personalizaciones/templates/personalizaciones/README.md",
+      "before": null,
+      "after": "39aa682815e164bc19d35ebb00dca47dffb821f64a31d394f2be0cd21f1fe324"
+    },
+    {
+      "path": "apps/catalogo/cotizaciones/migrations/0002_cotizacion_cliente.py",
+      "before": null,
+      "after": "eed6f847dd209ea5a3fa243fb9d435e9896d3899faab60384f902630d3f46a97"
+    },
+    {
+      "path": "config/settings.py",
+      "before": "77650b514c968c348d7fff13ead1e5ceefe833c2c3549a9da0c6de0bd9a91a49",
+      "after": "9531db93ec9fb6f251c33b0881f6f33a8ac97b8b2b9604c7cf37c21f3d935a2e"
+    },
+    {
+      "path": "config/testing.py",
+      "before": null,
+      "after": "0f048073da87a95eee3f6e2c0a8b80b1dc2a2363fbaad13949c6140c25fa2807"
+    },
+    {
+      "path": "config/urls.py",
+      "before": "8f219d816559b573cd694cfa9916454d88bf5d3ef93d0efb19c9629fd62f55f1",
+      "after": "191c29b057a8d207a81d9b004e440333413597763e35f6e96320beb0b2807e83"
+    },
+    {
+      "path": "docs/mapa-apps.md",
+      "before": null,
+      "after": "68342cd210e9966d971940a1b94de4fda71f55420e977360a02cab3fd9c1bfdb"
+    },
+    {
+      "path": "docs/modelos-catalogo-inventario.md",
+      "before": "f842c138c7709e8465881ff5de43553d60998c12b6ff04b862eacff028781e13",
+      "after": "644571bf976b2cbf5163ad96d6dc8404ae551a76bf82c31fac798a7ea3feafd8"
+    },
+    {
+      "path": "README_ARQUITECTURA.md",
+      "before": null,
+      "after": "b355e4ea65a8e127bdef9f6cd5c742c26eb95ce3abe0146e6f8a3fcbc09094ab"
+    }
+  ],
+  "removed": [
+    {
+      "path": "apps/sistema/categorias/views.py",
+      "before": "bb41612fb453e5bc9fe4895c9d910cadc1f64ce9d091d7d1414d928ed036ea6d"
+    },
+    {
+      "path": "apps/inventario/categorias/admin.py",
+      "before": "afb586992f9587bbe538a056d9436e155eba11451b95cc5e2d6ed65cc6821b03"
+    },
+    {
+      "path": "apps/inventario/categorias/apps.py",
+      "before": "8cd6e38bdc823f4a85053aad3df905db1607aceb62df1f7618d7c526bafb7e97"
+    },
+    {
+      "path": "apps/inventario/categorias/models.py",
+      "before": "c00c40b3c7e18394d860fc73f1015cbe4cac9d7f6b599f753b14cf1e49e915de"
+    },
+    {
+      "path": "apps/inventario/categorias/tests.py",
+      "before": "dae0da7efdcdb3a7fb572d5e914b60631099122d4a4727ac6434c016161c5fe1"
+    },
+    {
+      "path": "apps/inventario/categorias/urls.py",
+      "before": "77511a8c9cb7940d463a83330e486efd605e61d3400cfdcc79267550df3cd6ae"
+    },
+    {
+      "path": "apps/inventario/categorias/__init__.py",
+      "before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/inventario/categorias/forms/add_update.py",
+      "before": "a409d624568fff9ee4203fa16bf74e637edf5d1bcd693c095c338d86c2fb677c"
+    },
+    {
+      "path": "apps/inventario/categorias/migrations/0001_initial.py",
+      "before": "bf5d81dbd17df0362a4e2f95fb31a062112f9b366fd9b430bfcc52c81556e0be"
+    },
+    {
+      "path": "apps/inventario/categorias/migrations/__init__.py",
+      "before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/inventario/categorias/templates/categorias-inventario-add-update.html",
+      "before": "7306ae63f9a228ab5130e34d38dd3e86f80385db23a3cbf5645d5406f37523c8"
+    },
+    {
+      "path": "apps/inventario/categorias/templates/categorias-inventario-delete.html",
+      "before": "df6c6dd5d76bb0bf39e6ad9abd0b8f1d95a233bc7ba32eb7f7e12aabb503ad3d"
+    },
+    {
+      "path": "apps/inventario/categorias/templates/categorias-inventario-detail.html",
+      "before": "df6c6dd5d76bb0bf39e6ad9abd0b8f1d95a233bc7ba32eb7f7e12aabb503ad3d"
+    },
+    {
+      "path": "apps/inventario/categorias/templates/categorias-inventario-list.html",
+      "before": "c0ed0a95888c6c9dc9dab4da9f1d2333828c687eb9eaf637490c5969dcdd7e0c"
+    },
+    {
+      "path": "apps/inventario/categorias/views/add_update.py",
+      "before": "5d9ea1c6979597b329782c7f21bc1d54508bbad6f35374a6d27928e694fab81b"
+    },
+    {
+      "path": "apps/inventario/categorias/views/delete.py",
+      "before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/inventario/categorias/views/detail.py",
+      "before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/inventario/categorias/views/views.py",
+      "before": "0d6d7671e0befb8e9528b23a578d51945df186a55836f210cb580d4c7cb2c3ba"
+    },
+    {
+      "path": "apps/core/migrations/0001_initial.py",
+      "before": "cfff7f1e992577782058645fa4aad9120ed8f5bbc6b471c354838418ec2d3987"
+    },
+    {
+      "path": "apps/catalogo/categorias/admin.py",
+      "before": "a7ac68a753eeb831b6530bf71bf6917e577139f0734d17cc6a8666391564ab25"
+    },
+    {
+      "path": "apps/catalogo/categorias/apps.py",
+      "before": "99d0a6dc175017c3c3c937f9bbd8c7fbd7c74a99809c310bb09e6748436eda5c"
+    },
+    {
+      "path": "apps/catalogo/categorias/models.py",
+      "before": "0a7979ed43bcd001e20b861415b93fd72296c3f9e982f09c0d2d845fc2c2bca3"
+    },
+    {
+      "path": "apps/catalogo/categorias/tests.py",
+      "before": "dae0da7efdcdb3a7fb572d5e914b60631099122d4a4727ac6434c016161c5fe1"
+    },
+    {
+      "path": "apps/catalogo/categorias/urls.py",
+      "before": "ba8df3b8594f5e61079287ae84f1d52dc668aa9c309270b99efb2c319f1b5c4f"
+    },
+    {
+      "path": "apps/catalogo/categorias/__init__.py",
+      "before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/catalogo/categorias/migrations/__init__.py",
+      "before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/catalogo/categorias/templates/categorias-catalogo-add-update.html",
+      "before": "df6c6dd5d76bb0bf39e6ad9abd0b8f1d95a233bc7ba32eb7f7e12aabb503ad3d"
+    },
+    {
+      "path": "apps/catalogo/categorias/templates/categorias-catalogo-delete.html",
+      "before": "df6c6dd5d76bb0bf39e6ad9abd0b8f1d95a233bc7ba32eb7f7e12aabb503ad3d"
+    },
+    {
+      "path": "apps/catalogo/categorias/templates/categorias-catalogo-detail.html",
+      "before": "df6c6dd5d76bb0bf39e6ad9abd0b8f1d95a233bc7ba32eb7f7e12aabb503ad3d"
+    },
+    {
+      "path": "apps/catalogo/categorias/templates/categorias-catalogo-list.html",
+      "before": "b248b5ea255ba55534d94ba119d43bf15c0ee8f36d438e6c355a7e89315c7b1a"
+    },
+    {
+      "path": "apps/catalogo/categorias/views/add_update.py",
+      "before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/catalogo/categorias/views/delete.py",
+      "before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/catalogo/categorias/views/detail.py",
+      "before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/catalogo/categorias/views/views.py",
+      "before": "73a1dc92ea3ea87850369cc8d1f045c485e272775eb00f2ae45073fa706d0293"
+    }
+  ],
+  "preserved": {
+    "apps/auth/admin.py": "a7ac68a753eeb831b6530bf71bf6917e577139f0734d17cc6a8666391564ab25",
+    "apps/auth/apps.py": "dbbed46587eb3c2ff24d1a616fdf069a9b2e3bb2109fcdbb0ef0759ba7ec1e30",
+    "apps/auth/helpers.py": "4caa377750b7574e339aff4654f95b8936a3686f4b1940c3a7e27834df0f4657",
+    "apps/auth/managers.py": "9334f607a3781f5bc57a0d8e093b9f8862614052445047be25db28beabf7cf67",
+    "apps/auth/models.py": "b1c0f2d1c134d9d34a161bdddf75a9e5fba6fd3b295f18df721cfe1099cae277",
+    "apps/auth/tests.py": "dae0da7efdcdb3a7fb572d5e914b60631099122d4a4727ac6434c016161c5fe1",
+    "apps/auth/urls.py": "11407423dc5442ddfb86e8cf606aba5711bec83b1e5cecb2646d3b82074ff5ff",
+    "apps/auth/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "apps/auth/forms/login.py": "f86e5db1fb8b112acc5a1bc9d54f5e0a5bb9a21d0d84dcc99e23c5b182858f03",
+    "apps/auth/forms/register.py": "da0e4a79aa13a015613bedfb427bd30c4d5298838d0b6367ac5239918d5a92f4",
+    "apps/auth/migrations/0001_initial.py": "92eae2c3bc907d810f5c7bd4454c06564b7d8219caf7eab17ac5fe582203b553",
+    "apps/auth/migrations/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "apps/auth/templates/forgot_password.html": "8d697ecf889f73f892f870c1c0fedc1c369ab6509fbf673c3948ff2df3da28c7",
+    "apps/auth/templates/login.html": "b6fa9e52667d657150766f4f2bdfd1035da9842f82159bf9a4295c65f0e1c83b",
+    "apps/auth/templates/register.html": "f7cd148fadaef632322e6dc7d689baadc19a2049631ed4e19a7ab2daafc55eb7",
+    "apps/auth/templates/reset_password.html": "3a4a18cf015da5eb3ec446eae51d29e1549bcb1ef504fb98adcd8052607ad63f",
+    "apps/auth/templates/verify_email.html": "c30e92f34906d0a15540d3cc63b039800be6b05836225681a2a51075796bee55",
+    "apps/auth/views/forgot_password.py": "392224855432accfe50cda004342e79e3b46b08246bd7c0c8d82f52413f793a3",
+    "apps/auth/views/login.py": "a21405ff4e089bc657d0e01c6863bbe89d4cb76f2aadede40a2d1b72724cdde0",
+    "apps/auth/views/register.py": "37312d8041f2d57ad135284d46cba7d6ec437b0204153b75cafbc4f11540419e",
+    "apps/auth/views/reset_password.py": "dea77988ecbd086a0cf1a467d814b4b1b84fd1632985b223274f36fcb78f288c",
+    "apps/auth/views/verify_email.py": "f73e3e7428222726a25fe1e80b6a67e6c9ab2a21cb3fc87ffe287a27c1e109f9",
+    "apps/auth/views/__init__.py": "6a656096a0ff9cb61805327f067face95c532c7e1f57c042e34b1304ddfa7540",
+    "apps/landing/admin.py": "a7ac68a753eeb831b6530bf71bf6917e577139f0734d17cc6a8666391564ab25",
+    "apps/landing/apps.py": "de29b9dfafccdc061b170fe18ba23757d0f29c2f2cd322457b6fb5e3db6bd4a4",
+    "apps/landing/models.py": "6ddc8147bb88e3effe69878d86e4f79546a0e83b8d7f8c206abaece756c514aa",
+    "apps/landing/tests.py": "dae0da7efdcdb3a7fb572d5e914b60631099122d4a4727ac6434c016161c5fe1",
+    "apps/landing/urls.py": "1bdf19932ee35421cadbadc636eb032fefd96f4730c5170d4b92f6a8ff550555",
+    "apps/landing/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "apps/landing/forms/sugerencias_form.py": "5565648e378a0bb35ab81d348d00bcb59f5b8f05fde0f2f73bb3b5421cca8551",
+    "apps/landing/migrations/0001_initial.py": "75b104cd2c85bb70cede23ebe740f5ac4c7de7ed0fee0724f0e6dc044ce224e7",
+    "apps/landing/migrations/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "apps/landing/templates/landing.html": "55948506ce38ca4f30d51ce191fb95b8e25ab1416e7a885de030fc8fbf4d73db",
+    "apps/landing/views/views.py": "dfe9de56e05b9632b87e309476e3e635b4f96d7167922687e5290783eddc26e8"
+  },
+  "html": [
+    {
+      "original": "templates/layout/layout_blank.html",
+      "target": "templates/layout/layout_blank.html",
+      "hash": "01e4075e41cad9d37fb03d67025c3b7841a8e384da23335acf7cf27f8471fa7a"
+    },
+    {
+      "original": "templates/layout/layout_front.html",
+      "target": "templates/layout/layout_front.html",
+      "hash": "8d58c36c84e6cc1dce9fd6ead10c12fe18ba16874c4883a1d1c9563ab8fe1ab7"
+    },
+    {
+      "original": "templates/layout/layout_horizontal.html",
+      "target": "templates/layout/layout_horizontal.html",
+      "hash": "584ed53d161689cfcd4be186839debaa5dcb777582e45cbd4ee2b704547b41d9"
+    },
+    {
+      "original": "templates/layout/layout_vertical.html",
+      "target": "templates/layout/layout_vertical.html",
+      "hash": "a942204efc4a4014390fb33a8a44633e367998a9389cb11749312871e2361c1c"
+    },
+    {
+      "original": "templates/layout/master.html",
+      "target": "templates/layout/master.html",
+      "hash": "1469db80cd7b5f249936725fcb0fc6c040dbe8e38e2315fad3b28c9d2480dab5"
+    },
+    {
+      "original": "templates/layout/system.html",
+      "target": "templates/layout/system.html",
+      "hash": "01e4075e41cad9d37fb03d67025c3b7841a8e384da23335acf7cf27f8471fa7a"
+    },
+    {
+      "original": "templates/partials/logo.html",
+      "target": "templates/partials/logo.html",
+      "hash": "3a8b0c49c6d88a81d011eefc218f094200ecc9b04ec6bf53cc44235989bef3c5"
+    },
+    {
+      "original": "templates/partials/wizard_ex_checkout.html",
+      "target": "templates/partials/wizard_ex_checkout.html",
+      "hash": "16daf97206e295ad56b28341c7d343b7b05eff50caf103b36160f4edca9ed9e5"
+    },
+    {
+      "original": "templates/widgets/text_input.html",
+      "target": "templates/widgets/text_input.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "templates/partials/_modals/modal_add_new_address.html",
+      "target": "templates/partials/_modals/modal_add_new_address.html",
+      "hash": "bca7cf7868bfd82dcc62e029df72c9cd996638af73419284c5f17dfb54e0775a"
+    },
+    {
+      "original": "templates/partials/_modals/modal_add_new_cc.html",
+      "target": "templates/partials/_modals/modal_add_new_cc.html",
+      "hash": "d8228354a567b1b3de6f2eeb1569f7e3355d181feb4e5056070e2d1b75273c17"
+    },
+    {
+      "original": "templates/partials/_modals/modal_add_permission.html",
+      "target": "templates/partials/_modals/modal_add_permission.html",
+      "hash": "09d744691b5d4c141526feb6930843fb28f717b29551da67163ff07fafd955bf"
+    },
+    {
+      "original": "templates/partials/_modals/modal_add_role.html",
+      "target": "templates/partials/_modals/modal_add_role.html",
+      "hash": "1f40fa723bbb9e1f9c630109fff0f1952c04eddb878c42c7233ff081d01aaa66"
+    },
+    {
+      "original": "templates/partials/_modals/modal_create_app.html",
+      "target": "templates/partials/_modals/modal_create_app.html",
+      "hash": "1b2ec0c2319c485ed49119d31b1eaa5732bbfd76e7f35762c5be3f2741096522"
+    },
+    {
+      "original": "templates/partials/_modals/modal_edit_cc.html",
+      "target": "templates/partials/_modals/modal_edit_cc.html",
+      "hash": "0fd1b3540fb7cdd30f380f610b8787e837f8f836b24bab8c59ee3f3c199b522c"
+    },
+    {
+      "original": "templates/partials/_modals/modal_edit_permission.html",
+      "target": "templates/partials/_modals/modal_edit_permission.html",
+      "hash": "a4f4b580e87a19958acef3c30786ed3546a0c1ec127b95947a0ced4c19f790a1"
+    },
+    {
+      "original": "templates/partials/_modals/modal_edit_user.html",
+      "target": "templates/partials/_modals/modal_edit_user.html",
+      "hash": "b76186426573f23e14e29603079cc2633d9e763d6e2d92b86cd9c2ac7e8fb227"
+    },
+    {
+      "original": "templates/partials/_modals/modal_enable_otp.html",
+      "target": "templates/partials/_modals/modal_enable_otp.html",
+      "hash": "a1adbc9361a5893d0a95a0ccfa31e20c8a10b93c1686e4e3cecebb9f9ec4f989"
+    },
+    {
+      "original": "templates/partials/_modals/modal_pricing.html",
+      "target": "templates/partials/_modals/modal_pricing.html",
+      "hash": "4804b2e8baa9def398d9b2c16c9e868b1295af4b55945489d1d8d08dfa44b98b"
+    },
+    {
+      "original": "templates/partials/_modals/modal_refer_earn.html",
+      "target": "templates/partials/_modals/modal_refer_earn.html",
+      "hash": "79a78d48e87922294f9a74009c0b59fa0259f609f33e8885852469a8d566b309"
+    },
+    {
+      "original": "templates/partials/_modals/modal_select_payment_methods.html",
+      "target": "templates/partials/_modals/modal_select_payment_methods.html",
+      "hash": "bc32759c886a0ed0204ab2624f7ed09b6e717785a06d1d16d38224c1cc615f4e"
+    },
+    {
+      "original": "templates/partials/_modals/modal_select_payment_providers.html",
+      "target": "templates/partials/_modals/modal_select_payment_providers.html",
+      "hash": "0ce15d3ae3d00d79df0f6722cc89ab657a9adcee7b4e6711380eea036bf585a6"
+    },
+    {
+      "original": "templates/partials/_modals/modal_share_project.html",
+      "target": "templates/partials/_modals/modal_share_project.html",
+      "hash": "9782d7c234b04969669cb909a269294b73e2919e5ae5e47cf65f665beb40331e"
+    },
+    {
+      "original": "templates/partials/_modals/modal_two_factor_auth.html",
+      "target": "templates/partials/_modals/modal_two_factor_auth.html",
+      "hash": "acdf22a5a4bf94e696352fad87c9d2fa2feaebaae454c2ad52e004d5dfea5133"
+    },
+    {
+      "original": "templates/partials/_modals/modal_upgrade_plan.html",
+      "target": "templates/partials/_modals/modal_upgrade_plan.html",
+      "hash": "980c2bad835c14e52687af7925bf813bcf33a12810a2e1f7e5a57ef4df6f2348"
+    },
+    {
+      "original": "templates/partials/_offcanvas/offcanvas_add_payment.html",
+      "target": "templates/partials/_offcanvas/offcanvas_add_payment.html",
+      "hash": "90b78dde742a816711b58b4d99389e82abbb480fc6cf54c915ee0fc0b7d64ca3"
+    },
+    {
+      "original": "templates/partials/_offcanvas/offcanvas_send_invoice.html",
+      "target": "templates/partials/_offcanvas/offcanvas_send_invoice.html",
+      "hash": "0474cefdf23d9368bdb1530b9e5f108dd1c01b241ef3b67798377001c5605fdb"
+    },
+    {
+      "original": "templates/layout/partials/scripts.html",
+      "target": "templates/layout/partials/scripts.html",
+      "hash": "7574d1f1057f50872376b93f78fdaeee21d00918e15ae46215cfbc312cb1613e"
+    },
+    {
+      "original": "templates/layout/partials/scripts_front.html",
+      "target": "templates/layout/partials/scripts_front.html",
+      "hash": "d26b8d78fb04a5a7efdbe98b8270681b81327ee56a94e0170d6c2ea0bcda40cd"
+    },
+    {
+      "original": "templates/layout/partials/scripts_includes.html",
+      "target": "templates/layout/partials/scripts_includes.html",
+      "hash": "07c3ec21477da9c2dde497c7395b3e070809097b2bb7da638e7f6afb1b808578"
+    },
+    {
+      "original": "templates/layout/partials/scripts_includes_front.html",
+      "target": "templates/layout/partials/scripts_includes_front.html",
+      "hash": "e2c78c332cd85dc5bec700175ff46ef911ac43f791d00b58c223a478d2fd1993"
+    },
+    {
+      "original": "templates/layout/partials/styles.html",
+      "target": "templates/layout/partials/styles.html",
+      "hash": "7d6a3dea6cf30686b312f3f67edc2127d97f11c572996040fed7730d471b042e"
+    },
+    {
+      "original": "templates/layout/partials/styles_front.html",
+      "target": "templates/layout/partials/styles_front.html",
+      "hash": "bcc724e8ebb15894c408c1e9d18bd4ec5382df3f71f9d8c565590719b8c091c8"
+    },
+    {
+      "original": "templates/layout/partials/footer/footer.html",
+      "target": "templates/layout/partials/footer/footer.html",
+      "hash": "4dc81891109ec8f873c2439d8b1306f6abfcc54d58fd9d06d0a186c3519c64d8"
+    },
+    {
+      "original": "templates/layout/partials/footer/footer_front.html",
+      "target": "templates/layout/partials/footer/footer_front.html",
+      "hash": "6e1427b7285fea43d69118d4ba589f18a205472fcc0277c69e248db33377ff76"
+    },
+    {
+      "original": "templates/layout/partials/navbar/navbar.html",
+      "target": "templates/layout/partials/navbar/navbar.html",
+      "hash": "ac05c180c8a8d996e441e6d60fed00a62f59ff67a73c83f98e37f6b9f02bf74f"
+    },
+    {
+      "original": "templates/layout/partials/navbar/navbar_front.html",
+      "target": "templates/layout/partials/navbar/navbar_front.html",
+      "hash": "f86a4d490f3a2f33a41a7404100d0235c223ad249ba344286a4c5296c9b92652"
+    },
+    {
+      "original": "templates/layout/partials/menu/vertical/vertical_menu.html",
+      "target": "templates/layout/partials/menu/vertical/vertical_menu.html",
+      "hash": "e285ba2202ba82afe4412088a0d7f3434211dfa750d0200abf17d88b12ff2218"
+    },
+    {
+      "original": "templates/layout/partials/menu/vertical/partials/menu_collapsible_template.html",
+      "target": "templates/layout/partials/menu/vertical/partials/menu_collapsible_template.html",
+      "hash": "b136932b21d29753da344fef4f76f856030388b077ab386826883afd16768fa8"
+    },
+    {
+      "original": "templates/layout/partials/menu/vertical/partials/menu_header_template.html",
+      "target": "templates/layout/partials/menu/vertical/partials/menu_header_template.html",
+      "hash": "ea1c96b5594c09343f8462182f59e78a57be645218f1747f33429b90d662c8fa"
+    },
+    {
+      "original": "templates/layout/partials/menu/vertical/partials/menu_item_template.html",
+      "target": "templates/layout/partials/menu/vertical/partials/menu_item_template.html",
+      "hash": "45aa4dd47c10c0aaeeacb001e570cba1fbc2264a3982b671d810b396a31a192b"
+    },
+    {
+      "original": "templates/layout/partials/menu/vertical/partials/menu_link_template.html",
+      "target": "templates/layout/partials/menu/vertical/partials/menu_link_template.html",
+      "hash": "d160d0392f48ebfb1854c6b7df32df8b672c3ff193bb6b0e761ace72e15abb80"
+    },
+    {
+      "original": "src/js/_template-customizer/_template-customizer.html",
+      "target": "src/js/_template-customizer/_template-customizer.html",
+      "hash": "498060fed9cc18887e8090826a3ce58bde0d6ae8b0c66740d245cce1e602cf6b"
+    },
+    {
+      "original": "apps/ventas/ventas/templates/ventas-add-update.html",
+      "target": "apps/ventas/ventas/templates/ventas-add-update.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/ventas/ventas/templates/ventas-delete.html",
+      "target": "apps/ventas/ventas/templates/ventas-delete.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/ventas/ventas/templates/ventas-detail.html",
+      "target": "apps/ventas/ventas/templates/ventas-detail.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/ventas/ventas/templates/ventas-list.html",
+      "target": "apps/ventas/ventas/templates/ventas-list.html",
+      "hash": "ff6dbf064faf04623b7430267f5786292fce3f1541542671627da933f64a2051"
+    },
+    {
+      "original": "apps/ventas/pedidos/templates/pedidos-add-update.html",
+      "target": "apps/ventas/pedidos/templates/pedidos-add-update.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/ventas/pedidos/templates/pedidos-delete.html",
+      "target": "apps/ventas/pedidos/templates/pedidos-delete.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/ventas/pedidos/templates/pedidos-detail.html",
+      "target": "apps/ventas/pedidos/templates/pedidos-detail.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/ventas/pedidos/templates/pedidos-list.html",
+      "target": "apps/ventas/pedidos/templates/pedidos-list.html",
+      "hash": "60fd7d5453684115389ea6408b09bb6144757e20852c026fa0126fcc976630d4"
+    },
+    {
+      "original": "apps/ventas/clientes/templates/clientes-add-update.html",
+      "target": "apps/ventas/clientes/templates/clientes-add-update.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/ventas/clientes/templates/clientes-delete.html",
+      "target": "apps/ventas/clientes/templates/clientes-delete.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/ventas/clientes/templates/clientes-detail.html",
+      "target": "apps/ventas/clientes/templates/clientes-detail.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/ventas/clientes/templates/clientes-list.html",
+      "target": "apps/ventas/clientes/templates/clientes-list.html",
+      "hash": "b11b7b7a1fb9ea56c9279eb55f06b90db1ccf6e5cf292cda69ccdc2f11b82a11"
+    },
+    {
+      "original": "apps/trabajadores/personas/templates/personas-add-update.html",
+      "target": "apps/trabajadores/personas/templates/personas-add-update.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/trabajadores/personas/templates/personas-delete.html",
+      "target": "apps/trabajadores/personas/templates/personas-delete.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/trabajadores/personas/templates/personas-detail.html",
+      "target": "apps/trabajadores/personas/templates/personas-detail.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/trabajadores/personas/templates/personas-list.html",
+      "target": "apps/trabajadores/personas/templates/personas-list.html",
+      "hash": "d93b558e65ce2c89d4542a17d076bad1bcb0cd8bff89b31bc6d65fc5d6b1e0aa"
+    },
+    {
+      "original": "apps/trabajadores/areas/templates/areas-add-update.html",
+      "target": "apps/trabajadores/areas/templates/areas-add-update.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/trabajadores/areas/templates/areas-delete.html",
+      "target": "apps/trabajadores/areas/templates/areas-delete.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/trabajadores/areas/templates/areas-detail.html",
+      "target": "apps/trabajadores/areas/templates/areas-detail.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/trabajadores/areas/templates/areas-list.html",
+      "target": "apps/trabajadores/areas/templates/areas-list.html",
+      "hash": "b11b7b7a1fb9ea56c9279eb55f06b90db1ccf6e5cf292cda69ccdc2f11b82a11"
+    },
+    {
+      "original": "apps/sistema/sexo/templates/sex-list.html",
+      "target": "apps/sistema/sexo/templates/sex-list.html",
+      "hash": "da1f04ec8ca532939568842b7683ad04311e2b5b45de211ae25b64ea0ddc5c0d"
+    },
+    {
+      "original": "apps/sistema/emails/templates/emails-list.html",
+      "target": "apps/sistema/emails/templates/emails-list.html",
+      "hash": "b11b7b7a1fb9ea56c9279eb55f06b90db1ccf6e5cf292cda69ccdc2f11b82a11"
+    },
+    {
+      "original": "apps/landing/templates/landing.html",
+      "target": "apps/landing/templates/landing.html",
+      "hash": "55948506ce38ca4f30d51ce191fb95b8e25ab1416e7a885de030fc8fbf4d73db"
+    },
+    {
+      "original": "apps/inventario/movimientos/templates/movimientos-add-update.html",
+      "target": "apps/inventario/movimientos/templates/movimientos-add-update.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/inventario/movimientos/templates/movimientos-delete.html",
+      "target": "apps/inventario/movimientos/templates/movimientos-delete.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/inventario/movimientos/templates/movimientos-detail.html",
+      "target": "apps/inventario/movimientos/templates/movimientos-detail.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/inventario/movimientos/templates/movimientos-list.html",
+      "target": "apps/inventario/movimientos/templates/movimientos-list.html",
+      "hash": "b11b7b7a1fb9ea56c9279eb55f06b90db1ccf6e5cf292cda69ccdc2f11b82a11"
+    },
+    {
+      "original": "apps/inventario/insumos/templates/insumos-add-udpate.html",
+      "target": "apps/inventario/insumos/templates/insumos-add-udpate.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/inventario/insumos/templates/insumos-delete.html",
+      "target": "apps/inventario/insumos/templates/insumos-delete.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/inventario/insumos/templates/insumos-detail.html",
+      "target": "apps/inventario/insumos/templates/insumos-detail.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/inventario/insumos/templates/insumos-list.html",
+      "target": "apps/inventario/insumos/templates/insumos-list.html",
+      "hash": "b11b7b7a1fb9ea56c9279eb55f06b90db1ccf6e5cf292cda69ccdc2f11b82a11"
+    },
+    {
+      "original": "apps/inventario/categorias/templates/categorias-inventario-add-update.html",
+      "target": "apps/sistema/categorias/templates/categorias/form.html",
+      "hash": "7306ae63f9a228ab5130e34d38dd3e86f80385db23a3cbf5645d5406f37523c8"
+    },
+    {
+      "original": "apps/inventario/categorias/templates/categorias-inventario-delete.html",
+      "target": "apps/sistema/categorias/templates/categorias/archive.html",
+      "hash": "df6c6dd5d76bb0bf39e6ad9abd0b8f1d95a233bc7ba32eb7f7e12aabb503ad3d"
+    },
+    {
+      "original": "apps/inventario/categorias/templates/categorias-inventario-detail.html",
+      "target": "apps/sistema/categorias/templates/categorias/archive.html",
+      "hash": "df6c6dd5d76bb0bf39e6ad9abd0b8f1d95a233bc7ba32eb7f7e12aabb503ad3d"
+    },
+    {
+      "original": "apps/inventario/categorias/templates/categorias-inventario-list.html",
+      "target": "apps/sistema/categorias/templates/categorias/list.html",
+      "hash": "c0ed0a95888c6c9dc9dab4da9f1d2333828c687eb9eaf637490c5969dcdd7e0c"
+    },
+    {
+      "original": "apps/inventario/bodegas/templates/bodegas-add-update.html",
+      "target": "apps/inventario/bodegas/templates/bodegas-add-update.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/inventario/bodegas/templates/bodegas-delete.html",
+      "target": "apps/inventario/bodegas/templates/bodegas-delete.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/inventario/bodegas/templates/bodegas-detail.html",
+      "target": "apps/inventario/bodegas/templates/bodegas-detail.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/inventario/bodegas/templates/bodegas-list.html",
+      "target": "apps/inventario/bodegas/templates/bodegas-list.html",
+      "hash": "df6c6dd5d76bb0bf39e6ad9abd0b8f1d95a233bc7ba32eb7f7e12aabb503ad3d"
+    },
+    {
+      "original": "apps/home/templates/home.html",
+      "target": "apps/home/templates/home.html",
+      "hash": "f7360666307d2de6ae2478e969177ba8676db932a6df406aee4a96646558208c"
+    },
+    {
+      "original": "apps/core/templates/widgets/floating_input.html",
+      "target": "apps/core/templates/widgets/floating_input.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/core/templates/widgets/image_input.html",
+      "target": "apps/core/templates/widgets/image_input.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/core/templates/widgets/password_input.html",
+      "target": "apps/core/templates/widgets/password_input.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/core/templates/widgets/text_area.html",
+      "target": "apps/core/templates/widgets/text_area.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/compras/proveedores/templates/proveedores-add-update.html",
+      "target": "apps/compras/proveedores/templates/proveedores-add-update.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/compras/proveedores/templates/proveedores-delete.html",
+      "target": "apps/compras/proveedores/templates/proveedores-delete.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/compras/proveedores/templates/proveedores-detail.html",
+      "target": "apps/compras/proveedores/templates/proveedores-detail.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/compras/proveedores/templates/proveedores-list.html",
+      "target": "apps/compras/proveedores/templates/proveedores-list.html",
+      "hash": "cd033a5c35be393d385e603da69a0e4bb7fea0717a7eafd02c43ece759e8ca57"
+    },
+    {
+      "original": "apps/compras/oc/templates/oc-add-update.html",
+      "target": "apps/compras/oc/templates/oc-add-update.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/compras/oc/templates/oc-delete.html",
+      "target": "apps/compras/oc/templates/oc-delete.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/compras/oc/templates/oc-detail.html",
+      "target": "apps/compras/oc/templates/oc-detail.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/compras/oc/templates/oc-list.html",
+      "target": "apps/compras/oc/templates/oc-list.html",
+      "hash": "c4e208ccb7dce8f25fbc3af86806676f7a9b4bad423a2cd6ecf66454b91997fc"
+    },
+    {
+      "original": "apps/catalogo/productos/templates/productos-add-update.html",
+      "target": "apps/catalogo/productos/templates/productos-add-update.html",
+      "hash": "f09c03914f97edb8c8f313b843c18c224614ac712052dc7495c490bc100419d4"
+    },
+    {
+      "original": "apps/catalogo/productos/templates/productos-delete.html",
+      "target": "apps/catalogo/productos/templates/productos-delete.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/catalogo/productos/templates/productos-detail.html",
+      "target": "apps/catalogo/productos/templates/productos-detail.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/catalogo/productos/templates/productos-list.html",
+      "target": "apps/catalogo/productos/templates/productos-list.html",
+      "hash": "46545fb0d37991370af9e3553b3fd3045452ef5f43a9386fdc012d0857f0f8f1"
+    },
+    {
+      "original": "apps/catalogo/cotizaciones/templates/cotizaciones-add-update.html",
+      "target": "apps/catalogo/cotizaciones/templates/cotizaciones-add-update.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/catalogo/cotizaciones/templates/cotizaciones-delete.html",
+      "target": "apps/catalogo/cotizaciones/templates/cotizaciones-delete.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/catalogo/cotizaciones/templates/cotizaciones-detail.html",
+      "target": "apps/catalogo/cotizaciones/templates/cotizaciones-detail.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/catalogo/cotizaciones/templates/cotizaciones-list.html",
+      "target": "apps/catalogo/cotizaciones/templates/cotizaciones-list.html",
+      "hash": "2a28b3d3888faded8ff4a72931730c191a91f2526dfb5231a3a0be34d0b86929"
+    },
+    {
+      "original": "apps/catalogo/categorias/templates/categorias-catalogo-add-update.html",
+      "target": "apps/sistema/categorias/templates/categorias/archive.html",
+      "hash": "df6c6dd5d76bb0bf39e6ad9abd0b8f1d95a233bc7ba32eb7f7e12aabb503ad3d"
+    },
+    {
+      "original": "apps/catalogo/categorias/templates/categorias-catalogo-delete.html",
+      "target": "apps/sistema/categorias/templates/categorias/archive.html",
+      "hash": "df6c6dd5d76bb0bf39e6ad9abd0b8f1d95a233bc7ba32eb7f7e12aabb503ad3d"
+    },
+    {
+      "original": "apps/catalogo/categorias/templates/categorias-catalogo-detail.html",
+      "target": "apps/sistema/categorias/templates/categorias/archive.html",
+      "hash": "df6c6dd5d76bb0bf39e6ad9abd0b8f1d95a233bc7ba32eb7f7e12aabb503ad3d"
+    },
+    {
+      "original": "apps/catalogo/categorias/templates/categorias-catalogo-list.html",
+      "target": "apps/sistema/categorias/templates/categorias/legacy/categorias-catalogo-list.html",
+      "hash": "b248b5ea255ba55534d94ba119d43bf15c0ee8f36d438e6c355a7e89315c7b1a"
+    },
+    {
+      "original": "apps/auth/templates/forgot_password.html",
+      "target": "apps/auth/templates/forgot_password.html",
+      "hash": "8d697ecf889f73f892f870c1c0fedc1c369ab6509fbf673c3948ff2df3da28c7"
+    },
+    {
+      "original": "apps/auth/templates/login.html",
+      "target": "apps/auth/templates/login.html",
+      "hash": "b6fa9e52667d657150766f4f2bdfd1035da9842f82159bf9a4295c65f0e1c83b"
+    },
+    {
+      "original": "apps/auth/templates/register.html",
+      "target": "apps/auth/templates/register.html",
+      "hash": "f7cd148fadaef632322e6dc7d689baadc19a2049631ed4e19a7ab2daafc55eb7"
+    },
+    {
+      "original": "apps/auth/templates/reset_password.html",
+      "target": "apps/auth/templates/reset_password.html",
+      "hash": "3a4a18cf015da5eb3ec446eae51d29e1549bcb1ef504fb98adcd8052607ad63f"
+    },
+    {
+      "original": "apps/auth/templates/verify_email.html",
+      "target": "apps/auth/templates/verify_email.html",
+      "hash": "c30e92f34906d0a15540d3cc63b039800be6b05836225681a2a51075796bee55"
+    },
+    {
+      "original": "apps/acceso/usuarios/templates/usuarios-add-update.html",
+      "target": "apps/acceso/usuarios/templates/usuarios-add-update.html",
+      "hash": "cf285cdb2408ab0ff05c558ca87c1e175359229c4ecfe8152ef62043f8778cd2"
+    },
+    {
+      "original": "apps/acceso/usuarios/templates/usuarios-delete.html",
+      "target": "apps/acceso/usuarios/templates/usuarios-delete.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/acceso/usuarios/templates/usuarios-detail.html",
+      "target": "apps/acceso/usuarios/templates/usuarios-detail.html",
+      "hash": "b11b7b7a1fb9ea56c9279eb55f06b90db1ccf6e5cf292cda69ccdc2f11b82a11"
+    },
+    {
+      "original": "apps/acceso/usuarios/templates/usuarios-list.html",
+      "target": "apps/acceso/usuarios/templates/usuarios-list.html",
+      "hash": "b63fd14f58b74841a93c05df2ce7c47c24b875cfb9c3b400702f2fc4e02a34e9"
+    },
+    {
+      "original": "apps/acceso/usuarios/templates/partials/account-status-modal.html",
+      "target": "apps/acceso/usuarios/templates/partials/account-status-modal.html",
+      "hash": "c356a52aa2b2211ed02f2d9b3cea3d070cb43f2d6bf2eb9a41af43daba507acc"
+    },
+    {
+      "original": "apps/acceso/usuarios/templates/partials/superadmin-password-modal.html",
+      "target": "apps/acceso/usuarios/templates/partials/superadmin-password-modal.html",
+      "hash": "ec48524caa8b1bf6b5474abd8d05b92fe3bacc07cba5952c7f5d5aabbc70b34f"
+    },
+    {
+      "original": "apps/acceso/permisos/templates/permisos-list.html",
+      "target": "apps/acceso/permisos/templates/permisos-list.html",
+      "hash": "f4035a18a981ad9c0382fa35593f868b6ed002f831ac777614f006f0f458238c"
+    },
+    {
+      "original": "apps/acceso/grupos/templates/grupos-add-update.html",
+      "target": "apps/acceso/grupos/templates/grupos-add-update.html",
+      "hash": "9c2b185fa7313acc8882b01a3278072afe76f8375a0337815df01241c18bc9ed"
+    },
+    {
+      "original": "apps/acceso/grupos/templates/grupos-delete.html",
+      "target": "apps/acceso/grupos/templates/grupos-delete.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/acceso/grupos/templates/grupos-detail.html",
+      "target": "apps/acceso/grupos/templates/grupos-detail.html",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "apps/acceso/grupos/templates/grupos-list.html",
+      "target": "apps/acceso/grupos/templates/grupos-list.html",
+      "hash": "5b94bf3c4340afc5cccf474e45a979b9f707a0f23bad249944f332fc5017a050"
+    }
+  ],
+  "retired": [
+    "apps/inventario/categorias",
+    "apps/catalogo/categorias"
+  ]
+}

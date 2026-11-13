@@ -4,7 +4,8 @@ from django.core.exceptions import ValidationError
 from django.core.validators import MinValueValidator
 from django.db import models
 
-from apps.core.models import Articulo, BaseModel
+from apps.core.models import BaseModel
+from apps.inventario.articulos.models import Articulo
 from apps.core.utils import RenameImagen, image_exist
 
 class TipoProducto(BaseModel):
@@ -23,7 +24,7 @@ class TipoProducto(BaseModel):
 
 class Producto(BaseModel):
     categoria = models.ForeignKey(
-        "catalogo_categorias.Categoria",
+        "inventario_categorias.Categoria",
         on_delete=models.PROTECT,
         related_name="productos",
     )
@@ -38,6 +39,8 @@ class Producto(BaseModel):
     nombre = models.CharField(max_length=150)
     descripcion = models.TextField(blank=True)
 
+    slug = models.SlugField(max_length=170, unique=True)
+
     permite_personalizacion = models.BooleanField(default=False)
     publicado = models.BooleanField(default=False)
 
@@ -45,6 +48,11 @@ class Producto(BaseModel):
         ordering = ["nombre", "pk"]
         verbose_name = "producto"
         verbose_name_plural = "productos"
+
+    def clean(self):
+        super().clean()
+        if self.publicado and self.categoria_id and (not self.categoria.publicada or self.categoria.is_archived):
+            raise ValidationError({"categoria": "Un producto público necesita una categoría pública activa."})
 
     def __str__(self):
         return self.nombre
@@ -79,15 +87,13 @@ class VarianteProducto(BaseModel):
     # Las medidas son interiores útiles, en milímetros.
     ancho_mm = models.PositiveIntegerField(validators=[MinValueValidator(1)],)
     alto_mm = models.PositiveIntegerField(validators=[MinValueValidator(1)],)
-    fuelle_mm = models.PositiveIntegerField(validators=[MinValueValidator(1)],)
+    fuelle_mm = models.PositiveIntegerField(default=0, help_text="Cero para bolsas sin fuelle.")
     gramaje_g_m2 = models.PositiveIntegerField(validators=[MinValueValidator(1)])
 
     # Vacío significa que no se ha verificado la carga.
     carga_maxima_kg = models.DecimalField(max_digits=7, decimal_places=3, null=True, blank=True, validators=[MinValueValidator(Decimal("0.001"))])
 
-    # Precio neto por bolsa, sin personalización.
-    precio_base = models.DecimalField(max_digits=12, decimal_places=2, validators=[MinValueValidator(Decimal("0.01"))],)
-    moneda = models.CharField(max_length=3, choices=[("CLP", "Peso chileno")], default="CLP")
+    # Precios netos administrados en apps.catalogo.precios.
 
     cantidad_minima = models.PositiveIntegerField(default=1, validators=[MinValueValidator(1)],)
     multiplo_venta = models.PositiveIntegerField(default=1, validators=[MinValueValidator(1)])
@@ -103,7 +109,7 @@ class VarianteProducto(BaseModel):
                 condition=(
                     models.Q(ancho_mm__gt=0)
                     & models.Q(alto_mm__gt=0)
-                    & models.Q(fuelle_mm__gt=0)
+                    & models.Q(fuelle_mm__gte=0)
                     & models.Q(gramaje_g_m2__gt=0)
                 ),
                 name="variante_medidas_positivas",
@@ -114,10 +120,6 @@ class VarianteProducto(BaseModel):
                     | models.Q(carga_maxima_kg__gt=0)
                 ),
                 name="variante_carga_valida",
-            ),
-            models.CheckConstraint(
-                condition=models.Q(precio_base__gt=0),
-                name="variante_precio_positivo",
             ),
             models.CheckConstraint(
                 condition=(
@@ -132,6 +134,10 @@ class VarianteProducto(BaseModel):
         return f"{self.articulo.sku} - {self.producto.nombre}"
 
     @property
+    def stock_disponible(self):
+        return self.articulo.stock_disponible
+
+    @property
     def sku(self):
         return self.articulo.sku
 
@@ -143,10 +149,14 @@ class VarianteProducto(BaseModel):
 
         errores = []
 
+        if self.cantidad_minima and self.multiplo_venta and self.cantidad_minima % self.multiplo_venta:
+            raise ValidationError({"cantidad_minima": "El mínimo debe ser múltiplo de la cantidad de venta."})
+        if self.articulo.is_archived:
+            errores.append("El artículo está archivado.")
         if not self.articulo.es_vendible:
             errores.append("El artículo debe ser vendible.")
 
-        if ( self.articulo.unidad_medida != Articulo.UnidadMedida.UNIDAD):
+        if ( self.articulo.unidad_medida_id != Articulo.UNIDAD_CONTEO):
             errores.append("Las variantes de bolsas se venden en unidades.")
 
         if errores:
@@ -160,9 +170,11 @@ class ImagenProducto(BaseModel):
     imagen = models.ImageField(upload_to=RenameImagen("productos"))
     texto_alternativo = models.CharField(max_length=200, blank=True,)
     orden = models.PositiveIntegerField(default=0)
+    es_principal = models.BooleanField(default=False)
 
     class Meta:
         ordering = ["orden", "pk"]
+        constraints = [models.UniqueConstraint(fields=["producto"], condition=models.Q(es_principal=True, archived_at__isnull=True), name="producto_imagen_principal_unica")]
         verbose_name = "imagen de producto"
         verbose_name_plural = "imágenes de producto"
 

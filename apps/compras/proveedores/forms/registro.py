@@ -1,0 +1,8 @@
+from django import forms
+from ..models import Proveedor
+
+
+class ProveedorForm(forms.ModelForm):
+    class Meta:
+        model = Proveedor
+        fields = ('nombre', 'identificacion', 'email', 'telefono', 'direccion')

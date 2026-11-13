@@ -1,3 +1,6 @@
 from django.contrib import admin
+from apps.core.admin import MasterAdmin
+from .models import Insumo, Lote, UnidadSerializada
 
-# Register your models here.
+for model in [Insumo, Lote, UnidadSerializada]:
+    admin.site.register(model, MasterAdmin)
