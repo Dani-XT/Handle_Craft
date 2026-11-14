@@ -1,0 +1,16 @@
+<div class="quill-widget">
+  <div class="form-control p-0 pt-1">
+    <div class="quill-toolbar border-0 border-bottom">
+      <span class="ql-formats me-0">
+        <button type="button" class="ql-bold" aria-label="Negrita"></button>
+        <button type="button" class="ql-italic" aria-label="Cursiva"></button>
+        <button type="button" class="ql-underline" aria-label="Subrayar"></button>
+        <button type="button" class="ql-list" value="ordered" aria-label="Lista numerada"></button>
+        <button type="button" class="ql-list" value="bullet" aria-label="Lista con viñetas"></button>
+        <button type="button" class="ql-link" aria-label="Enlace"></button>
+      </span>
+    </div>
+    <div class="quill-editor border-0 pb-1" style="min-height: 150px"></div>
+  </div>
+  {% include "django/forms/widgets/textarea.html" %}
+</div>

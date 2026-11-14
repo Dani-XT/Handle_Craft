@@ -1,8 +1,8 @@
-from django import forms
+from apps.core.forms import StyledModelForm
 from apps.sistema.categorias.models import Categoria
 
 
-class CategoriaForm(forms.ModelForm):
+class CategoriaForm(StyledModelForm):
     class Meta:
         model = Categoria
         fields = ("nombre", "slug", "descripcion", "imagen", "parent", "publicada", "orden")

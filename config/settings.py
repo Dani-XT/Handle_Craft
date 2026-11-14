@@ -41,6 +41,7 @@ ENVIRONMENT = os.environ.get("DJANGO_ENVIRONMENT", default="local")
 # Application definition
 
 INSTALLED_APPS = [
+    'django.forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -102,6 +103,10 @@ INSTALLED_APPS = [
 
 
 ]
+
+# Permite que los widgets y grupos de campo reutilizables de apps.core
+# utilicen el mismo motor de templates del proyecto.
+FORM_RENDERER = "django.forms.renderers.TemplatesSetting"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
